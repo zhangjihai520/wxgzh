@@ -1,0 +1,9 @@
+.input-group-text{
+	background: #FFFFFF;
+}
+.form-control{
+	color:  #FF6F01 !important;
+}
+.dropdown-toggle:focus{
+	color: #FF6F01 !important;
+}

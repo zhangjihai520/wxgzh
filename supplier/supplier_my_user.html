@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/supplier_my_user.css" />
+	</head>
+
+	<body class="public_bg">
+		<header class="container orange_bg">
+			<div class="row">
+				<div class="col-1  offset-10">
+					<span class="fa fa-cog mt-2" style="color: #FFFFFF" onclick="go_page('supplier_setting.html')"></span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-2 img">
+					<img class="rounded-circle" src="" alt="" style="width: 100%; height: 100%;" />
+				</div>
+				<div class="col-7 px-1">
+					<div class="form-row">
+						<p class="col-12 user_name wite"></p>
+						<p class="col-12 user_accoun wite font_1"></p>
+					</div>
+				</div>
+
+			</div>
+			<div class="row mt-1 pb-2">
+				<p class="col-4 font_1 wite status pr-0 ">未认证</p>
+			</div>
+		</header>
+		<div class="container mb-5">
+			<div class="row ">
+				<div class="col-12 mt-2">
+					<div class="form-row wite_bg px-2 pt-3 title_top">
+						<p class="col-12 title">运营简报</p>
+					</div>
+					<div class="form-row wite_bg text-center font_1 pt-3">
+						<div class="col-5 offset-1">
+							<p>近30天</p>
+							<p>销售机构(家)</p>
+						</div>
+						<div class="col-5">
+							<p>近30天</p>
+							<p>销售油量(吨)</p>
+						</div>
+					</div>
+					<div class="form-row wite_bg text-center border-bottom ">
+						<p class="col-5 offset-1  text-center border-right py-2 sale_num">0</p>
+						<p class="col-5 py-2 oil_num">0</p>
+					</div>
+					<div class="form-row wite_bg text-center font_1">
+						<div class="col-5 offset-1  text-center border-right py-2">
+							<p>近30天</p>
+							<p>共计订单数(单)</p>
+						</div>
+						<div class="col-5 py-2">
+							<p class="mt-2">未结账款(元)</p>
+						</div>
+					</div>
+					<div class="form-row wite_bg text-center pb-3 title_top">
+						<p class="col-5 offset-1  text-center order_num">0</p>
+						<p class="col-5 no_pay">0</p>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-2">
+				<div class="col-12">
+					<div class="form-row wite_bg px-2 pt-3 title_top">
+						<p class="col-12 title">基础信息</p>
+					</div>
+					<div class="form-row wite_bg py-3 title_top">
+						<div class="col-3 offset-1 font_1 text-center item_QRcode" data-toggle="modal" data-target="#pick-up-qr-code-dialog">
+							<span class="iconfont iconerweima icon"></span>
+							<p class="mt-1"> 提货二维码</p>
+						</div>
+						
+						<div class="col-3 offset-1 font_1 text-center item_cer">
+							<span class="iconfont iconqiyerenzheng1 icon"></span>
+							<p class="mt-1">企业认证</p>
+						</div>
+						<div class="col-3 offset-1 font_1 text-center"  onclick="go_page('vip_system.html')">
+							<div class="text-center">
+								<span class="iconfont iconhuiyuantixi icon"></span>
+							</div>
+							<p class="mt-1" style="">会员体系</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fixed-bottom container shadow-lg bg-white rounded b_nav">
+			<ul class="row pb-1">
+				<li class="col-3 text-center" onclick="go_page('supplier_list.html')">
+					<div class="footer_item ">
+						<img src="img/store.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom">油库</p>
+					</div>
+				</li>
+				<li class="col-3 text-center" onclick="go_page('supplier_order_list.html')">
+					<div class="footer_item">
+						<img src="img/procurement.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom">采购管理</p>
+					</div>
+				</li>
+				<li class="col-3 text-center" >
+					<div class="footer_item physical_want">
+						<img src="img/physical.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom">物流</p>
+					</div>
+				</li>
+				<li class="col-3 text-center" onclick="go_page('supplier_my_user.html')">
+					<div class="footer_item  ">
+						<img src="img/myself_0.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom change_active">我的</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- 提货二维码的Modal -->
+		<div class="modal fade" id="pick-up-qr-code-dialog" tabindex="-1" role="dialog" aria-labelledby="pick-up-qr-code-dialog-title" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">扫码取件</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<div id="qr-code-border">
+									<div id="output"></div>
+								</div>
+							</div>
+							<a style="display: none" id="downPhoto" href="" download="downloadQrCode.jpg">生成图片</a>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="../plugins/qrcode/jquery.qrcode.min.js"></script>
+	<script src="js/supplier_my_user.js"></script>
+</html>

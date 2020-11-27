@@ -1,0 +1,32 @@
+#navigationBar {
+    border: none;
+}
+.serviceComment {
+    margin-left: 4%;
+    min-height: 100vh;
+}
+.serviceLogoDiv {
+    height: 28.8vw;
+    overflow: hidden;
+    border-radius: 10px;
+    /*background: url("../img/13639685_123501617185_2.jpg") no-repeat;*/
+    background-size: cover;
+}
+.serviceType {
+    color: #E66B00;
+    background: #FFF1D9;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.borderBottom {
+    border-bottom: 1px solid #E6DFDA;
+}
+.modal {
+    top: 30%;
+    width: 66%;
+    font-size: 4vw;
+    left: 17%;
+}
+.btn {
+    font-size: 3vw;
+}

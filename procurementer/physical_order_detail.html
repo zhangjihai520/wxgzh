@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+	</head>
+	<body class="public_bg">
+		<div class="container-fluid wite_bg pt-1 border-bottom header px-0">
+			<div class="top  ">
+				<span class="fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<p class="header-title">订单详情</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="form-row wite_bg px-1 mt-2 border_3 border">
+						<div class="col-12">
+							<span class="font_4 font_weight">物流配送</span>
+							<span class="orange_bg font_0 wite border_1 px-1 order_status"></span>
+						</div>
+						<div class="col-12 font_1 text-black-50 border-bottom pb-2">
+							<span>订单号：</span>
+							<span class="order_no"></span>
+						</div>
+						<div class="col-12 mt-2">
+							<span class=" fa fa-circle" style="font-size: 6px !important;"></span>
+							<span class="font_6 b_name font_weight"></span>
+							<span class="font_6 b_phoe font_weight"></span>
+							<span class="font_3 text-black-50">取</span>
+						</div>
+						<div class="col-12 font_1 text-black-50">
+							<p class="b_site"></p>
+						</div>
+						<div class="col-12 mt-2">
+							<span class=" fa fa-circle 	orange" style="font-size: 6px !important;"></span>
+							<span class="font_6 e_name font_weight"></span>
+							<span class="font_6 e_phoe font_weight"></span>
+							<span class="font_3 text-black-50">收</span>
+						</div>
+						<div class="col-12 font_1 text-black-50 border-bottom pb-2">
+							<p class="e_site"></p>
+						</div>
+						<div class="col-12">
+							<span class="font_1 text-black-50">物流费用:</span>
+							<span class="font_2 text-danger trans_pay"></span>
+						</div>
+					</div>
+					<div class="form-row wite_bg px-1 mt-2 border_3 border">
+						<div class="col-12 font_1">
+							<div class="form-row mt-2">
+								<p class="col-3 text-black-50">取货时间:</p>
+								<span class="b_time"></span>
+							</div>
+							<div class="form-row mt-2">
+								<p class="col-3 text-black-50 ">预达时间:</p>
+								<span class="e_time"></span>
+							</div>
+							<div class="form-row mt-2">
+								<p class="col-3 text-black-50">商品详情:</p>
+								<div class="col-9">
+									<div class="form-row goods_box">
+										<!--<div class="col-3">
+											<p>92#</p>
+											<p>200吨</p>
+										</div>
+										<div class="col-3">
+											<p>92#</p>
+											<p>200吨</p>
+										</div>
+										<div class="col-3">
+											<p>92#</p>
+											<p>200吨</p>
+										</div>-->
+									</div>
+								</div>
+							</div>
+							<div class="form-row py-2">
+								<p class="col-3 text-black-50 ">下单时间:</p>
+								<span class="creat_time"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="js/physical_order_detail.js"></script>
+</html>

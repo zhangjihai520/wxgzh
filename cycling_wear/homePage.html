@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--在IE运行最新的渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <title>车服商</title>
+    <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/public.css" />
+    <link rel="stylesheet" href="../css/organization.css" />
+    <link rel="stylesheet" href="css/homePage.css" />
+    <script src="../js/jquery.min.js?v=2.1.1"></script>
+    <script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/util.js"></script>
+    <script src="js/homePage.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12" id="subject">
+                <div class="form-row mt-3">
+                    <div class="ml-2 module" id="uploading">
+                        <div class="form-row mt-3 mb-3">
+                            <div class="col-4 offset-4"><img src="img/uploadingIcon.png"></div>
+                            <div class="col-12 text-center mt-2 font_5">上传服务</div>
+                        </div>
+                    </div>
+                    <div class="ml-3 module" id="list">
+                        <div class="form-row mt-3 mb-3">
+                            <div class="col-4 offset-4"><img src="img/listIcon.png"></div>
+                            <div class="col-12 text-center mt-2 font_5">服务列表</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12" id="menu">
+                <div class="form-row">
+                    <div class="menu-comment organization-menu check-menu" id="account">
+                        <div class="form-row">
+                            <div class="col-8 offset-2"><img class="menu-icon" src="img/checkCar.png"></div>
+                            <div class="col-12 mt-1">服务</div>
+                        </div>
+                    </div>
+                    <div class="menu-comment organization-menu uncheck-menu" id="information">
+                        <div class="form-row">
+                            <div class="col-8 offset-2"><img class="menu-icon" src="img/uncheckInformation.png"></div>
+                            <div class="col-12 mt-1">我的</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toast text-center fixed-bottom" style="" role="alert" aria-live="polite" aria-atomic="true"
+         data-delay="1000">
+        <div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+
+#navigationBar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: white;
+}
+#aboutus,#aboutusT{
+    padding-right: 6%;
+    padding-left: 6%;
+}
+#aboutusicon{
+    background: white;
+}
+
+#buttonstyle{
+    background: #FF660D;
+    text-align: center;
+    font-size: 4vw;
+}
+
+.navigationBarText {
+    width: 89%;
+    text-align: center;
+    color: #1F1F1F;
+    font-size:0.8rem;
+    margin-top: 1.6%;
+}
+
+.public_bg{
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #EBEBEB;
+}
+.publicLeft-Right{
+    padding-right: 6%;
+    padding-left: 6%;
+}
+.text1{
+
+    color: #666666;
+    font-size: 3vw;
+    text-align: left;
+}
+
+.Headportrait {
+    height: 12%;
+    width: 12%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    margin-top: 15px;
+}
+.fa-angle-right-align{
+    color: #737373;
+}
+
+
+
+
+

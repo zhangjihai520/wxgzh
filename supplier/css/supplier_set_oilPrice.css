@@ -1,0 +1,33 @@
+.oil_no{
+	height: 1.25rem;
+	border-radius: 4px;
+	line-height: 1.2rem;
+	color: #C2C2C2;
+}
+.choose_active{
+	color: #FF974C;
+	border-color: #FF974C !important;
+}
+.border-white{
+	background: #FFF6F0 !important;
+	border: none;
+}
+.oil_type{
+	color: #FF6E00;
+	
+}
+.change_price{
+	color: #17A2B8;
+}
+.style{
+	border: none;
+	background: #FFFFFF !important;
+	font-size: 0.7rem;
+}
+.click_btn{
+	width: 3.85rem;
+	height: 1.4rem;
+	color: #FFFFFF;
+	line-height: 0;
+	margin-left:5.8rem ;
+}

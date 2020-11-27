@@ -1,0 +1,31 @@
+.default_box,.complie_box,.del_box{
+	color: #737373;
+}
+.default-em {
+	width:0.75rem;
+	height:0.75rem;
+	border-radius: 50%;
+	border: 1px solid #B3B3B3;
+	display: inline-block;
+	line-height: 0.8rem;
+}
+.text{
+	line-height: 0.8rem;
+}
+.product_img{
+	width: 100%;
+}
+
+.default_active{
+	background: url(../img/gouico.png) no-repeat 0 0;
+	background-size:0.75rem;
+	border: 0;
+}
+.false_btn{
+	background: #90979D;
+}
+.true_btn{
+	background:#E8493A;
+}
+
+

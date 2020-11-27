@@ -1,0 +1,89 @@
+.public_style {
+	background: #FFFFFF !important;
+	border: none;
+	font-size: 0.65rem;
+	line-height: 1rem;
+}
+
+.oil_gun,
+.gun_icon {
+	border: 1px solid #E1E1E1 !important;
+	border-radius: 4px;
+	color: #ABABAB;
+	text-align: center;
+	line-height: 1rem;
+    }
+.gun_icon{
+	height:1.5rem;
+}
+.imageDiv {
+	display: inline-block;
+	width:5rem;
+	height:3rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px dashed darkgray;
+	background: #f8f8f8;
+	position: relative;
+	overflow: hidden;
+	margin:3px
+}
+.imageDiv>img{
+	width:5rem;
+	height:3rem;
+}
+.cover {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width:5rem;
+	height:3rem;
+	background-color: rgba(0, 0, 0, .3);
+	display: none;
+	/*line-height: 125px;*/
+	text-align: center;
+}
+
+.cover .delbtn {
+	color: red;
+}
+
+.imageDiv:hover .cover {
+	display: block;
+}
+
+.addImages {
+	display: inline-block;
+	width:5rem;
+	height:3rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #E1E1E1;
+	background: #f8f8f8;
+	position: relative;
+	overflow: hidden;
+	margin:3px
+	border-radius: 4px;
+}
+
+.text-detail {
+	width:5rem;
+	height:3rem;
+	line-height: 3rem;
+	text-align: center;
+	color: #C0C0C0;
+}
+.file {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:5rem;
+	height:3rem;
+	opacity: 0;
+}
+.imgBox{
+	display: inline-block;
+}

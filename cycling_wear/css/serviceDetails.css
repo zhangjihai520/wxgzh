@@ -1,0 +1,26 @@
+#navigationBar {
+    border: none;
+}
+.navigationBarText {
+    color: black;
+}
+
+.borderBottom {
+    border-bottom: 1px solid #E6DFDA;
+}
+.serviceDetails {
+    background: #F7F8FA;
+    border-radius: 5px;
+    margin-left: 4%;
+}
+.unfoldText {
+    width: 10%;
+    margin-left: 1.5%;
+}
+.relevantQualifications {
+    width: 21%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 5px;
+    padding: 5px 0 5px 0;
+}

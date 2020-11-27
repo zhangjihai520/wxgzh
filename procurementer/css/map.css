@@ -1,0 +1,98 @@
+.top_in {
+	color: #333333 !important;
+	background: #FFFFFF !important;
+}
+#mapContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#tip {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	padding-left: 10px;
+	padding-right: 2px;
+	position: absolute;
+	min-height: 65px;
+	top: 10px;
+	font-size: 12px;
+	right: 10px;
+	border-radius: 3px;
+	overflow: hidden;
+	line-height: 20px;
+	min-width: 30%;
+}
+
+#tip input[type="button"] {
+	background-color: #0D9BF2;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	color: #fff;
+	font-size: 12px;
+	border-radius: 3px;
+	outline: none;
+	border: 0;
+	cursor: pointer;
+}
+
+#tip input[type="text"] {
+	height: 25px;
+	border: 1px solid #ccc;
+	padding-left: 5px;
+	border-radius: 3px;
+	outline: none;
+}
+
+#pos {
+	width: 100%;
+	background-color: #fff;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: absolute;
+	font-size: 0.6rem;
+	bottom: 0px;
+	border-radius: 3px;
+	line-height:1rem;
+	border: 1px solid #ccc;
+	z-index: 999 !important;
+}
+
+#pos input {
+	border: 1px solid #ddd;
+	height: 1.15rem;
+	border-radius: 3px;
+	outline: none;
+	width:5rem;
+	font-size: 0.6rem;
+}
+
+#result1 {
+	max-height: 300px;
+	overflow: scroll;
+}
+
+b {
+	display: block;
+	margin: 5px 0;
+}
+
+.map_body {
+	border: 1px solid #ddd;	
+	width:98vw;
+	height:75vh;
+	position: relative;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+.physical_finish{
+	width: 100%;
+	background: #1772FC;
+	color: #FFFFFF !important;
+}

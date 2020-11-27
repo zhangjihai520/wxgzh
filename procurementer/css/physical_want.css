@@ -1,0 +1,44 @@
+.form-control{
+	background: #FFFFFF !important;
+	outline: none ;
+	border: none ;
+	border-radius: 0 !important;
+}
+
+.border-white{
+	background: #FFFFFF;
+	color: #737373;
+	font-size: 0.6rem ;
+}
+.start,.end{
+	width:1.2rem;
+	height: 1.2rem;
+	line-height: 1.2rem;
+	color: #FFFFFF;
+	text-align: center;
+}
+.start{
+	background: #0079FA;
+}
+.style{
+	color: #999999;
+}
+
+.oil_type::-webkit-input-placeholder{
+	text-align: center;
+}
+.account_box{
+	display: none;
+	bottom:2.6rem !important;
+	height: 2.75rem;
+	line-height: 2.75rem;
+}
+.shop_box{
+	padding-bottom: 6rem;
+}
+.b_siteId,.e_siteId{
+	display: none;
+}
+.fontIcon{
+	display: none;
+}

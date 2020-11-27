@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/supplier.css" />
+		<script src="../bootstrap-4.3.1-dist/js/popper.min.js"></script>
+	</head>
+
+	<body class="public_bg">
+		<header class="container header orange_bg ">
+			<div class=" wite">
+				<p class="text-center pt-1 font_5 font_weight">供应商</p>
+			</div>
+		</header>
+		<div class="container ">
+			<div class="row">
+				<div class="col-12 text-center">
+					<p class="wite_bg titles orange font_3 font_weight">油库列表</p>
+				</div>
+			</div>
+
+		</div>
+		<div class="container wite_bg oil_box mb-5">
+			
+		</div>
+		<div class="toast text-center fixed-bottom" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+		<div class="list_null" style="width: 100vw; text-align: center; display: none;">
+			<img src="../img/plan_null.png" alt="" width="20%"/>
+			<p class="font_4 text-muted mt-1">暂无数据</p>
+		</div>
+		<div class="fixed-bottom container shadow-lg bg-white rounded b_nav">
+			<ul class="row pb-1">
+				<li class="col-3 text-center" onclick="go_page('supplier_list.html')">
+					<div class="footer_item ">
+						<img src="img/store_0.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom change_active">油库</p>
+					</div>
+				</li>
+				<li class="col-3 text-center" onclick="go_page('supplier_order_list.html')">
+					<div class="footer_item">
+						<img src="img/procurement.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom">采购管理</p>
+					</div>
+				</li>
+				<li class="col-3 text-center" >
+					<div class="footer_item physical_want">
+						<img src="img/physical.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom">物流</p>
+					</div>
+				</li>
+				<li class="col-3 text-center" onclick="go_page('supplier_my_user.html')">
+					<div class="footer_item  ">
+						<img src="img/myself.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom ">我的</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="js/supplier_list.js"></script>
+
+</html>

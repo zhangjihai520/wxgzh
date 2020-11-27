@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/supplier_sysytem_stock.css" />
+		<script src="../bootstrap-4.3.1-dist/js/popper.min.js"></script>
+	</head>
+
+	<body class="public_bg">
+		<header class="container-fluid  wite_bg border-bottom px-0">
+			<div class="top pt-1 orange">
+				<span class="fa fa-angle-left top_icon pl-2" style="width:20%;" onclick="page_back()"></span>
+				<p class="header-title" style="width: 60%;">系统入库</p>
+				<div class="add_stock pr-2">
+					<p class=" col-12 text-center  font_3 mx-2" style="line-height:0.9rem;">
+						<span class="fa fa-plus-circle" style="width: 40%;"></span>
+					</p>
+					<p class="col-12 p-0 text-center mx-2 font_1" style="line-height:0.9rem;">添加油品</p>
+				</div>
+			</div>
+		</header>
+		<div class="container wite_bg  stock_box">
+			<!--<div class="row pb-3">
+				<div class="btn-group col-5">
+					<button class="btn  btn-sm orange dropdown-toggle border font_5" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  						92#
+  					</button>
+					<div class="dropdown-menu font_5" aria-labelledby="dropdownMenu2" style="min-width:80%;">
+						<button class="dropdown-item text-center border-bottom orange" type="button">92#</button>
+						<button class="dropdown-item text-center border-bottom" type="button">95#</button>
+						<button class="dropdown-item text-center border-bottom" type="button">98#</button>
+						<button class="dropdown-item text-center border-bottom" type="button">0#</button>
+					</div>
+				</div>
+				<div class="input-group input-group-sm col-6 offset-1">
+					<input type="text" class="form-control orange border-right-0 text-right px-0" value="0">
+					<div class="input-group-append">
+						<span class="input-group-text border-left-0 pr-4 orange">吨</span>
+					</div>
+				</div>
+			</div>
+			<div class="row pb-3">
+				<div class="btn-group col-5">
+					<button class="btn  btn-sm dropdown-toggle border orange font_5" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  						92#
+  					</button>
+					<div class="dropdown-menu font_5" aria-labelledby="dropdownMenu2" style="min-width:80%;">
+						<button class="dropdown-item text-center border-bottom orange" type="button">92#</button>
+						<button class="dropdown-item text-center border-bottom" type="button">95#</button>
+						<button class="dropdown-item text-center border-bottom" type="button">98#</button>
+						<button class="dropdown-item text-center border-bottom" type="button">0#</button>
+					</div>
+				</div>
+				<div class="input-group input-group-sm col-6 offset-1">
+					<input type="text" class="form-control orange border-right-0 text-right px-0" value="0">
+					<div class="input-group-append">
+						<span class="input-group-text border-left-0 pr-4 orange">吨</span>
+					</div>
+				</div>
+			</div>-->
+		</div>
+		<div class="container mt-4">
+			<div class="row">
+				<p class="col-12 font_2 text-center text-danger warn" style="display: none;">注意：输入为负数意思是减少库存</p>
+				<button type="button" class="btn mt-1 btn-sm click_btn line_orange col-10 offset-1 wite ">确定入库</button>
+				
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="js/supplier_system_stock.js"></script>
+
+
+</html>

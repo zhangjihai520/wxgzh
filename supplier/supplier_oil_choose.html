@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<script src="../bootstrap-4.3.1-dist/js/popper.min.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid pt-1 px-0">
+			<div class="top">
+				<span class=" fa fa-angle-left top_icon pl-2" onclick="go_page('supplier_list.html')"></span>
+				<p class="header-title"></p>
+			</div>
+		</div>
+		<div class="container choose_box">
+			<div class="row mt-2">
+				<div class="col-6">
+					<p class="text-center oil_price" style="height: 4.25rem;line-height:4.25rem;font-size: 0.8rem;background: #FCE8D7;color: #EB6C05;">油价</p>
+				</div>
+				<div class="col-6">
+					<p class="text-center oil_stock" style="height: 4.25rem;line-height:4.25rem;font-size: 0.8rem;background: #F7D5D8;color: #DB3444;">库存</p>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script>
+		$(".header-title").text(get_localStorage("oilStoreName"));
+		$(".oil_price").click(function(){
+			window.location.href = "supplier_set_oilPrice.html";
+		})
+		$(".oil_stock").click(function(){
+			window.location.href = "supplier_oil_stock.html";
+		})
+	</script>
+</html>

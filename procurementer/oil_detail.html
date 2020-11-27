@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/oil_detail.css" />
+	</head>
+
+	<body class="public_bg">
+		<div class="container-fluid wite_bg pt-1 px-0">
+			<div class="top black ">
+				<span class="fa fa-angle-left top_icon pl-2" onclick="go_page('purchasing.html')"></span>
+				<p class="header-title">油品详情</p>
+			</div>
+		</div>
+		<div class="container p-0 wite_bg pb-3">
+			<div class="row mx-2">
+				<p class="station_name col-9 p-0 px-1 font_5 font_weight terminalName"></p>
+				<p class="oil_no col-3 p-0 px-1 text-right font_1" id="oilType"></p>
+			</div>
+			<div class="row mx-2 mb-1">
+				<p class="surplus font_1 p-0 px-1 orange"></p>
+			</div>
+			<div class="row  m-0 p-0  price_area ml-2" id="oilPrice">
+
+			</div>
+			<p class="row  mx-2  mt-3 font_1">
+				<div class="col-12 p-0 m-0  input-group input-group-sm " id="go_price">
+					<div class="input-group-prepend icon_box  rounded ">
+						<div class="input-group-text pr-1 price_make" style="height: 1rem !important;">
+							<img src="img/physcial_price.png" alt="" class="imgs"/>
+						</div>
+					</div>
+					<div class="input-group-prepend">
+						<span class="input-group-text font_1 text-muted price_make" style="height: 1rem !important;color: #FF4019 !important;">运费组成</span>
+					</div>
+					<input type="text" id="re_money" class="form-control font_1 pl-0 price_make" readonly="readonly" value="" style="height: 1rem !important;">
+					<div class="input-group-prepend icon_box">
+						<div class="input-group-text price_make"style="height: 1rem !important;color: #FF4019 !important;">
+							<span class="  fa fa-angle-right  px-2" ></span>
+						</div>
+						
+					</div>
+				</div>
+				<!--<span>运费单价:</span>
+				<span class="unit_tranPrice pl-1"></span>-->
+			</p>
+			<div class="row  mx-2 click_arive">
+				<!--<p class="col-12 m-0 p-0 font_1 mt-1">
+					<span>运费核算：</span>
+					<span class="site_short pr-1" id="distance"></span>
+					<span class="unit_num"></span>
+				</p>-->
+				<p class="font_1 mt-1 sites">
+					<span class="fa fa-map-marker"></span>
+					<span>到货地址：</span>
+					<span class="arive_site" id="addressName"></span>
+				</p>
+			</div>
+		</div>
+		<div class="container p-0 wite_bg mt-2">
+			<div class="row  m-0 p-0">
+				<p class="col-12 text-center font_weight oilStation mt-3 terminalName"></p>
+				<p class="col-12 text-center font_1 mt-1 ">
+					<span class="fa fa-map-marker item pl-1"></span>
+					<span class="station_site item pr-1" id="detailsAddress"></span>
+				</p>
+			</div>
+			<div class="row m-0 p-0 mx-2 mt-3 pb-3">
+				<p class="col-2 m-0 p-0 font_5 font_weight">数据</p>
+				<div class="row col-4  p-0 offset-1 text-center">
+					<p class="col-12 m-0 p-0 font_4">近30天成交</p>
+					<p class="col-12 m-0 p-0 font_weight mt-1 volume_num " id="recentDealCount">2500吨</p>
+					<p class="col-12 m-0 p-0 font_1 ">复购率<span class="buy_rate"></span></p>
+				</div>
+				<div class="row col-4  p-0 offset-1   text-center">
+					<p class="col-12 m-0 p-0 font_4">近30天采购</p>
+					<p class="col-12 m-0 p-0 font_weight mt-1 buy_num" id="recentPutInCount"></p>
+					<p class="col-12 m-0 p-0 font_1">人均<span id="perCapitaCount"></span></p>
+				</div>
+			</div>
+		</div>
+		<div class="container p-0 wite_bg mt-2 pb-2 mb-5">
+			<div class="row m-0 p-0">
+				<p class="col-12 font_5 py-2 font_weight argument">参数</p>
+			</div>
+			<div class="row  m-0 p-0">
+				<p class="row col-12  m-0 p-0 font_1 mt-1">
+					<span class="col-4 titles">油源</span>
+					<span class="col-8 text-right" id="oilSource"></span>
+				</p>
+				<p class="row col-12  m-0 p-0 font_1 mt-1">
+					<span class="col-4 titles">油品标号</span>
+					<span class="col-8 text-right" id="oilGrade"></span>
+				</p>
+				<p class="row col-12  m-0 p-0 font_1 mt-1">
+					<span class="col-4 titles">车用密度</span>
+					<span class="col-8 text-right" id="carDensity"></span>
+				</p>
+				<p class="row col-12  m-0 p-0 font_1 mt-1">
+					<span class="col-4 titles">馏程</span>
+					<span class="col-8 text-right" id="boilingRange"></span>
+				</p>
+				<p class="row col-12  m-0 p-0 font_1 mt-1">
+					<span class="col-4 titles">硫</span>
+					<span class="col-8 text-right" id="sulfur"></span>
+				</p>
+				<p class="row col-12  m-0 p-0 font_1 mt-1">
+					<span class="col-4 titles">芳烃</span>
+					<span class="col-8 text-right" id="arene"></span>
+				</p>
+				<p class="row col-12  m-0 p-0 font_1 mt-1">
+					<span class="col-4 titles">烯烃</span>
+					<span class="col-8 text-right" id="alkene"></span>
+				</p>
+				<p class="row col-12  m-0 p-0 font_1 mt-1">
+					<span class="col-4 titles">苯</span>
+					<span class="col-8  text-right" id="benzene"></span>
+				</p>
+				<p class="row col-12  m-0 p-0 font_1 mt-1">
+					<span class="col-4 titles">胶质</span>
+					<span class="col-8 text-right" id="colloid"></span>
+				</p>
+				<p class="row col-12  m-0 p-0 font_1 mt-1">
+					<span class="col-4 titles">颜色</span>
+					<span class="col-8 text-right" id="color"></span>
+				</p>
+			</div>
+		</div>
+
+		<div class="container wite_bg fixed-bottom border">
+			<div class="row py-1">
+				<div class="col-2 m-0 px-0">
+					<div class="service text-center text-muted">
+						<span class="fa fa-headphones"></span>
+						<p class="font_1 sigin text-muted">客服</p>
+					</div>
+				</div>
+				<div class="col-2 m-0 px-0" id="comeShopping">
+					<div class="service text-center text-muted">
+						<span class="fa fa-shopping-cart"></span>
+						<p class="font_1 sigin text-muted">购物车</p>
+					</div>
+				</div>
+				<div class="col-8 p-0 px-1 text-right mt-2 ">
+					<button class="btn btn-sm line_orange click_btn rounded-pill add_buy" data-toggle="modal" data-target="#exampleModalCenter">加入购物车</button>
+					<button class="btn btn-sm line_orange click_btn rounded-pill now_buy" data-toggle="modal" data-target="#exampleModalCenter">立即购买</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content fixed-bottom pb-2">
+					<div class="modal-header p-2">
+						<span class="font_2">请选择数量</span>
+						<span class="font_1">(单位：吨)</span>
+					</div>
+					<div class="modal-body p-2">
+						<div class="row">
+							<p class="col-3 font_2" style="line-height:2.5rem">数量</p>
+							<div class="col-9 input-group input-group-sm">
+								<div class="input-group-prepend">
+									<span class="input-group-text wite_bg font_5" id="deleteNum">-</span>
+								</div>
+								<input id="oilNum" oninput = "value=value.replace(/[^\d]/g,'')" type="text" class="form-control
+								text-center" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+								<div class="input-group-prepend">
+									<span class="input-group-text wite_bg font_5" id="addNum">+</span>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<button id="addShoppingTips" type="button" class="btn btn-sm col-10 offset-1 orange_bg wite rounded-pill modal_btn"
+							data-dismiss="modal" aria-label="Close">确定</button>
+
+					<button id="purchaseNow" type="button" class="btn btn-sm col-10 offset-1 orange_bg wite rounded-pill modal_btn"
+							data-dismiss="modal" aria-label="Close">确定</button>
+
+				</div>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="z-index: 2000" role="alert" aria-live="polite" aria-atomic="true" data-delay="2000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../toastr-2.1.4/toastr.min.js"></script>
+	<script src="js/oil_detail.js"></script>
+</html>

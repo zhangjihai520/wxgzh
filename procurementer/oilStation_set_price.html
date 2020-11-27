@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/oilStation_set_price.css" />
+	</head>
+
+	<body>
+		<div class="container-fluid wite_bg pt-1 border-bottom px-0">
+			<div class="top black ">
+				<span class="fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<p class="header-title">加油站定价</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row ">
+				<div class="col-12 accordion wite_bg " id="accordionExample">
+					<!--<div class="card border-0">
+						<div class="row card-header wite_bg border-0  px-0" id="headingOne">
+							<div class="col-8 font_4 font_weight">中石油-昌北加油站</div>
+							<div class="col-4 font_1" data-toggle="collapse" data-target="#collapseOne" aria-expanded="ture" aria-controls="collapseOne">
+								<p class="border orange text-center">
+									<span>价格详情</span>
+									<span class="fa fa-angle-down"></span>
+								</p>
+							</div>
+							<p class="col-12 text-muted font_1">南昌市青山湖区青山大道2号</p>
+						</div>
+
+						<div id="collapseOne" class="row collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+							<div class="card-body  col-12 p-0 m-0">
+								<div class="row">
+									<form class="col-10 offset-1 form_box pb-1">
+										<div class="input-group input-group-sm border-bottom">
+											<div class="input-group-prepend">
+												<span class="input-group-text  icon collapse_color font_weight">92#：</span>
+											</div>
+											<input type="text" class="form-control collapse_color text-center" id="old_password">
+											<div class="input-group-prepend icon_box">
+												<span class="input-group-text icon collapse_color" onclick="clear_input('.user_name')">&times;</span>
+											</div>
+										</div>
+										<div class="input-group input-group-sm border-bottom">
+											<div class="input-group-prepend">
+												<span class="input-group-text  icon collapse_color font_weight">95#：</span>
+											</div>
+											<input type="text" class="form-control collapse_color center" id="old_password">
+											<div class="input-group-prepend icon_box">
+												<span class="input-group-text icon collapse_color" onclick="clear_input('.user_name')">&times;</span>
+											</div>
+										</div>
+										<div class="input-group input-group-sm border-bottom">
+											<div class="input-group-prepend">
+												<span class="input-group-text  icon collapse_color font_weight">98#：</span>
+											</div>
+											<input type="text" class="form-control collapse_color text-center" id="old_password">
+											<div class="input-group-prepend icon_box">
+												<span class="input-group-text icon collapse_color" onclick="clear_input('.user_name')">&times;</span>
+											</div>
+										</div>
+										<div class="input-group input-group-sm border-bottom">
+											<div class="input-group-prepend">
+												<span class="input-group-text  icon collapse_color font_weight">0#：</span>
+											</div>
+											<input type="text" class="form-control collapse_color center font_weight" id="old_password">
+											<div class="input-group-prepend icon_box">
+												<span class="input-group-text icon collapse_color" onclick="clear_input('.user_name')">&times;</span>
+											</div>
+										</div>
+									</form>
+									<p class="offset-5 font_1 col-2  p-0 my-1 change_price">确认修改</p>
+								</div>
+							</div>
+						</div>
+					</div>-->
+					<!--<div class="card border-0">
+						<div class="row card-header wite_bg border-0  px-0" id="headingTwo">
+							<div class="col-8 font_4 font_weight">中石油-昌北加油站</div>
+							<div class="col-4 font_1" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								<p class="border orange text-center">
+									<span>价格详情</span>
+									<span class="fa fa-angle-down"></span>
+								</p>
+							</div>
+							<p class="col-12 text-muted font_1">南昌市青山湖区青山大道2号</p>
+						</div>
+						<div id="collapseTwo" class="row collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+							<div class="card-body  col-12 p-0 m-0">
+								<div class="row">
+									<form class="col-10 offset-1 form_box pb-1">
+										<div class="input-group input-group-sm border-bottom">
+											<div class="input-group-prepend">
+												<span class="input-group-text  icon collapse_color font_weight">921#：</span>
+											</div>
+											<input type="text" class="form-control collapse_color text-center" id="old_password" >
+											<div class="input-group-prepend icon_box">
+												<span class="input-group-text icon collapse_color" onclick="clear_input('.user_name')">&times;</span>
+											</div>
+										</div>
+										<div class="input-group input-group-sm border-bottom">
+											<div class="input-group-prepend">
+												<span class="input-group-text  icon collapse_color font_weight">95#：</span>
+											</div>
+											<input type="text" class="form-control collapse_color center" id="old_password">
+											<div class="input-group-prepend icon_box">
+												<span class="input-group-text icon collapse_color" onclick="clear_input('.user_name')">&times;</span>
+											</div>
+										</div>
+										<div class="input-group input-group-sm border-bottom">
+											<div class="input-group-prepend">
+												<span class="input-group-text  icon collapse_color font_weight">98#：</span>
+											</div>
+											<input type="text" class="form-control collapse_color text-center center" id="old_password">
+											<div class="input-group-prepend icon_box">
+												<span class="input-group-text icon collapse_color" onclick="clear_input('.user_name')">&times;</span>
+											</div>
+										</div>
+										<div class="input-group input-group-sm border-bottom">
+											<div class="input-group-prepend">
+												<span class="input-group-text  icon collapse_color font_weight">0#：</span>
+											</div>
+											<input type="text" class="form-control collapse_color text-center font_weight" id="old_password">
+											<div class="input-group-prepend icon_box">
+												<span class="input-group-text icon collapse_color" onclick="clear_input('.user_name')">&times;</span>
+											</div>
+										</div>
+
+									</form>
+									<p class="offset-5 font_1 col-2  p-0 my-1 change_price">确认修改</p>
+								</div>
+							</div>
+						</div>
+					</div>-->
+				</div>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>	
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="js/oilStation_set_price.js"></script>
+
+</html>

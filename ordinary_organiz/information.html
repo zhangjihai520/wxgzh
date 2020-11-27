@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--在IE运行最新的渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <title>团油机构</title>
+    <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/public.css"/>
+    <link rel="stylesheet" href="../css/organization.css"/>
+    <link rel="stylesheet" href="css/information.css"/>
+    <script src="../js/jquery.min.js?v=2.1.1"></script>
+    <script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/util.js"></script>
+    <script src="js/information.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 px-0" id="subject">
+            <div class=" d-flex bd-highlight form-row pl-2" id="head" >
+                <div class="Headtopimghw">
+                    <img class="Headportrait mt-2 " src="" id="user_img"/>
+                    <div class="status mt-1 mb-2">已认证</div>
+                </div>
+                <div class="bd-highlight flex-grow-1">
+                    <div class="text1 mt-2 ml-2">
+						<span class="name">*小小</span> <span class="viplevel text2">二级会员</span>
+                        <p class="text3 phone">13020101506</p></div>
+                </div>
+                <img class="head_img mr-3 mt-2"  id="setpager"  src="img/gear.png">
+            </div>
+            <div class="d-flex form-row bd-highlight">
+                <div class="DriverBack flex-fill bd-highlight ml-2 mt-1">
+                    <div class="text4">
+						下属人员数量(人)
+						<p class="text5">
+							<span id="carNum">0</span>
+							<!--<span class="text4">(人)</span>-->
+						</p>
+					</div>
+                </div>
+                <div class="DriverBack1 mt-1 mr-2 flex-fill bd-highlight" >
+                    <div class="text4">
+						30天共计加油(元)
+						<p class="text5">
+							<span id="addOilDay">0</span>
+							<!--<span class="text4">(元)</span>-->
+						</p>
+					</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="vipdata ml-2 mr-2 mt-1 mb-2 w-100 pl-2 pr-2 pt-2 pb-2">
+                    <div class="text6">会员信息</div>
+                    <div>
+                        <div class="form-row">
+                            <div class="vipdata1" id="businessCertification"><img class="vipimag" src="img/enterpriseprove.png"/>
+                                <p class="text7">企业认证</p></div>
+                            <div class="vipdata1" id="invoice" hidden=""><img class="vipimag" src="img/invoice.png"/>
+                                <p class="text7">开票信息</p></div>
+                            <div class="vipdata1" id="membershipsystem" hidden=""><img class="vipimag" style="height: 41%" src="img/diamonds.png"/>
+                                <p class="text7" style="margin-top: 11px">会员体系</p></div>
+                            <div class="vipdata1" id="activity"><img class="vipimag" src="img/giftbox.png"/>
+                                <p class="text7">优惠活动</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 wite_bg" id="menu">
+            <div class="form-row">
+                <div class="menu-comment organization-menu uncheck-menu" id="account">
+                    <div class="form-row">
+                        <div class="col-8 offset-2"><img class="menu-icon" src="img/uncheckAccount.png"></div>
+                        <div class="col-12 mt-1">账户</div>
+                    </div>
+                </div>
+                <div class="menu-comment organization-menu uncheck-menu" id="personnel">
+                    <div class="form-row">
+                        <div class="col-8 offset-2"><img class="menu-icon" src="img/uncheckPersonnel.png"></div>
+                        <div class="col-12 mt-1">人员</div>
+                    </div>
+                </div>
+                <div class="menu-comment organization-menu check-menu" id="information">
+                    <div class="form-row">
+                        <div class="col-8 offset-2"><img class="menu-icon" src="img/checkInformation.png"></div>
+                        <div class="col-12 mt-1">我的</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="toast text-center fixed-bottom" style="" role="alert" aria-live="polite" aria-atomic="true"
+     data-delay="1000">
+    <div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+</div>
+</body>
+</html>

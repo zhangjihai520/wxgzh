@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/iScroll.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/logistics_index.css" />
+		<script src="../bootstrap-4.3.1-dist/js/popper.min.js"></script>
+	</head>
+
+	<body class="public_bg">
+		<div class="container-fluid wite_bg pt-1  px-0 top_box">
+			<div class="top  ">
+				<span class="fa fa-angle-left top_icon pl-2 back" onclick="page_back()"></span>
+				<p class="header-title">需求确认单</p>
+			</div>
+		</div>
+		<div id="wrapper" class="public_bg pb-3">
+			<div id="scroller" class="container px-2 "  style="padding-bottom:1rem;">
+				<ul class="row mx-0 order_box " >
+					 <li class="col-12 order_item px-1 border-bottom order_box">
+					 	<!--<div class="form-row font_2 mt-2 mr-1">
+					 		<p class="col-10">
+					 			<span class=" fa fa-circle icons icon_1 pr-1"></span>
+					 			<span class="text-muted">订单号:</span>
+					 			<span class="pl-1">fdgfdgfdsgdf</span>
+					 		</p>
+					 		<p class="col-2 border text-center border_2 font_2 detail_btn">详情</p>
+					 	</div>
+					 	<div class="form-row font_2 mt-2">
+					 		<p class="col-12">
+					 			<span class=" fa fa-circle icons icon_2 pr-1"></span>
+					 			<span class="text-muted">要求送达时间:</span>
+					 			<span class="pl-1">2019-03-24</span>
+					 		</p>
+					 	</div>
+					 	<div class="form-row font_2 mt-2">
+					 		<p class="col-12 pl-0">
+					 			<span class=" iconfont iconqidian font_6 icon_3 pr-1 "></span>
+					 			<span class="text-muted">江西南昌西湖区</span>
+					 		</p>
+					 	</div>
+					 	<div class="form-row font_2 mt-2">
+					 		<p class="col-12 pl-0">
+					 			<span class=" iconfont iconzhongdian font_6 icon_3 pr-1 "></span>
+					 			<span class="text-muted">江西南昌东湖区</span>
+					 		</p>
+					 	</div>
+					 	<div class="form-row font_2 py-2 border-bottom">
+					 		<p class="col-12 ">
+					 			<span class="fa fa-circle icons icon_5 pr-1"></span>
+					 			<span class="text-muted">物流费:</span>
+					 			<span class=" pl-0 tran_money font_4 trans_price">2000元</span>
+					 		</p>
+					 	</div>
+					 </li>
+					 <li class="col-12 order_item px-1 border-bottom">
+					 	<div class="form-row font_2 mt-2 mr-1">
+					 		<p class="col-10">
+					 			<span class=" fa fa-circle icons icon_1 pr-1"></span>
+					 			<span class="text-muted">订单号:</span>
+					 			<span class="pl-1">dsfdasfdasfdsaf</span>
+					 		</p>
+					 		<p class="col-2 border text-center border_2 font_2 detail_btn">详情</p>
+					 	</div>
+					 	<div class="form-row font_2 mt-2">
+					 		<p class="col-12">
+					 			<span class=" fa fa-circle icons icon_2 pr-1"></span>
+					 			<span class="text-muted">要求送达时间:</span>
+					 			<span class="pl-1">2019-03-24</span>
+					 		</p>
+					 	</div>
+					 	<div class="form-row font_2 mt-2">
+					 		<p class="col-12 pl-0">
+					 			<span class=" iconfont iconqidian font_6 icon_3 pr-1 "></span>
+					 			<span class="text-muted">江西南昌西湖区</span>
+					 		</p>
+					 	</div>
+					 	<div class="form-row font_2 mt-2">
+					 		<p class="col-12 pl-0">
+					 			<span class=" iconfont iconzhongdian font_6 icon_3 pr-1 "></span>
+					 			<span class="text-muted">江西南昌东湖区</span>
+					 		</p>
+					 	</div>
+					 	<div class="form-row font_2 py-2 border-bottom">
+					 		<p class="col-12 ">
+					 			<span class="fa fa-circle icons icon_5 pr-1"></span>
+					 			<span class="text-muted">物流费:</span>
+					 			<span class=" pl-0 tran_money font_4 trans_price">2000元</span>
+					 		</p>
+					 		
+					 </li>
+					 <li class="col-12 order_item px-1 border-bottom">
+					 	<div class="form-row font_2 mt-2 mr-1">
+					 		<p class="col-10">
+					 			<span class=" fa fa-circle icons icon_1 pr-1"></span>
+					 			<span class="text-muted">订单号:</span>
+					 			<span class="pl-1">dsfdasfdasfdsaf</span>
+					 		</p>
+					 		<p class="col-2 border text-center border_2 font_2 detail_btn">详情</p>
+					 	</div>
+					 	<div class="form-row font_2 mt-2">
+					 		<p class="col-12">
+					 			<span class=" fa fa-circle icons icon_2 pr-1"></span>
+					 			<span class="text-muted">要求送达时间:</span>
+					 			<span class="pl-1">2019-03-24</span>
+					 		</p>
+					 	</div>
+					 	<div class="form-row font_2 mt-2">
+					 		<p class="col-12 pl-0">
+					 			<span class=" iconfont iconqidian font_6 icon_3 pr-1 "></span>
+					 			<span class="text-muted">江西南昌西湖区</span>
+					 		</p>
+					 	</div>
+					 	<div class="form-row font_2 mt-2">
+					 		<p class="col-12 pl-0">
+					 			<span class=" iconfont iconzhongdian font_6 icon_3 pr-1 "></span>
+					 			<span class="text-muted">江西南昌东湖区</span>
+					 		</p>
+					 	</div>
+					 	<div class="form-row font_2 py-2 border-bottom">
+					 		<p class="col-12 ">
+					 			<span class="fa fa-circle icons icon_5 pr-1"></span>
+					 			<span class="text-muted">物流费:</span>
+					 			<span class=" pl-0 tran_money font_4 trans_price">2000元</span>
+					 		</p>
+					 		
+					 </li>-->
+				</ul>
+				<div class="pull-loading ">
+					上拉加载更多
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/iscroll.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="js/logistics_want_orders.js"></script>
+</html>

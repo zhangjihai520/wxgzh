@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<!--在IE运行最新的渲染模式-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+		<title>团油机构</title>
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../plugins/navtree/font/layui.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="../css/organization.css" />
+		<link rel="stylesheet" href="css/addPerson.css" />
+		<script src="../js/jquery.min.js?v=2.1.1"></script>
+		<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+		<script src="../plugins/navtree/layui.js"></script>
+		<script src="../js/public.js"></script>
+		<script src="../js/util.js"></script>
+		<script src="js/addPerson.js"></script>
+	</head>
+
+	<body>
+		<div class="container-fluid pt-1 border-bottom px-0">
+			<div class="top orange">
+				<span class=" fa fa-angle-left top_icon nav_icon pl-2 break"></span>
+				<p class="header-title">添加人员</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<!--<div class="col-12" id="navigationBar">
+					<div class="form-row">
+						<div class="break">
+							<img src="img/break.png">
+						</div>
+						<div class="navigationBarText">
+							添加人员
+						</div>
+					</div>
+				</div>-->
+				<div class="col-12">
+					<div class="form-row mt-2 pb-2 particulars">
+						<div class="col-1 ml-3 mt-1"><img src="img/addName.png"></div>
+						<div class="mt-1">姓 名 :</div>
+						<div class="col-7"><input class="addInput addName" type="text" placeholder="请输入姓名"></div>
+					</div>
+					<div class="form-row mt-2 pb-2 particulars">
+						<div class="col-1 ml-3 mt-1"><img src="img/addAccount.png"></div>
+						<div class="mt-1">账 号 :</div>
+						<div class="col-7"><input class="addInput addAccount" type="text" placeholder="请输入账户"></div>
+					</div>
+					<div class="form-row mt-2 pb-2 particulars">
+						<div class="col-1 ml-3 mt-1"><img src="img/addRole.png"></div>
+						<div class="mt-1">权限组:</div>
+						<div class="col-7 allGroup">
+							<select class="addInput addRole">
+
+							</select>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-10 offset-1 mt-2 registerHint p-2">
+							您好，未注册用户初始密码为123456. 如需更改请前往设置中更改。
+						</div>
+					</div>
+					<div class="form-row mt-5">
+						<div class="col-11 text-center p-2" id="addPerson">确认添加</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+
+</html>

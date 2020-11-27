@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/iScroll.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<script src="../bootstrap-4.3.1-dist/js/popper.min.js"></script>
+	</head>
+	<body class="public_bg">
+		<div class="container-fluid wite_bg pt-1 border-bottom header px-0">
+			<div class="top  ">
+				<span class="fa fa-angle-left top_icon pl-2 back"></span>
+				<p class="header-title">物流订单</p>
+			</div>
+		</div>
+		
+		<div id="wrapper" class="container" style="bottom: 0;">
+			<div id="scroller" class="row">
+				<ul class="col-12 order_box">
+					<!--<li class="form-row wite_bg px-1 mt-2 border_3 border">
+						<div class="col-6">
+							<span class="font_4">物流配送</span>
+							<span class="orange_bg font_0 wite border_1">未接单</span>
+						</div>
+						<div class="col-6 text-right">
+							<span class="font_0 border border_1 text-danger">详情</span>
+						</div>
+						<div class="col-12 font_1 text-black-50 border-bottom pb-2">
+							<span>订单号：</span>
+							<span>1283916286577340</span>
+						</div>
+						<div class="col-12 mt-2">
+							<span class="font_6">张小娴</span>
+							<span class="font_6">13020101506</span>
+							<span class="font_3 text-black-50">收</span>
+						</div>
+						<div class="col-12 font_1 text-black-50 border-bottom pb-2">
+							<p>江西省南昌市东湖区三经路12号</p>
+						</div>
+						<div class="col-12 py-2">
+							<div class="form-row font_1 text-black-50">
+								<p class="col-4 ">2019-12-28</p>
+								<p class="col-2 border text-center border_3 mx-1 ">删除</p>
+								<p class="col-2 border text-center border_3 mr-1">取消</p>
+								<p class="col-3 border text-center border_3 green_light border-success">改物流价</p>
+							</div>
+						</div>
+					</li>
+					<li class="form-row wite_bg px-1 mt-2 border_3 border">
+						<div class="col-6">
+							<span class="font_4">物流配送</span>
+							<span class="orange_bg font_0 wite border_1">未接单</span>
+						</div>
+						<div class="col-6 text-right">
+							<span class="font_0 border border_1 text-danger">详情</span>
+						</div>
+						<div class="col-12 font_1 text-black-50 border-bottom pb-2">
+							<span>订单号：</span>
+							<span>1283916286577340</span>
+						</div>
+						<div class="col-12 mt-2">
+							<span class="font_6">张小娴</span>
+							<span class="font_6">13020101506</span>
+							<span class="font_3 text-black-50">收</span>
+						</div>
+						<div class="col-12 font_1 text-black-50 border-bottom pb-2">
+							<p>江西省南昌市东湖区三经路12号</p>
+						</div>
+						<div class="col-12 py-2">
+							<div class="form-row font_1 text-black-50">
+								<p class="col-4 ">2019-12-28</p>
+								<p class="col-2 border text-center border_3 mx-1 ">删除</p>
+								<p class="col-2 border text-center border_3 mr-1">取消</p>
+								<p class="col-3 border text-center border_3 green_light border-success">改物流价</p>
+							</div>
+							
+						</div>
+					</li>-->
+				</ul>
+				<div class="pull-loading" style="display: none;">
+						上拉加载更多
+					</div>
+			</div>
+		</div>
+		<div class="modal fade " id="delte_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class=" p-1 mt-2 col-2 offset-5 text-center">提示</div>
+					<div class="modal-body p-0">
+						<p class="font_2 font_weight text-center">是否确认删除订单</p>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn line_orange click_btn delte_btn" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#comfirm">确定</button>
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn line_orange click_btn" style="opacity: 0.5;" data-dismiss="modal" aria-label="Close">取消</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="dowm_away" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class=" p-1 mt-2 col-2 offset-5 text-center">提示</div>
+					<div class="modal-body p-0">
+						<p class="font_2 font_weight text-center">是否确认下架订单</p>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn line_orange click_btn down_btn" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#comfirm">确定</button>
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn line_orange click_btn" style="opacity: 0.5;" data-dismiss="modal" aria-label="Close">取消</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="put_away" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class=" p-1 mt-2 col-2 offset-5 text-center">提示</div>
+					<div class="modal-body p-0">
+						<p class="font_2 font_weight text-center">是否确认上架订单</p>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn line_orange click_btn put_btn" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#comfirm">确定</button>
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn line_orange click_btn" style="opacity: 0.5;" data-dismiss="modal" aria-label="Close">取消</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="trans_price" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class=" p-1 mt-2 col-6 offset-3 text-center text-black-50">改物流金额</div>
+					<div class="modal-body text-center ">
+						<div class="form-row border-bottom font_5 text-danger font_weight" style="line-height: 1.55rem;">
+							<input type="text" class="font_2 col-6 offset-1 font_weight text-right form-control text-danger trans_price" oninput="clearNoNum(this)">
+							<span>元</span>
+						</div>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn line_orange click_btn" style="opacity: 0.5;" data-dismiss="modal" aria-label="Close">取消</button>
+						
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn line_orange click_btn trans_btn" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#comfirm">确定</button>
+						
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>	
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/iscroll.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="js/physical_orders.js"></script>
+	<script>
+	
+		
+	</script>
+</html>

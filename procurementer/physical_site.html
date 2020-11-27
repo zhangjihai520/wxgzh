@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+	</head>
+	<body class="public_bg">
+		<div class="container-fluid pt-1 wite_bg border-bottom px-0">
+			<div class="top black">
+				<span class=" fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<!--<p class="header-title">所有订单</p>-->
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 mt-2">
+					<div class="form-row wite_bg border-bottom ">
+						<div class="col-6  border-right my-2">
+							<p class="ml-2 font_1 text-muted">联系人</p>
+							<div class="input-group input-group-sm">
+								<input type="text" class="form-control font_3 border-white contant_name" placeholder="请输入">
+							</div>
+						</div>
+						<div class="col-6  my-2">
+							<p class="ml-2 font_1 text-muted">电话</p>
+							<div class="input-group input-group-sm">
+								<input type="text" class="form-control font_3 border-white contant_phone" onkeyup="Number_num(this)" placeholder="请输入">
+							</div>
+						</div>
+					</div>
+					<div class="form-row wite_bg pt-2 border-bottom">
+						<p class="col-12 font_1 text-muted ml-2">选择省市区</p>
+						<div class="input-group input-group-sm">
+							<input type="text" class="form-control font_2 border-white  checke_address" readonly="readonly" placeholder="请选择地址" onclick="toshare()">
+						</div>
+					</div>
+					<div class="form-row wite_bg pt-2 border-bottom pb-2">
+						<p class="col-12 font_1 text-muted ml-2">详细地址</p>
+						<div class="input-group input-group-sm">
+							<input type="text" class="form-control font_2 border-white detail_site" placeholder="请输入详细地址(门牌号)">
+						</div>
+					</div>
+					<div class="form-row wite_bg pt-2 pb-2"></div>
+				</div>
+				<div class="col-12">
+					<div class="form-row">
+						<button class="btn btn-sm line_orange click_btn wite col-12 mt-5">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+		<div class="am-share ">
+			<h3 class="am-share-title">选择地区</h3>
+			<ul class="am-share-sns">
+				
+			</ul>
+			<div class="am-share-footer"><button class="share_btn">取消</button></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="js/physical_site.js"></script>
+</html>

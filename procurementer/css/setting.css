@@ -1,0 +1,48 @@
+body{
+	background: #FAF5F7;
+}
+
+.set_contant{
+	margin-top: 0.5rem;
+	background:#FFFFFF; 
+}
+.set_photo{
+	height: 4rem;
+}
+.setList_title,.set_name{
+	font-size: 0.65rem;
+	line-height: 4rem;
+	color: #666666;
+}
+.set_img{
+	height: 2.25rem;
+	padding:10px;
+	border-radius: 50%;
+	margin-top:0.5rem;
+}
+.img{
+	width: 100%;
+}
+.photo_icon,.set_icon{
+	font-size:1rem;
+	line-height: 4rem;
+	text-align: right;
+	color: #666666;
+}
+.set_item{
+	height: 2.25rem;
+	border-top: 1px solid #EBEBEB;
+}
+.set_name{
+	line-height:2.25rem;
+}
+.set_icon{
+	line-height:2.25rem;
+}
+.cancel_btn{
+	color: #FFFFff;
+	margin-top: 3rem;
+}
+.cancel_btn:focus{
+	color: #FFFFFF;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<!--在IE运行最新的渲染模式-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+		<title>设置</title>
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="../cycling_wear/css/setuppager.css" />
+		<script src="../js/jquery.min.js?v=2.1.1"></script>
+		<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 px-1 border-bottom pb-0 pt-1" id="navigationBar">
+					<div class="form-row">
+						<a class="fa fa-angle-left top_icon pl-2 black nav_icon back"></a>
+						<div class="navigationBarText font_weight pt-1">
+							设置
+						</div>
+					</div>
+				</div>
+
+				<div class="public_bg publicLeft-Right mt-1">
+					<div class="d-flex bd-highlight align-items-center">
+						<div class="text1 flex-grow-1 bd-highlight">头像</div>
+						<img id="avatarImage" class="Headportrait bd-highlight" src="" />
+						<input type="file" class="file">
+						<div class="fa fa-angle-right bd-highlight ml-2"></div>
+					</div>
+				</div>
+				<div class="public_bg">
+					<div class="d-flex bd-highlight align-items-center pt-2 pb-2" data-toggle="collapse" href="#multiCollapseExample1"
+					 aria-expanded="false" aria-controls="multiCollapseExample1" id="aboutus">
+						<div class="text1 flex-grow-1 bd-highlight">关于我们</div>
+						<div class="fa fa-angle-right bd-highlight ml-2" id="aboutusicon"></div>
+					</div>
+					<div class="collapse multi-collapse" id="multiCollapseExample1">
+						<div class="d-flex flex-column bd-highlight">
+							<div class="publicLeft-Right text1 flex-grow-1 bd-highlight border-top pt-2 pb-2 bg-light" id="brief-introduction">优易油网
+							</div>
+							<div class="publicLeft-Right text1 flex-grow-1 bd-highlight border-top pt-2 pb-2 bg-light" id="user-agreement">用户协议
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="public_bg">
+					<div class="d-flex bd-highlight align-items-center pt-2 pb-2" data-toggle="collapse" href="#multiCollapseExample2"
+					 aria-expanded="false" aria-controls="multiCollapseExample2" id="aboutusT">
+						<div class="text1 flex-grow-1 bd-highlight">修改订单收货款方式</div>
+						<div class="fa fa-angle-right bd-highlight ml-2" id="aboutusicon"></div>
+					</div>
+					<div class="collapse multi-collapse" id="multiCollapseExample2">
+						<div class="d-flex flex-column bd-highlight">
+							<div class="publicLeft-Right text1 flex-grow-1 bd-highlight border-top pt-2 pb-2 bg-light  platform" id="0">平台代收
+							</div>
+							<div class="publicLeft-Right text1 flex-grow-1 bd-highlight border-top pt-2 pb-2 bg-light  gysform" id="1">供应商直收
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="public_bg publicLeft-Right">
+					<div class="d-flex bd-highlight align-items-center pt-2 pb-2" id="updatePass">
+						<div class="text1 flex-grow-1 bd-highlight" >修改密码</div>
+						<div class="fa fa-angle-right bd-highlight ml-2"></div>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="d-flex pl-2 pr-2 mt-5">
+				<button type="button" class="btn text-white w-100" id="buttonstyle">注销登录</button>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom" style="z-index: 9999 !important;" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="js/supplier_setting.js"></script>
+</html>

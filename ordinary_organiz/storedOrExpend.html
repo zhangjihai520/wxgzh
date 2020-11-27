@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--在IE运行最新的渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <title>更多支出和储值</title>
+    <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+    <link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+    <link rel="stylesheet" href="../css/public.css" />
+    <link rel="stylesheet" href="../css/organization.css" />
+    <script src="../js/jquery.min.js?v=2.1.1"></script>
+    <script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/util.js"></script>
+    <style>
+        .spendingRanking {
+            width: 90%;
+            margin-left: 5%;
+            margin-top: 5px;
+            font-size: 4vw;
+        }
+        .rankingColor {
+            color: #F20C23;
+        }
+        .rankingMoneyColor {
+            color: #FF6E00;
+        }
+        .randing div {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+    <script>
+        $(function () {
+            //返回
+            $(".break").click(function () {
+                page_back();
+            });
+           if (get_localStorage("storedOrExpend") == 1) {
+               $(".navigationBarText").text("支出");
+           } else {
+               $(".navigationBarText").text("储值记录");
+           }
+        });
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 pt-1" id="navigationBar">
+                <div class="form-row">
+                    <div class="break col-1 px-0">
+                       <span class=" fa fa-angle-left nav_icon orange"></span>
+                    </div>
+                   <div class=" col-10 font_5 mt-2 text-center orange font_weight">
+                       		 支出
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-row">
+                    <div class="spendingRanking">
+                        <div class="form-row randing">
+                            <div class="col-8">
+                                <span class="rankingColor">1</span>
+                                <span>王师傅</span> 
+                            </div>
+                            <div class="col-4 text-right rankingMoneyColor">
+                                3000
+                            </div>
+                            <div class="col-8">
+                                <span class="rankingColor">2</span> 王师傅
+                            </div>
+                            <div class="col-4 text-right rankingMoneyColor">
+                                2600
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--在IE运行最新的渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <title>充值</title>
+    <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+    <link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+    <link rel="stylesheet" href="../css/public.css" />
+    <link rel="stylesheet" href="../css/organization.css" />
+    <link rel="stylesheet" href="css/recharge.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 pr-1" id="navigationBar">
+                <div class="form-row">
+                    <div class="break">
+                       <span class=" fa fa-angle-left nav_icon orange"></span>
+                    </div>
+                    <div class="navigationBarText">
+                        充值
+                    </div>
+                    <div class="disclaimer font_1 text-muted">
+                        免责声明
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 px-0" id="moneyNum">
+                <div class="form-row" id="">
+                    <div class="col-3 offset-1">金额(￥)</div>
+                    <div class="col-6">
+                        <input type="text" class="moneyNum re_money col-12" placeholder="请输入充值金额"  maxlength="9" oninput ="clearNoNum(this)">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12  px-0 checkPay checkPayTip" style="margin-top: 10px">
+                支付方式
+            </div>
+            <div class="col-12 px-0 checkPay" style="margin-top: 2px">
+                <div class="form-row">
+                    <div class="wxIcon"><img src="img/wx.png"></div>
+                    <div class="patternPayment">微信支付</div>
+                    <div class="checkWX"><input type="radio" checked></div>
+                </div>
+            </div>
+            <div class="col-10 offset-1 orange_bg" id="affirm" data-toggle="modal" data-target="#exampleModalCenter">
+                确认充值
+            </div>
+        </div>
+    </div>
+	<div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered " role="document">
+			<div class="modal-content pb-4">
+				<div class=" p-1 mt-2 col-2 offset-5 text-center">提示</div>
+				<div class="modal-body p-0">
+					<p class="font_2 font_weight text-center">是否确认充值</p>
+				</div>
+				<div class="row m-0 p-0">
+					<button type="button" class="btn btn-sm col-3 mt-3 offset-2 orange_bg click_btn  wite  false_btn" data-dismiss="modal" aria-label="Close">否</button>
+					<button type="button" class="btn btn-sm col-3 mt-3 offset-2 orange_bg click_btn wite  true_btn" data-dismiss="modal" aria-label="Close">是</button>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+    <div class="toast text-center fixed-bottom" style="" role="alert" aria-live="polite" aria-atomic="true"
+         data-delay="1000">
+        <div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+    </div>
+</body>
+<script src="../js/jquery.min.js?v=2.1.1"></script>
+<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+<script src="../js/util.js"></script>
+<script src="../js/public.js"></script>
+<script src="js/recharge.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+</html>

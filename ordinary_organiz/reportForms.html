@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<!--在IE运行最新的渲染模式-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+		<title>月报表</title>
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../plugins/dateModel/css/htmleaf-demo.css">
+		<link rel="stylesheet" href="../css/iScroll.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="../css/organization.css" />
+		<link rel="stylesheet" href="css/reportForms.css" />
+
+	</head>
+
+	<body>
+		<div class="container-fluid title_contanier">
+			<div class="row">
+				<div class="col-12 px-0 pt-1" id="navigationBar">
+					<div class="form-row  pl-2 title">
+						<div class="break col-1">
+							<span class=" fa fa-angle-left nav_icon orange"></span>
+						</div>
+						<div class=" col-10 font_5 mt-2 text-center orange font_weight">
+							月报表
+						</div>
+					</div>
+				</div>
+				<div class="col-12 px-0" id="getMonth">
+					<div class="form-row">
+						<div class="col-3" style="margin-left: 5%" id="dateNow"></div>
+						<div class="col-4" id="subscript">
+							<div class="form-row">
+								<div class="col-2"><img src="img/downward.png"></div>
+							</div>
+						</div>
+						<div class="checkStatement uncheckStatement disburse" style="margin-left: 3%" id="1">支出</div>
+						<div class="uncheckStatement" style="margin-left: 5%" id="2">储值</div>
+					</div>
+				</div>
+				<div class="col-12" id="formDetails">
+					<div class="form-row">
+						<div class="col-10 reportFormLeft" id="expend">
+							<span class="total_title">本月支出</span>
+							<span class="fo_pay_num"></span>
+							<span>笔，合计</span>
+						</div>
+						<div class="col-10 reportFormLeft" id="expendDetails">
+							<span class="money"></span>
+						</div>
+						<div id="histogram" class="pl-0">
+
+						</div>
+						<div class="col-12">
+							<div class="form-row">
+								<div class="spendingRanking">
+									<div class="form-row" style="color: #999999;margin-bottom: 10px">
+										<div class="col-8" id="storedOrExpend">
+											支出排行榜
+										</div>
+										<div class="col-4" id="moreRanking">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="wrapper" class="wite_bg" style="min-height: 50vw;" >
+			<div id="scroller" class="container px-2 ">
+				<ul class="row mx-0 form_box ">
+					<!--<li class="col-12">
+						<div class="form-row randing">
+							<div class="col-8">
+								<span class="rankingColor">2</span> 王师傅
+							</div>
+							<div class="col-4 text-right rankingMoneyColor">
+								2600
+							</div>
+						</div>
+					</li>
+					<li class="col-12">
+						<div class="form-row randing">
+							<div class="col-8">
+								<span class="rankingColor">2</span> 王师傅
+							</div>
+							<div class="col-4 text-right rankingMoneyColor">
+								2600
+							</div>
+						</div>
+					</li>
+					<li class="col-12">
+						<div class="form-row randing">
+							<div class="col-8">
+								<span class="rankingColor">2</span> 王师傅
+							</div>
+							<div class="col-4 text-right rankingMoneyColor">
+								2600
+							</div>
+						</div>
+					</li>-->
+				</ul>
+				<div class="pull-loading ">
+					上拉加载更多
+				</div>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true"
+		 data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../plugins/dateModel/js/rolldate.min.js"></script>
+	<script src="../plugins/histogram/echarts.min.js"></script>
+	<script src="../js/iscroll.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="js/reportForms.js"></script>
+
+</html>

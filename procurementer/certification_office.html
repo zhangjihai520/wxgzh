@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/swiper-3.3.1.min.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/certification_office.css" />
+	</head>
+
+	<body class="public_bg">
+		<div class="container-fluid wite_bg pt-1 px-0 border-bottom">
+			<div class="top black ">
+				<span class="fa fa-angle-left top_icon pl-2"  onclick="page_back()"></span>
+				<p class="header-title">企业认证</p>
+			</div>
+		</div>
+		<div class="container wite_bg">
+			<div class="row status_box">
+				<div class="col-12 row  m-0 is_status pt-3 pb-4">
+					<div class="col-4 text-center px-2 offset-4">
+						<img class="stutas_img rounded-circle" src="" alt=""  style="width: 2.6rem;height: 2.6rem;"/>
+					</div>
+					<p class="col-12 p-0 m-0 font_2 text-center mt-2 status_text"></p>
+				</div>
+			</div>
+
+		</div>
+		<div class="container wite_bg mt-2 ">
+			<div class="row">
+				<form class="col-12 login_form m-0 p-0">
+					<div class="input-group input-group-md  border-bottom py-1">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text fa fa-asterisk public_style px-1"></span>
+						</div>
+						<div class="input-group-prepend">
+							<span class="input-group-text public_style px-0">公司全称：</span>
+						</div>
+						<input type="text" class="form-control public_style" placeholder="请输入" id="company_name">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text  fa fa-angle-right public_style pr-2"></span>
+						</div>
+					</div>
+					<div class="input-group input-group-md  border-bottom py-1">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text fa fa-asterisk public_style px-1"></span>
+						</div>
+						<div class="input-group-prepend">
+							<span class="input-group-text public_style px-0">统一社会信用代码：</span>
+						</div>
+						<input type="text" class="form-control public_style" onkeyup="number_eng(this)" placeholder="请输入" id="uscc">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text  fa fa-angle-right public_style pr-2"></span>
+						</div>
+					</div>
+					<div class="input-group input-group-md  border-bottom py-1">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text fa fa-asterisk public_style px-1"></span>
+						</div>
+						<div class="input-group-prepend">
+							<span class="input-group-text public_style px-0">联系人：</span>
+						</div>
+						<input type="text" class="form-control public_style" placeholder="请输入" id="contact">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text  fa fa-angle-right public_style pr-2"></span>
+						</div>
+					</div>
+					<div class="input-group input-group-md  border-bottom py-1">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text fa fa-asterisk public_style px-1"></span>
+						</div>
+						<div class="input-group-prepend">
+							<span class="input-group-text public_style px-0" >联系电话：</span>
+						</div>
+						<input type="text" class="form-control public_style" onkeyup="Number_num(this)" placeholder="请输入" id="contact_tel">
+						<div class="input-group-prepend icon_box pr-2 border-left getcode_box">
+							<button type="button" class="input-group-text  wite_bg border-0 font_1 get_code text-muted " >获取验证码</button>
+						</div>
+					</div>
+					<div class="input-group input-group-md  border-bottom py-1 code_box">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text fa fa-asterisk public_style px-1"></span>
+						</div>
+						<div class="input-group-prepend">
+							<span class="input-group-text public_style px-0">验证码：</span>
+						</div>
+						<input type="text" class="form-control public_style" placeholder="请输入" id="code">
+						
+					</div>
+					<div class="input-group input-group-md  border-bottom py-1">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text fa fa-asterisk public_style px-1"></span>
+						</div>
+						<div class="input-group-prepend">
+							<span class="input-group-text public_style px-0">选择地址：</span>
+						</div>
+						<input type="text" class="form-control public_style checke_address" onclick="toshare()" readonly="readonly" placeholder="请选择">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text  fa fa-angle-right public_style pr-2"></span>
+						</div>
+					</div>
+					<div class="input-group input-group-md  border-bottom py-1">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text fa fa-asterisk public_style px-1"></span>
+						</div>
+						<div class="input-group-prepend">
+							<span class="input-group-text public_style px-0">详细地址：</span>
+						</div>
+						<input type="text" class="form-control public_style " placeholder="只填写路段、门牌号" id="address">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text  fa fa-angle-right public_style pr-2"></span>
+						</div>
+					</div>
+					<div class="input-group input-group-md  border-bottom py-1">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text fa fa-asterisk public_style px-1"></span>
+						</div>
+						<div class="input-group-prepend">
+							<span class="input-group-text public_style px-0">开户银行名称：</span>
+						</div>
+						<input type="text" class="form-control public_style" placeholder="请输入" id="bankNode">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text  fa fa-angle-right public_style pr-2"></span>
+						</div>
+					</div>
+					<div class="input-group input-group-md  border-bottom py-1">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text fa fa-asterisk public_style px-1"></span>
+						</div>
+						<div class="input-group-prepend">
+							<span class="input-group-text public_style px-0">开户银行账户名称：</span>
+						</div>
+						<input type="text" class="form-control public_style" placeholder="请输入" id="bankUsername">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text  fa fa-angle-right public_style pr-2"></span>
+						</div>
+					</div>
+					<div class="input-group input-group-md  border-bottom py-1">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text fa fa-asterisk public_style px-1"></span>
+						</div>
+						<div class="input-group-prepend">
+							<span class="input-group-text public_style px-0">开户银行账号：</span>
+						</div>
+						<input type="text" class="form-control public_style" onkeyup="Number_num(this)" placeholder="请输入" id="bankAccount">
+						<div class="input-group-prepend icon_box ">
+							<span class="input-group-text  fa fa-angle-right public_style pr-2"></span>
+						</div>
+					</div>
+					
+					<div class="clearfix"></div>
+					<div class="row col-12 m-0 p-0">
+						<p class="col-12 font_3 font_weight py-3 px-3 base">基础认证:</p>
+						<div class="col-12 row m-0 pb-3">
+							<div class=" col-4 text-center pl-1">
+								<div id="preview">
+									<img id="imghead" src="img/aprove_01.png" alt="" border="0" width="90" height="90">
+								</div>
+								<input type="file" name="businessLicenceImage" style="display: none;" id="previewImg">
+								<!--<p class="clear_img">取消</p>-->
+								<p class=" clear_img fa fa-trash clear_preview" ></p>
+								<p class="font_1 orange mt-1">营业执照</p>
+							</div>
+							<div class=" col-4 text-center pl-1">
+								<div id="article">
+									<img id="articleHead" src="img/aprove_01.png" alt="" border="0" width="90" height="90">
+								</div>
+								<input type="file" name="chemiclaLicenceImage" style="display: none;" id="articleImg">
+								<p class=" clear_img fa fa-trash clear_article"></p>
+								<p class=" font_1 orange mt-1">危险化学品经营许可证</p>
+							</div>
+							<div class=" col-4 text-center pl-1">
+								<div id="article">
+									<img id="oilsaleHead" src="img/aprove_01.png" alt="" border="0" width="90" height="90">
+								</div>
+								<input type="file" name="wholesaleLicenceImage" style="display: none;" id="oilsaleImg">
+								<p class=" clear_img fa fa-trash clear_oilsale"></p>
+								<p class=" font_1 orange mt-1">成品油批发许可证</p>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="container my-2 pt-1">
+			<div class="row">
+				<button type="button" class="btn  btn-sm wite col-10 offset-1 click_btn line_orange report_data">提交资料</button>
+			</div>
+		</div>
+		<div class="am-share ">
+			<h3 class="am-share-title">选择地区</h3>
+			<ul class="am-share-sns">
+				<li>南昌</li>
+				<li>南昌</li>
+			</ul>
+			<div class="am-share-footer"><button class="share_btn">取消</button></div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/img_resize.js"></script>
+	<script src="js/certification_office.js"></script>
+</html>

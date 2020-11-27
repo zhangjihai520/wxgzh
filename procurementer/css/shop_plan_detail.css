@@ -1,0 +1,25 @@
+.plan_item{
+	border: 1px solid #FFE4CC;
+}
+.tag{
+	height: 1rem;
+	background: #FFE9D6;
+	border-bottom-right-radius:0.5rem;
+	font-size: 0.7rem;
+	color: #FF6E00;
+}
+
+.color-6{
+	color:#666666 ;
+}
+.fa-circle{
+	color: #17A2B8;
+}
+.goods_name,.site_name{
+	font-weight: bolder;
+}
+.finsh_btn{
+	height: 1.8rem;
+	color: #FFFFFF;
+}
+

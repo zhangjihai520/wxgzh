@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../css/swiper-3.3.1.min.css" />-->
+		<link rel="stylesheet" href="../css/iScroll.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/purchasing.css" />
+		<script src="../bootstrap-4.3.1-dist/js/popper.min.js"></script>
+	</head>
+
+	<body class="public_bg">
+		<header class="container header orange_bg ">
+			<div class="d-flex flex-row justify-content-between pt-2 pb-2 seach_box">
+				<div class="input-group search_box ">
+					<input type="text" class="form-control  search_input in_focus" style="border-left-radius: 50% !important;" id="name" placeholder="请输入搜索内容">
+					<button class="btn btn-xs search_btn in_focus" id="search" type="button">搜索</button>
+				</div>
+				<div class="d-flex flex-row pl-2">
+					<span class="iconfont icongouwuchekong buy_icon" onclick="go_page('shopping_cart.html')"></span>
+					<span id="cartCount" class="badge badge-danger p-1" style="vertical-align: super;font-size: 0.5rem;height: 0.8rem;width: auto;margin-left: -0.3rem;line-height: 0.5;">0</span>
+				</div>
+
+			</div>
+		</header>
+		<div class="container shadow bg-white rounded title_box">
+			<div class="row title_row" style="height: 2.5rem;">
+				<div class="btn-group col-3 row m-0 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<button type="button" id="oiOilText" class="btn in_focus  dropdown-toggle p-0 m-0" style="width: 10vw !important;">95#</button>
+					<div class="dropdown-menu" style="min-width: 100%;" id="oiOil">
+						<div class="p_box row col-12 p-1 m-0" id="oiOilComment">
+
+						</div>
+					</div>
+				</div>
+				<div class="btn-group col-3 row m-0 p-0">
+					<button type="button" id="oilTypeText" class="btn  dropdown-toggle in_focus col-12 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 中石油</button>
+					<div class="dropdown-menu p-1 m-0" style="min-width: 100%;" id="oilType">
+						<div class=" row col-12 p-0 m-0">
+							<p class="col-12 mt-1 p-0 product_item type_active oilType">中石油</p>
+							<input type="hidden" value="1">
+							<p class="col-12 mt-1 p-0 product_item">中石化</p>
+							<input type="hidden" value="2">
+							<p class="col-12 mt-1 p-0 product_item">中海油</p>
+							<input type="hidden" value="3">
+							<p class="col-12 mt-1 p-0 product_item">民营</p>
+							<input type="hidden" value="4">
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-3" id="price">
+					<div class="form-row">
+						<div class="search_price col-6 text-right p-0">价格</div>
+						<div class="col-4 checkIcon">
+							<img src="img/uncheck.png">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-3 px-2" id="addressCheck" data-toggle="modal" data-target="#exampleModalCenter">
+					<div class="form-row">
+						<div class="search_price col-7 text-right p-0">到货价</div>
+						<div class="col-4 checkIcon">
+							<img src="img/uncheck.png">
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-12 font_3 pt-2 pb-2" id="priceTip">
+					当前价格包含了物流价格
+				</div>
+			</div>
+		</div>
+
+		<div id="wrapper" class="public_bg mt-2">
+			<div id="scroller" class="container px-2">
+				<ul class="row mx-0" id="dataList">
+					<!--<li class="col-12 my-2 pb-2 border-2 list-group-item">
+						<div class="form-row ">
+							<input type="hidden" class="osOilstoreId" value="'+ rowData">
+							<input type="hidden" class="osOilstoreId" value="'+ rowData+'">
+							<div class="col-12 mt-2 ">
+								<div class="form-row">
+									<div class="col-4 mt-3 logoUrl">
+										<img src="img/add_station_operation1.png" alt="" class="product_img" />
+									</div>
+									<div class="col-8 text-left mt-3">
+										<p class="station_name">中石油南昌昌北油库</p>
+										<p class="font_1 mt-1 gray_color">近期成交200吨</p>
+										<p class="price mt-2 font_4">￥20000元/吨</p>
+									</div>
+									<p class="col-12 text-right mt-2 font_1 gray_color">江西 南昌</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="col-12  pb-2 border-2">
+						<div class="form-row">
+							<input type="hidden" class="osOilstoreId" value="'+ rowData">
+							<input type="hidden" class="osOilstoreId" value="'+ rowData+'">
+							<div class=" col-12   mt-2 ">
+								<div class="form-row">
+									<div class="col-4 mt-3 logoUrl">
+										<img src="img/add_station_operation1.png" alt="" class="product_img" />
+									</div>
+									<div class="col-8 text-left mt-3">
+										<p class="station_name">中石油南昌昌北油库</p>
+										<p class="font_1 mt-1 gray_color">近期成交200吨</p>
+										<p class="price mt-2 font_4">￥20000元/吨</p>
+									</div>
+									<p class="col-12 text-right mt-2 font_1 gray_color">江西 南昌</p>
+								</div>
+							</div>
+						</div>
+					</li>-->
+				</ul>
+				<div class="pull-loading ">
+					上拉加载更多
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content fixed-bottom pb-2">
+					<div class="modal-header p-1">
+						<!--<div class="col-3 text-center" style="color: #8A8A8A;" data-dismiss="modal" aria-label="Close">-->
+							<!--<span class="fa fa-times-circle"></span>-->
+							<!--<p class="font_1">清除</p>-->
+						<!--</div>-->
+						<div class="sortByDestinationParent ml-2">
+							<img class="sortByDestination" src="img/getOn.png">
+							<p class="font_1" style="color: #9F9F9F;text-indent: 0.8vw;">升序</p>
+						</div>
+						<div class="col-2 orange text-center add_site p-0" data-dismiss="modal" aria-label="Close">
+							<span class="fa fa-plus-circle"></span>
+							<p class="font_1">添加</p>
+						</div>
+					</div>
+					<div class="modal-body p-0" id="buAddress">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1">
+							<label class="form-check-label" for="exampleRadios1"></label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2">
+							<label class="form-check-label" for="exampleRadios2"></label>
+						</div>
+					</div>
+					<button type="button" id="confirmBuAddress" class="btn btn-sm col-4 mt-3 offset-4 orange_bg wite modal_btn click_btn" data-dismiss="modal" aria-label="Close">确定</button>
+
+				</div>
+			</div>
+		</div>
+		<div class="fixed-bottom nav_bottom container shadow-lg bg-white rounded">
+			<ul class="row mt-1">
+				<li class="col-3 text-center " onclick="go_page('purchasing.html')">
+					<div class="footer_item ">
+						<img src="img/procurement_0.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom change_active">超市</p>
+					</div>
+				</li>
+				<li class="col-3 text-center" onclick="go_page('shopping_plan.html')">
+					<div class="footer_item ">
+						<img src="img/plan.png" alt=""  class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom">购油</p>
+					</div>
+				</li>
+				<li class="col-3 text-center" >
+					<div class="footer_item physical_want">
+						<img src="img/physical.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom">物流</p>
+					</div>
+				</li>
+				<li class="col-3  text-center" onclick="go_page('my_user.html')">
+					<div class="footer_item ">
+						<img src="img/myself.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom">我的</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="toast text-center fixed-bottom" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/iscroll.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="js/purchasing.js"></script>
+
+</html>

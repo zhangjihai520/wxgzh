@@ -1,0 +1,169 @@
+	<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/shopping_plan_recommend.css" />
+		<script src="../bootstrap-4.3.1-dist/js/popper.min.js"></script>
+	</head>
+
+	<body class="public_bg">
+		<div class="container-fluid wite_bg px-0">
+			<div class="top black pt-1">
+				<span class=" fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<p class="header-title">推荐明显</p>
+			</div>
+		</div>
+		<div class="container recommend_box px-2">
+			<!-- <div class="row m-0 shadow-sm bg-white wite_bg mt-2 recommend_item pb-4">
+				<div class="col-12 row p-0 m-0">
+					<div class="row col-12">
+						<p class="col-2 tag text-center">1</p>
+					</div>
+					<div class="col-12 row color-6 font_2 mt-3">
+						<span class=" px-1 py-1 fa fa-map-marker"></span>
+						<span class="col-3 px-0 font_2 font_color">收货地址：</span>
+						<span class="col-8 px-0 site_name black">江西南昌东湖区120号</span>
+					</div>
+					<div class="col-12 mt-2 py-1 font_1 px-0">
+						<span class="fa fa-circle px-1 "></span>
+						<span class="color-6 font_color">油品详情</span>
+					</div>
+					<div class="col-12 row m-0 p-0 mt-2 py-1">
+						<div class="col-3 goods_item text-center border-right">
+							<p class="goods_name font_4 font_weight orange">92#</p>
+							<p class="goods_no font_1 mt-1"><span class="g_no">50</span>吨</p>
+						</div>
+						<div class="col-3 goods_item text-center  border-right">
+							<p class="goods_name font_4 font_weight orange">92#</p>
+							<p class="goods_no font_1 mt-1"><span class="g_no">500</span>吨</p>
+						</div>
+						<div class="col-3 goods_item text-center  border-right">
+							<p class="goods_name font_4 font_weight orange">92#</p>
+							<p class="goods_no font_1 mt-1"><span class="g_no">500</span>吨</p>
+						</div>
+						<div class="col-3 goods_item text-center  border-right">
+							<p class="goods_name font_4 font_weight orange">92#</p>
+							<p class="goods_no font_1 mt-1"><span class="g_no">500</span>吨</p>
+						</div>
+					</div>
+					<div class="col-12 row color-6 font_2 mt-3">
+						<span class=" px-1 py-1 fa fa-map-marker"></span>
+						<span class="col-3 px-0 font_color">收货地址：</span>
+						<span class="col-8 px-0 site_name black">江西南昌东湖区120号</span>
+					</div>
+					<div class="col-12 mt-2 py-1 font_1 px-0">
+						<span class="fa fa-circle px-1 "></span>
+						<span class="color-6 font_color">总费用：</span>
+						<span class="total_money font_5">2100元</span>
+						<span class="detail_money font_2 font_color">(商品：<span class="goods font_1">2000元</span>+物流<span class="physical font_1">1000元</span>)</span>
+					</div>
+					<div class="col-12 row mt-3 choose_time">
+						<p class="col-4 font_1 pr-0" style="line-height: 1.6rem;">到货时间：</p>
+						<input readonly class="col-6 drop_time laydate-icon form-control" type="text" id="layDate_item" placeholder="请选择到货时间">
+						<span class="col-2 fa fa-calendar  time_icon"></span>
+					</div>
+				</div>
+			</div> -->
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12   input-group input-group-md py-2 physical_box" data-toggle="collapse" href="#" aria-expanded="false" aria-controls="collapseTwo">
+					<div class="input-group-prepend">
+						<span class="input-group-text font_1 border-white"> <span class=" fa fa-circle icons pr-1" ></span> 物流方式：</span>
+					</div>
+					<input type="text" class="form-control font_1 physical_type" value="物流配送" readonly="readonly">
+				</div>
+			</div>
+			<div class="row wite_bg m-0 p-0 collapse input-group input-group-md py-2" id="physcial_type">
+				<div class="col-12">
+					<div class="row ">
+						<div class="col-5 input-group-prepend">
+							<span class="input-group-text font_1 border-white physical_style">物流配送</span>
+						</div>
+						<div class="col-1  offset-5 text-right mt-2">
+							<p class="rounded-circle check_active physical_icon"></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="col-12 border-bottom"></div>
+				</div>
+				<div class="col-12">
+					<div class="row">
+						<div class="col-5 input-group-prepend">
+							<span class="input-group-text font_1 border-white physical_style">上门自提</span>
+						</div>
+						<div class="col-1  offset-5 text-right mt-2 ">
+							<p class="rounded-circle  physical_icon"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12   input-group input-group-md py-2 pay_box" data-toggle="collapse" href="#pay_type" aria-expanded="false" aria-controls="collapseTwo">
+					<div class="input-group-prepend">
+						<span class="input-group-text font_1 border-white"> <span class=" fa fa-circle icons pr-1" ></span> 支付方式：</span>
+					</div>
+					<input type="text" class="form-control font_1 pay_type" value="货到付款" readonly="readonly">
+				</div>
+			</div>
+			<div class="row wite_bg m-0 p-0 collapse input-group input-group-md py-2" id="pay_type">
+				<div class="col-12">
+					<div class="row ">
+						<div class="col-5 input-group-prepend">
+							<span class="input-group-text font_1 border-white pay_style">货到付款</span>
+						</div>
+						<div class="col-1  offset-5 text-right mt-2">
+							<p class="rounded-circle check_active pay_icon" id="payType_arrive"></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="col-12 border-bottom"></div>
+				</div>
+				<div class="col-12">
+					<div class="row">
+						<div class="col-5 input-group-prepend">
+							<span class="input-group-text font_1 border-white pay_style">银行汇款</span>
+						</div>
+						<div class="col-1  offset-5 text-right mt-2">
+							<p class="rounded-circle pay_icon" id="payType_remittance"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container my-2">
+			<div class="row">
+				<button type="button" class="btn  btn-sm wite col-10 offset-1 line_orange click_btn">去下单</button>
+			</div>
+		</div>
+		<div class="box_ull" style="width: 50%;height: 50%;position: absolute;top: 0;right: 0;bottom: 0;left: 0;margin: auto;display: none;text-align: center;">
+			<img src="img/plan_null.png" alt="" width="25%"/>
+			<p class="text-center font_5 text-muted">暂无数据</p>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../laydate/laydate.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="js/shopping_plan_recommend.js"></script>
+	<script type="text/javascript">
+		
+	</script>
+
+</html>

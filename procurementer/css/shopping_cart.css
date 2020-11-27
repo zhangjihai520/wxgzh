@@ -1,0 +1,122 @@
+.header {
+	height:5.5rem;
+}
+
+.top {
+	padding-top:0.5rem;
+}
+
+.shop_goods{
+	
+	 background: #FFFFFF;
+	 border-top-left-radius:10px; 
+	 border-top-right-radius:10px;
+}
+.product_area{
+	border-bottom: 1px solid #EDEDED;
+	font-size: 0.8rem;
+}
+
+.product{
+	width: 100%;
+	border-bottom: 1px solid #F2F2F2 ;
+}
+
+.product-box .product-ckb {
+	width:1rem;
+	font-size: 0.8rem;
+}
+
+.product-ckb em {
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	border: 1px solid #B8B4B4;
+	display: inline-block;
+}
+.product_img{
+	width: 2.5rem !important;
+	height: 2.5rem !important;
+}
+
+.product-ckb .product-xz {
+	background: url(../img/gouico.png) no-repeat 0 0;
+	background-size: 1rem;
+	border: 0;
+}
+.slogan{
+	font-size: 0.7rem;
+}
+.oil_name{
+	font-size: 0.6rem;
+	color: #8F8F8F;
+}
+.p_item,.pre_price{
+	font-size: 0.65rem;
+}
+.pre_price{
+	color: #FF1D0D;
+	background: #FCF0F2;
+}
+.product-price{
+	font-size: 0.8rem; 
+	line-height: 1.5rem;
+}
+.product_gw{
+	display: flex;
+}
+.product-add,.product-jian{
+	height: 1.5rem; 
+	font-size: 0.9rem;
+	background:#FFFFFF ;
+	border: none;
+	outline: none;
+}
+.product-add:focus,.product-jian:focus{
+	outline: none;
+}
+
+.product-num {
+	text-align: center !important;
+	width:50%;
+	height: 1.5rem;
+	border: none; 
+	font-size: 0.8rem;
+}
+.cost{
+	font-size: 0.8rem;
+	line-height: 1.5rem;
+	padding-right: 5px;
+}
+.check_sigin{
+	margin-top: 0.8rem;
+}
+.check_call{
+	
+	font-size: 0.65rem;
+	line-height: 2.75rem;
+	color: #737373;
+}
+.total_amount{
+	font-size: 0.75rem;
+	line-height: 2.75rem;
+}
+.btn_finsh{
+	height: 2.05rem;
+	border-radius: 2.05rem;
+	background:linear-gradient(to right,#FF8214,#FF5E0D);
+	margin-top: 0.35rem;
+	line-height:0;
+	font-size: 0.75rem;
+}
+.city {
+	font-size: 3.5vw;
+	text-align: right;
+	color: grey;
+	margin-top: 1vw;
+}
+
+.goods_box{
+	position: absolute;
+	top: -12vw;
+}

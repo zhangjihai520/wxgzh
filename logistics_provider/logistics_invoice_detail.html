@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+	</head>
+	<body>
+		<div class="container-fluid  pt-2 pl-0">
+			<div class="top black ">
+				<span class="fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<p class="header-title pl-2">发票详情</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 border-bottom pb-3">
+					<div class="form-row pt-1">
+						<div class="col-12 text-center">
+							<p class="font_6 text-black-50">金额：<span class="orange px-1 font_weight">40000</span>元</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 pt-1">
+					<div class="form-row font_1 py-2 border-bottom">
+						<span class="text-black-50">发票抬头：</span>
+						<span>南昌毛菇科技有限公司</span>
+					</div>
+					<div class="form-row font_1 py-2 border-bottom">
+						<span class="text-black-50">纳税人识别号：</span>
+						<span>6240263200012330</span>
+					</div>
+					<div class="form-row font_1 py-2 border-bottom">
+						<span class="text-black-50">收件人：</span>
+						<span>李先生</span>
+					</div>
+					<div class="form-row font_1 py-2 border-bottom">
+						<span class="text-black-50">短信接收号码：</span>
+						<span>130****4265</span>
+					</div>
+					<div class="form-row font_1 py-1 border-bottom">
+						<div class="input-group input-group-sm">
+							<div class="input-group-prepend">
+								<span class="input-group-text border-0 wite_bg font_1 text-black-50 px-0">邮箱地址：</span>
+							</div>
+							<input type="email" class="form-control password wite_bg  font_1" placeholder="请输入邮箱地址(必填)">
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+		<div class="container mt-5">
+			<div class="row">
+				<button type="button" class="btn  btn-sm click_btn wite line_orange col-10 offset-1 cancel_btn ">确认开票</button>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true"
+		 data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/public.js"></script>
+	 <script src="../js/util.js"></script> 
+	<script src="../toastr-2.1.4/toastr.min.js"></script>
+</html>

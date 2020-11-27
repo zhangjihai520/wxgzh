@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--在IE运行最新的渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <title>团油机构</title>
+    <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+    <link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+    <link rel="stylesheet" href="../plugins/navtree/font/layui.css" />
+    <link rel="stylesheet" href="../css/public.css" />
+    <link rel="stylesheet" href="../css/organization.css" />
+    <link rel="stylesheet" href="css/personnel.css" />
+    <script src="../js/jquery.min.js?v=2.1.1"></script>
+    <script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+    <script src="../plugins/navtree/layui.js"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/util.js"></script>
+    <script src="js/personnel.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!--//弹窗-->
+            <!--用户详情-->
+            <div class="popup" id="personnelDetails" >
+                <div class="form-row">
+                    <div class="marginTopTwenty personnelDetailsComment">
+                        <div class="form-row marginTopFifteen">
+                            <div class="col-10 personnelDetailsConfirm">确认</div>
+                            <div class="col-1 cancel">×</div>
+                            <div class="marginTopFifteen personage">
+                                <div class="form-row personageItem">
+                                    <div class="detailedIcon personageItemIcon"><img src="img/person.png"></div>
+                                    <div class="col-8 inputLeft"><input readonly class="form-control personageItemInput pl-0" type="text" value="张三"></div>
+                                </div>
+                                <div class="form-row personageItem">
+                                    <div class="detailedIcon personageItemIcon"><img src="img/phone.png"></div>
+                                    <div class="col-8 inputLeft"><input readonly class="form-control personageItemInput pl-0" value="1527000000" type="text"></div>
+                                </div>
+                                <div class="form-row personageItem">
+                                    <div class="detailedIcon personageItemIcon"><img src="img/permissionsSet.png"></div>
+                                    <div class="col-7 inputLeft">
+                                        <select class="form-control personageItemInput pl-0">
+                                            <option value="1">权限组1</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-1">
+                                        <img src="img/right.png">
+                                    </div>
+                                </div>
+                                <div class="form-row personageItem delete_people">
+                                    <div class="col-1 offset-1 personageItemIcon"><img src="img/delete.png"></div>
+                                    <div class="col-8 inputLeft"><input readonly class="form-control personageItemInput" type="text" value="删除"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--删除权限组-->
+            <div class="popup" id="deleteJurisdiction">
+                <div class="form-row">
+                    <div class="col-9 offset-2 deleteJurisdictionComment">
+                        <div class="form-row">
+                            <div class="col-12 deleteJurisdictionHint marginTopTwenty">提示</div>
+                            <div class="col-12 marginTopTwenty jurisdictionComment"></div>
+                            <div class="col-12">
+                                <div class="form-row">
+                                    <div class="col-6 cancel jurisdictionDeleteCancel">取消</div>
+                                    <div class="col-6 jurisdictionDeleteConfirm">确定</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--添加权限组-->
+            <div class="popup mx-0" id="addJurisdiction">
+                <div class="form-row mx-0">
+                    <div class="addJurisdiction mx-3" style="font-size: 5vw">
+                        <div class="form-row">
+                            <div class="col-12 text-center" style="color: #8A8A8A;margin-top: 15px">
+                                创建新的权限组
+                            </div>
+                            <div class="col-12">
+                                <input class="text-center setName" type="text" placeholder="请输入权限组组名">
+                            </div>
+                            <div class="col-10 offset-1 jurisdictionDetails">
+                                <div class="form-row">
+                                    <div class="col-12 details">
+                                        <div class="form-row">
+                                            <div class="col-5">最高单笔消费</div>
+                                            <div class="col-6"><input class="single" type="text" placeholder="金额（元）"
+                                                                      oninput = "value=value.replace(/[^\d]/g,'')"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 details">
+                                        <div class="form-row">
+                                            <div class="col-5">最高单日限额</div>
+                                            <div class="col-6"><input class="everyday" type="text" placeholder="金额（元）"
+                                                                      oninput = "value=value.replace(/[^\d]/g,'')"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 details">
+                                        <div class="form-row">
+                                            <div class="col-5">最高每月限额</div>
+                                            <div class="col-6"><input class="monthly" type="text" placeholder="金额（元）"
+                                                                      oninput = "value=value.replace(/[^\d]/g,'')"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 moneyHint">
+                                        最高每月限额>=最高单日限额>=最高单笔消费
+                                    </div>
+                                    <div class="col-12 jurisdictionBtn">
+                                        <div class="form-row">
+                                            <div class="col-3 offset-1 text-center jurisdictionCancel cancel">取消</div>
+                                            <div class="col-3 offset-4 text-center jurisdictionConfirm" id="jurisdictionConfirmAdd">确定</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--//内容-->
+            <div class="col-12 px-0" id="subject">
+            	<div class="form-row pt-1 wite_bg">
+            		<div class="top black col-12">
+						<span class=" fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+						<p class="header-title text-center">人员权限管理</p>
+					</div>
+            	</div>
+                <div class="form-row" style="background: white;margin-top: 5px">
+                        <div class="col-11 aligning">
+                        <div class="form-row" id="jurisdictionTip">
+                            <div class="col-9">
+                                创建的权限组(<span class="group_listNum">0</span>)
+                            </div>
+                            <div class="col-1" id="add"><img src="img/plus.png"></div>
+                            <div class="col-1 more"><img src="img/more.png"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row accessMenu" style="background: white;margin-top: 10px">
+                    <div class="col-11 aligning">
+                        <div class="form-row" style="margin: 10px 0 10px 0;">
+                            <div class="jurisdictionMenu checkMenu text-center allPerson">所有人员</div>
+                            <div class="jurisdictionMenu text-center" style="margin-left: 4vw">权限组</div>
+                            <div class="addPerson">
+                                <img src="img/addPerson.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row" style="background: white;margin-top: 1px;">
+                    <div class="col-11 personDetails">
+
+                        <!-- <div class="form-row marginTopTwenty">
+                            <div class="col-12 personDetailsTip">
+                                <div class="form-row">
+                                    <div class="col-1 first-title">
+                                        <i class="layui-icon layui-icon-triangle-r myicon"></i>
+                                        <i class="layui-icon layui-icon-triangle-d myicon" style="display: none;"></i>
+                                    </div>
+                                    <div class="col-10 first-title">权限组A（<span class="setNum">0</span>）</div>
+                                    <div class="col-1 more"><img src="img/more.png"></div>
+                                    <div class="col-1 deletePerson"><img src="img/delete.png"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 personDetailsText">
+
+                            </div>
+                        </div>
+                        <div class="form-row marginTopTwenty">
+                            <div class="col-12 personDetailsTip">
+                                <div class="form-row">
+                                    <div class="col-1 first-title laYuiIconTop">
+                                        <i class="layui-icon layui-icon-triangle-r myicon"></i>
+                                        <i class="layui-icon layui-icon-triangle-d myicon" style="display: none;"></i>
+                                    </div>
+                                    <div class="col-10 first-title">权限组A（<span class="setNum">2</span>）</div>
+                                    <div class="col-1 more"><img src="img/more.png"></div>
+                                    <div class="col-1 deletePerson"><img src="img/delete.png"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 personDetailsText">
+                                <div class="form-row personTip personText">
+                                    <div class="col-4 text-center">用户名</div>
+                                    <div class="col-7 text-center">每月加油金额（元）</div>
+                                </div>
+                                <div class="form-row personText">
+                                    <div class="col-4 text-center">张某山</div>
+                                    <div class="col-6 text-center">500</div>
+                                    <div class="col-2 text-right personnelDetails">＞</div>
+                                </div>
+                                <div class="form-row personText">
+                                    <div class="col-4 text-center">张某山</div>
+                                    <div class="col-6 text-center">500</div>
+                                    <div class="col-2 text-right personnelDetails">＞</div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12" id="menu">
+                <div class="form-row">
+                    <div class="menu-comment organization-menu uncheck-menu" id="account">
+                        <div class="form-row">
+                            <div class="col-8 offset-2"><img class="menu-icon" src="img/uncheckAccount.png"></div>
+                            <div class="col-12 mt-1">账户</div>
+                        </div>
+                    </div>
+                    <div class="menu-comment organization-menu check-menu" id="personnel">
+                        <div class="form-row">
+                            <div class="col-8 offset-2"><img class="menu-icon" src="img/checkPersonnel.png"></div>
+                            <div class="col-12 mt-1">人员</div>
+                        </div>
+                    </div>
+                    <div class="menu-comment organization-menu uncheck-menu" id="information">
+                        <div class="form-row">
+                            <div class="col-8 offset-2"><img class="menu-icon" src="img/uncheckInformation.png"></div>
+                            <div class="col-12 mt-1">我的</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toast text-center fixed-bottom" style="" role="alert" aria-live="polite" aria-atomic="true"
+         data-delay="1000">
+        <div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+    </div>
+</body>
+</html>

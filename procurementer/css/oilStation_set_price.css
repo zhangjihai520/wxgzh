@@ -1,0 +1,23 @@
+.border{
+	border-color: #FD6B04 !important;
+}
+.collapse_color{
+	background: #FFF7F2 !important;
+
+}
+.input-group-text,.form-control{
+	border: none;
+}
+.input-group,.input-group-text,.form-control{
+	height: 2.5rem !important;
+}
+.form-control:focus{
+	background: #FFF7F2 ;
+	box-shadow:0 0 0 0 #FFFFFF;
+}
+.change_price{
+	background:#FFE0CC;
+	text-align: center;
+	color: #FF6E00;
+	border-radius: 2px;
+}

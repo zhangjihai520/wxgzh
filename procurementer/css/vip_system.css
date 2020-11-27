@@ -1,0 +1,81 @@
+/**进度条样式*/
+
+.proressexternal {
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+	align-items: center;
+}
+
+.proresscontainer {
+	width: 25%;
+	height: 3px;
+	background: #E3E3E3;
+}
+
+.progress {
+	width: 0%;
+	height: 100%;
+	background: #FFBE19;
+}
+
+#p-v {
+	position: absolute;
+	top: -5px;
+	right: 0px;
+}
+
+img {
+	width: 100%;
+}
+
+.break {
+	width: 5%;
+	margin-left: 4%;
+}
+
+.vipimag {
+	width: 6%;
+	margin-bottom: 5px;
+}
+
+.vLine {
+	border-left: solid 2px #F0C7A8;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.item {
+	color: #FFFFFF !important;
+}
+.borders{
+	border-color:#F0C7A8 !important;
+}
+.item_1{
+	height:2.4rem;
+	background: #FFDBBF;
+	border-radius:6px 6px 0px 0px;
+	line-height: 2.4rem;
+	color: #FF7D19;
+}
+
+.item_2{
+	background: #FFB77F;
+}
+.item_3{
+	background: #FFA561;
+}
+.item_4{
+	background: #FF8B33;
+	border-radius:0px 0px 6px 6px;
+}
+.item_5{
+	background:#FF801F;
+	border-radius:0px 0px 6px 6px;
+}
+.Lv{
+	color: #FF0400;
+}
+.rule_item{
+	height:2.4rem;
+	line-height: 2.4rem;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/add_oilStation_list.css" />
+		<script src="../bootstrap-4.3.1-dist/js/popper.min.js"></script>
+	</head>
+
+	<body class="public_bg">
+		<header class="container header wite_bg border-bottom px-2">
+			<div class="top pt-1">
+				<span class="fa fa-angle-left top_icon" style="width:20%;" onclick="page_back()"></span>
+				<p class="header-title " style="width: 60%;">加油站列表</p>
+				<div class="save orange" onclick="go_page('add_oil_station.html')" style="display: none;">
+					<p class=" col-12 text-center  font_3  mx-2" style="line-height:0.9rem;">
+						<span class=" fa fa-plus-circle " style="width: 40%;"></span>
+					</p>
+					<p class="col-12 p-0 text-center mx-2  font_1" style="line-height:0.8rem;">添加加油站</p>
+				</div>
+			</div>
+		</header>
+		<div class="container list_null" style="display: none;">
+			<div class="row shadow-sm bg-white m-0 plan_box pb-4 mt-2">
+				<div class="add_btn col-4 offset-4 mt-4">
+					<p class="add_icon text-center mx-3"></p>
+					<p class="text-center black" style="font-size: 0.7rem;">添加加油站</p>
+				</div>
+			</div>
+		</div>
+		<div class="container oil_list">
+			<!--<div class="row col-12 m-0 p-0 py-3  border-bottom">
+				<p class="col-12 p-0 font_4 black font_weight station_name">中石油-昌北加油站</p>
+				<p class="col-12 p-0 font_1 station_site mt-2">南昌市庐山南大道与碟子路湖大道交汇处工商银行旁</p>
+				<div class="col-12 p-0 row font_1 text-center m-0 mt-2 pt-1">
+					<p class="col-3 orange change_info px-0">修改信息</p>
+					<p class="col-3 px-0 orange offset-1 delete" data-toggle="modal" data-target="#exampleModalCenter">删除</p>
+				</div>
+			</div>
+			<div class="row col-12 m-0 p-0 py-3  border-bottom">
+				<p class="col-12 p-0 font_4 black font_weight station_name">中石油-昌北加油站</p>
+				<p class="col-12 p-0 font_1 station_site mt-2">南昌市庐山南大道与碟子路湖大道交汇处工商银行旁</p>
+				<div class="col-12 p-0 row font_1 text-center m-0 mt-2 pt-1">
+					<p class="col-3 orange change_info px-0">修改信息</p>
+					<p class="col-3 px-0 orange offset-1 delete" data-toggle="modal" data-target="#exampleModalCenter">删除</p>
+				</div>
+			</div>
+			<div class="row col-12 m-0 p-0 py-3  border-bottom">
+				<p class="col-12 p-0 font_4 black font_weight station_name">中石油-昌北加油站</p>
+				<p class="col-12 p-0 font_1 station_site mt-2">南昌市庐山南大道与碟子路湖大道交汇处工商银行旁</p>
+				<div class="col-12 p-0 row font_1 text-center m-0 mt-2 pt-1">
+					<p class="col-3 orange change_info px-0">修改信息</p>
+					<p class="col-3 px-0 orange offset-1 delete" data-toggle="modal" data-target="#exampleModalCenter">删除</p>
+				</div>
+			</div>-->
+		</div>
+		<div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class=" p-1 mt-2 col-2 offset-5 text-center">提示</div>
+					<div class="modal-body p-0">
+						<p class="font_2 font_weight text-center">是否确认删除加油站</p>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn false_btn" data-dismiss="modal" aria-label="Close">否</button>
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn true_btn" data-dismiss="modal" aria-label="Close">是</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="js/add_oilStation_list.js"></script>
+</html>

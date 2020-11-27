@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/shopping_cart.css"/>
+		<script src="../bootstrap-4.3.1-dist/js/popper.min.js"></script>
+	</head>
+	<body class="public_bg">
+		<header class="container-fluid header orange_bg ">
+			<div class="top wite ">
+				<span class="fa fa-angle-left top_icon getBack pl-2" style="width:10%;" ></span>
+				<p class="header-title" style="width: 80%;">购物车</p>
+				<span class="top_icon edit" style="font-size:0.7rem !important;width: 10%;">编辑</span>
+			</div>
+		</header>
+		<div class="container goods_box">
+			<div class="row col-12" style="position:absolute;top:5rem;padding-bottom: 3rem;" id="shoppingComment">
+
+				<!--<div class="col-12 mt-2 shop_goods">-->
+					<!--<div class="form-row">-->
+						<!--<div class="col-12 mt-2 pb-2 product_area">-->
+							<!--<div class="form-row">-->
+								<!--<div class="col-2"><p class="product-ckb"><em class="product-em check1"></em></p></div>-->
+								<!--<div class="col-7"><span class="px-1 oilName">中石化昌北油库</span></div>-->
+								<!--<div class="col-3 city">南昌市</div>-->
+							<!--</div>-->
+						<!--</div>-->
+					<!--</div>-->
+					<!--<div class="product">-->
+						<!--<div class="form-row oilComment">-->
+							<!--<div class="product-box row mt-3 m-0 p-0 col-12 pb-2">-->
+								<!--<p class="product-ckb mt-3 col-1 p-0">-->
+									<!--<em class="product-em check2"></em>-->
+								<!--</p>-->
+								<!--<div class="product-sx col-4 ">-->
+									<!--<img src="img/logo.png" class="rounded-circle product_img" />-->
+								<!--</div>-->
+								<!--<div class="col-7 p-0">-->
+									<!--<p class="slogan black">汽油国六92#</p>-->
+									<!--<p class="slogan black oil_name">库存<span class="oilCount">100</span>吨</p>-->
+									<!--<ul class="col-12 py-2 row">-->
+										<!--<li class="col-12 px-2 m-0 oil_name p_item">起售<span class="startVolume">5</span>吨 <span class="oilPrice">6150</span>元/吨</li>-->
+										<!--<li class="col-12 px-2 m-0 black p_item">>=24吨 6100元/吨</li>-->
+										<!--<li class="col-12 px-2 m-0 black p_item">>=24吨 6100元/吨</li>-->
+										<!--<li class="col-12 px-2 m-0 black p_item">>=24吨 6100元/吨</li>-->
+										<!--<li class="col-12 px-2 m-0 black p_item">>=24吨 6100元/吨</li>-->
+									<!--</ul>-->
+								<!--</div>-->
+							<!--</div>-->
+							<!--<div class="col-12 m-2 p-0 row buyOil">-->
+								<!--<input type="hidden" value="" class="unitPrice">-->
+								<!--<input type="hidden" value="" class="oilNo">-->
+								<!--<input type="hidden" value="" class="oiOilId">-->
+								<!--<span class="product-price col-5 text-right orange">¥&thinsp;<span class="price">0</span></span>-->
+								<!--<div class="product-amount input-group offset-1 col-6 p-0">-->
+									<!--<div class="product_gw">-->
+										<!--<button class="product-jian">-</button>-->
+										<!--<input type="text" class="product-num text-right" value="0" oninput = "value=value.replace(/[^\d]/g,'')">-->
+										<!--<span class="cost">吨</span>-->
+										<!--<button class="product-add px-1">+</button>-->
+									<!--</div>-->
+								<!--</div>-->
+
+							<!--</div>-->
+						<!--</div>-->
+
+					<!--</div>-->
+				<!--</div>-->
+
+			</div>
+		</div>
+		<div class="container wite_bg fixed-bottom account_box"  style="border-top: 1px solid #E6E6E6;height: 2.75rem;">
+			<div class="row pr-1">
+				<p class="product-ckb col-2 pr-0  check_sigin">
+					<em class="product-em mx-2 check"></em>
+				</p>
+				<p class="col-1 check_call p-0 text-left">全选</p>
+				<div class="col-6 total_amount text-right">
+					<span class="black">合计：</span>
+					<span class="total_money orange ">0.00</span>
+				</div>
+				<button class="col-3 wite btn btn_finsh click_btn close_account">结算</button>
+			</div>
+		</div>
+		<div class="container wite_bg fixed-bottom delete_box"  style="border-top: 1px solid #E6E6E6;height: 2.75rem;display: none;">
+			<div class="row pr-1">
+				<p class="product-ckb col-2 pr-0  check_sigin">
+					<em class="product-em mx-2 check"></em>
+				</p>
+				<p class="col-1 check_call p-0 text-left">全选</p>
+				
+				<button class="offset-6 col-3 wite btn click_btn btn_finsh delete " id="deleteCar">删除</button>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="js/shopping_cart.js"></script>
+	<!--<script>-->
+		<!--page_change(".close_account","comfirm_orders.html")-->
+	<!--</script>-->
+</html>

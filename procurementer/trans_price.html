@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+	</head>
+	<body>
+		<div class="container-fluid wite_bg pt-1 border-bottom px-0" >
+			<div class="top  ">
+				<span class="fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<p class="header-title">运费组成</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="form-row mt-3">
+						<p class="col-4 font_4  top_title py-1 font_weight" style="border-left-radius: 50% !important;background: #FFF1E5;color: #F27C05;" >运费总价组成</p>
+						<p class="col-1 top_title rounded-pill py-1 position-relative" style="left:-0.5rem;background: #FFF1E5;"></p>
+					</div>
+					<div class="form-row mt-2">
+						<p class="col-12 font_4 font_weight" style="color: #F23A0C;">起步价：<span class="begin"></span>+（吨公里单价*公里数*吨数）</p>
+					</div>
+					<div class="form-row mt-3">
+						<div class="col-10 offset-1 border " style="border-radius: 10px; border-color: #EDA618 !important;background: #FFF9F0;">
+							<div class="form-row mt-3">
+								<p class="col-6 offset-3 text-danger rounded-pill font_3 text-center" style="background: #FFF1E5;">吨 公里单价表</p>
+							</div>
+							<div class="form-row pb-3 price_box">
+								<p class="font_2 col-10 offset-1 text-danger mt-3">
+									<!--<span>10吨以下：</span>
+									<span>XXX元/公里</span>-->
+								</p>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="js/trans_price.js"></script>
+	
+</html>

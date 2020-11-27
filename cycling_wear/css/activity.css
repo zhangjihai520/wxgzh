@@ -1,0 +1,59 @@
+/*.container-fluid {
+    min-height: 100vh;
+    background: #F4F7FC;
+}*/
+#navigationBar {
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: white;
+}
+.break {
+    margin-top: 2.7%;
+    width: 6%;
+    height: 3.5%;
+    margin-left: 4%;
+}
+img {
+    width: 100%;
+}
+.navigationBarText {
+    width: 80%;
+    text-align: center;
+    color: #1F1F1F;
+    font-size: 5vw;
+    margin-top: 1.6%;
+}
+
+.activitycontent{
+    background: #ffffff;
+    margin-top: 5px;
+
+}
+.activityImag{
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+.activitytext{
+    color: #262626;
+    width: 100%;
+    font-size: 4.3vw;
+    margin-left: 6.2%;
+    margin-right: 6.2%;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    font-weight: bolder;
+}
+
+.activitytext2{
+    color: #ADADAD;
+    width: 100%;
+    font-size: 2.5vw;
+    margin-left: 6.2%;
+    margin-right: 6.2%;
+    margin-bottom: 10px;
+
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--在IE运行最新的渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <title>团油机构</title>
+    <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/public.css" />
+    <link rel="stylesheet" href="../css/organization.css" />
+    <link rel="stylesheet" href="css/account.css" />
+    <script src="../js/jquery.min.js?v=2.1.1"></script>
+    <script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+    <script src="../plugins/layer/layer.min.js"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/util.js"></script>
+    <script src="js/account.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 px-0 " id="subject">
+                <div class="form-row" id="accountTip">
+                    <div class="col-12" id="wallet">
+                        <div class="form-row">
+                            <div class="col-7">
+                                <div class="form-row" id="balance">
+                                    <div class="col-11 offset-1">钱包余额(元)</div>
+                                    <div class="col-11 offset-1 money">
+                                        <div class="form-row" style="margin-top: 2%">
+                                            <div class="col-1" style="margin-top: 16%;">￥</div>
+                                            <div class="col-11 balance">0.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="form-row">
+                                    <div class="col-10 offset-1" id="rechargeBtn">
+                                        <div class="form-row">
+                                            <div class="rechargeIcon"><img src="img/rechargeIcon.png"></div>
+                                            <div class="col-5 offset-1" style="margin-top: 2%">充值</div>
+                                        </div>
+                                    </div>
+                                    <div class="billIcon billingDetails">
+                                        <img src="img/billIcon.png">
+                                    </div>
+                                    <div class="col-5 bill billingDetails">账单</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-8 offset-2" id="walletThat">
+                        钱包说明
+                    </div>
+                    <div id="walletThatComment">
+                        <div class="form-row">
+                            <div class="walletThatComment">
+                                团油充值是UE油网针对行业级用户所开发的预储
+                                钱包系统。<br>
+                                “UE油网”是车队管理专家为车队提供最齐全最便
+                                利的加油网络，同时通过“UE油网”公众号，帮助
+                                车队实现各种各样的全方位监控和综合管理。
+                                系统完善，易于管理一车一卡，专用专卡。
+                                一卡多副的账号管理，方便查询。可随时上网查询
+                                消费流水。<br>
+                            </div>
+                            <div class="col-12"><img src="img/auxiliary.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12" id="menu">
+                <div class="form-row">
+                    <div class="menu-comment organization-menu check-menu" id="account">
+                        <div class="form-row">
+                            <div class="col-8 offset-2"><img class="menu-icon" src="img/checkAccount.png"></div>
+                            <div class="col-12 mt-1">账户</div>
+                        </div>
+                    </div>
+                    <div class="menu-comment organization-menu uncheck-menu" id="personnel">
+                        <div class="form-row">
+                            <div class="col-8 offset-2"><img class="menu-icon" src="img/uncheckPersonnel.png"></div>
+                            <div class="col-12 mt-1">人员</div>
+                        </div>
+                    </div>
+                    <div class="menu-comment organization-menu uncheck-menu" id="information">
+                        <div class="form-row">
+                            <div class="col-8 offset-2"><img class="menu-icon" src="img/uncheckInformation.png"></div>
+                            <div class="col-12 mt-1">我的</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toast text-center fixed-bottom" style="" role="alert" aria-live="polite" aria-atomic="true"
+         data-delay="1000">
+        <div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+    </div>
+</body>
+</html>

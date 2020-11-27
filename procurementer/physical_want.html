@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/physical_want.css" />
+	</head>
+
+	<body class="public_bg">
+		<div class="container-fluid wite_bg pt-1">
+			<p class="top_icon text-center font_5 font_weight">物流需求</p>
+		</div>
+		<div class="container mt-2 pb-3 wite_bg">
+			<div class="row">
+				<div class="col-12 mt-3 pb-2">
+					<div class="row px-2">
+						<div class="input-group input-group-sm password_box">
+							<div class="input-group-prepend icon_box mr-1">
+								<div class="  rounded-circle start font_2 mt-1">起</div>
+							</div>
+							<div class="form-control input-group-sm">
+								<input type="text" class="form-control font_1 inputs font_weight" readonly="readonly" placeholder="请点击填写起始地址" id="begin">
+								<p class="font_1 py-0 mx-2">
+									<span class="b_name pr-1"></span>
+									<span class="b_phone"></span>
+									<span class="b_siteId"></span>
+								</p>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-12 border-left mx-1 py-4">
+						<div class="col-12 border-bottom py-2"></div>
+					</div>
+					<div class="row px-2">
+						<div class="input-group input-group-sm password_box">
+							<div class="input-group-prepend icon_box">
+								<span class=" rounded-circle orange_bg end mr-1 font_2 mt-1">终</span>
+							</div>
+							<div class="form-control input-group-sm pb-0">
+								<input type="text" class="form-control  font_1 inputs font_weight" value="" id="end" readonly="readonly" placeholder="请点击填写终点地址">
+								<p class="font_1 py-0 mx-2">
+									<span class="e_name pr-1"></span>
+									<span class="e_phone"></span>
+									<span class="e_siteId"></span>
+								</p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container mt-2 wite_bg py-2">
+			<div class="row">
+				<div class="col-12 ">
+					<div class="input-group input-group-sm border-bottom b_box">
+						<input type="text" class="form-control pick_time " readonly="readonly" placeholder="取货时间" id="hello1">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text  fa fa-angle-right border-white"></span>
+						</div>
+					</div>
+					<div class="input-group input-group-sm mt-3 border-bottom e_box">
+						<input type="text" class="form-control arrive_time" readonly="readonly" placeholder="要求送达时间" id="hello2">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text  fa fa-angle-right border-white "></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container wite_bg">
+			<div class="row">
+				<p class="col-4 font_1" style="line-height: 2.7rem;">
+					<span class=" fa fa-circle  pr-1" style="font-size: 6px;color: blue;"></span>
+					<span>物品信息</span>
+				</p>
+				<div class="col-3 text-center orange  offset-5 add_oil">
+					<span class="fa fa-plus-circle font_5"></span>
+					<p class="font_1">添加油品</p>
+				</div>
+			</div>
+		</div>
+		<div class="container wite_bg pt-2 shop_box ">
+			<div class="row">
+				<div class="col-12">
+					<div class="row font_2 text-right">
+						<p class="col-5 style ">油品</p>
+						<p class="col-5 style">油量(吨)</p>
+						<p class="col-2 font_1 pl-0 text-danger compile">编辑</p>
+					</div>
+				</div>
+				<div class="col-12 oil_box">
+					
+				</div>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="z-index: 9999 !important;" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+		<div class="fixed-bottom container shadow-lg bg-white rounded account_box">
+			<div class="row">
+				<div class="col-12">
+					<div class="form-row">
+						<div class="col-8">
+							<span class="font_2">物流费：</span>
+							<span class="font_5 orange">￥</span>
+							<span class="tran_money font_5 orange"></span>
+						</div>
+						<div class="col-4 text-right">
+							<button class="btn btn-sm line_orange rounded-pill wite click_btn place_order">确认下单</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="fixed-bottom container shadow-lg bg-white rounded">
+			<ul class="row">
+				<li class="col-3 offset-2 back text-center">
+					<a class="footer_item  physical_nav">
+						<span class="iconfont iconyemian-copy-copy1 footer_icon orange"></span>
+						<p class="footer_title font_1">首页</p>
+					</a>
+				</li>
+				<li class="col-3 offset-2 text-center">
+					<a class="footer_item " href="physical_orders.html">
+						<span class="iconfont icondingdan footer_icon orange"></span>
+						<p class="footer_title font_1">订单</p>
+					</a>
+				</li>
+
+			</ul>
+		</footer>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../laydate/laydate.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="js/physical_want.js"></script>
+
+</html>

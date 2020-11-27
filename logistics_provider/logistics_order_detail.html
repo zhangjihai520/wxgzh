@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+	</head>
+
+	<body class="public_bg">
+		<div class="container-fluid wite_bg pt-1 px-0">
+			<div class="top black ">
+				<span class="fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<p class="header-title">订单详情</p>
+			</div>
+		</div>
+		<div class="container mt-2">
+			<div class="row">
+				<div class="col-12 pt-3 wite_bg">
+					<div class="form-row">
+						<span class=" fa fa-circle blue_light pr-1 font_2"></span>
+						<span class="font_2 text-muted">配送油品</span>
+					</div>
+					<div class="form-row py-2 oils_box">
+						<!-- <div class="col-3 text-center border-right">
+							<p class="orange font_4">98#</p>
+							<p class="font_1">15吨</p>
+						</div> -->
+					</div>
+				</div>
+				<div class="col-12 mt-2  wite_bg">
+					<div class="form-row pb-2">
+						<div class="col-12">
+							<span class=" fa fa-map-marker blue_light pr-1 font_icon">
+							<span class="font_2 text-muted">取货地址</span>
+						</div>
+						<p class="col-12 font_1 py-1 shadow-sm bg-white rounded get_set"></p>
+					</div>
+					<div class="form-row pb-3">
+						<div class="col-12">
+							<span class=" fa fa-map-marker blue_light pr-1 font_icon">
+							<span class="font_2 text-muted">收货地址</span>
+						</div>
+						<p class="col-12 font_1 py-1 shadow-sm bg-white rounded end_site"></p>
+					</div>
+				</div>
+				<div class="col-12 mt-2 wite_bg pb-2">
+					<div class="form-row pt-1">
+						<div class="col-5 text-muted">
+							<span class=" fa fa-map-marker  pr-1 font_icon">
+							<span class="font_2">路程</span>
+						</div>
+						<div class="col-7  text-right">
+							<span class="font_1 distance"></span>
+						</div>
+					</div>
+					<div class="form-row pt-1">
+						<div class="col-5 text-muted">
+							<span class=" fa fa-map-marker  pr-1 font_icon">
+							<span class="font_2">油库联系人</span>
+						</div>
+						<p class="col-7 text-right ">
+							<span class="oil_contant_name font_1 pr-1"></span>
+							<span class="oil_contant_phone font_1 pr-1"></span>
+							<span class="fa fa-phone orange font_1 "></span>
+						</p>
+					</div>
+					<div class="form-row pt-1">
+						<div class="col-5 text-muted">
+							<span class=" fa fa-map-marker  pr-1 font_icon">
+							<span class="font_2">收件人</span>
+						</div>
+						<p class="col-7 text-right">
+							<span class="end_contant_name pr-1 font_1"></span>
+							<span class="end_contant_phone pr-1 font_1"></span>
+							<span class="fa fa-phone orange font_1"></span>
+						</p>
+					</div>
+					<div class="form-row pt-1">
+						<div class="col-5 text-muted">
+							<span class=" fa fa-map-marker  pr-1 font_icon">
+							<span class="font_2">物流费用</span>
+						</div>
+						<div class="col-7  text-right">
+							<span class="font_1 text-danger trans_price"></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 mt-2 wite_bg pb-2 config_box" style="display: none;">
+					<div class="form-row pt-2">
+						<h4 class="font_2">配置内容：</h4>
+					</div>
+					<div class="form-row">
+						<div class="col-6 text-muted ">
+							<span class=" fa fa-map-marker pr-1 font_1">
+							<span class="font_2">交通工具</span>
+						</div>
+						<div class="col-6  text-right">
+							<span class="font_2 car"></span>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-6 text-muted ">
+							<span class=" fa fa-map-marker pr-1 font_1">
+							<span class="font_2">交通工具牌号</span>
+						</div>
+						<div class="col-6  text-right">
+							<span class="font_2 car_code"></span>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-6 text-muted ">
+							<span class=" fa fa-map-marker pr-1 font_1">
+							<span class="font_2">运输人员</span>
+						</div>
+						<div class="col-6  text-right">
+							<span class="font_2 car_people"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container mt-3">
+			<div class="row">
+				<button type="button" class="btn font_3  btn-sm click_btn line_orange col-10 offset-1 wite" style="display: none;">确认接单</button>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true"
+		 data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../toastr-2.1.4/toastr.min.js"></script>
+	<script src="js/logistics_order_detail.js"></script>
+
+</html>

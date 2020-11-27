@@ -1,0 +1,18 @@
+.organization-menu {
+    margin-left: 19%;
+    margin-right: 20%;
+}
+.module {
+    width: 44.5%;
+    border-radius: 5px;
+}
+#uploading {
+    /*背景颜色渐变（to bottom 从上至下；to bottom right 从左上至右下；to right 从左至右；to up right 从左下至右上；
+   to up 从下至下；to up left 从右下至左上；to left 从右至左；to bottom left 从右上至左下）*/
+    background: linear-gradient(to bottom,#CCEEFF,#B1D3FC);
+    color: #0073FF
+}
+#list {
+    background: linear-gradient(to bottom,#FFDBC7,#FFBFB2);
+    color: #FF2F05;
+}

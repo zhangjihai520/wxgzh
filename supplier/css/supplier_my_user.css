@@ -1,0 +1,35 @@
+	.img{
+	padding: 0 0 0 0.7rem;
+	width: 2.5rem;
+	height: 2.25rem;
+	border-radius: 50%;
+}
+.user_name{
+	font-size: 0.95rem;
+}
+.title_top{
+	border-radius: 4px;
+}
+.title{
+	font-size: 0.95rem;
+	color: #595756;
+	font-weight: bolder;
+}
+.sale_num,.oil_num,.order_num,.no_pay{
+	font-size: 0.95rem;
+	color: #FD6C02;
+	font-weight: bold;
+}
+.icon{
+	color: #FF6E00;
+	font-size: 1.2rem;
+}
+#pick-up-qr-code-dialog {
+	margin-top: 10%;
+}
+#qr-code-border {
+	margin: 0 auto;
+	border: 1px solid black;
+	padding: 20px;
+	width: 296px;
+}

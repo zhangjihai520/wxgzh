@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/iScroll.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/supplier_order_list.css" />
+	</head>
+
+	<body class="public_bg">
+		<div class="container-fluid wite_bg pt-1 border-bottom header">
+			<div class="top">
+				<span class="offset-1"></span>
+				<p class="header-title">采购单列表</p>
+			</div>
+		</div>
+		<div id="wrapper" class="wite_bg">
+			<div id="scroller" class="container">
+				<ul class="row order_body">
+					
+				</ul>
+				<div class="pull-loading ">
+					上拉加载更多
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="show_order" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class=" p-1 mt-2 col-2 offset-5 text-center">提示</div>
+					<div class="modal-body p-0">
+						<p class="font_2 font_weight text-center">确定该订单出货!</p>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn new_btn col-3 mt-3 font_2 offset-2  wite modal_btn click_btn true_btn" data-dismiss="modal" aria-label="Close">确定</button>
+						<button type="button" class="btn new_btn col-3 mt-3 font_2 offset-2  wite modal_btn click_btn false_btn" data-dismiss="modal" aria-label="Close">取消</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="change_price" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class=" p-1 mt-2 col-6 offset-3 text-center text-black-50 font_2 font_weight ">优惠改价 (单位:元)</div>
+					<div class="modal-body text-center  ">
+						<div class="form-row">
+							<span class="font_1 text-muted col-4 offset-1 text-right text_tyle text_tyle ">当前金额：</span>
+							<input type="text" class="col-4 font_1 text_tyle realy_price" readonly/>
+						</div>
+						<div class="form-row mt-3">
+							<span class="font_1  orange col-4 offset-1 text-right  text_tyle">改价金额：</span>
+							<input type="text" class="col-4 orange font_1 text_tyle new_price"oninput="clearNoNum(this)"/>
+						</div>
+						<div class="form-row">
+							<span class="font_1    offset-2 text-right text-danger text_tyle">注：改价金额要小于当前金额</span>
+						</div>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn new_btn  col-3 mt-3 offset-2 muted_bg font_2 wite click_btn" style="opacity: 0.5;" data-dismiss="modal" aria-label="Close">取消</button>
+						
+						<button type="button" class="btn new_btn col-3 mt-3 offset-2 font_2 wite  line_orange click_btn change_btn" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#changePrice_db">确定</button>
+						
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="supOrderExamine" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class="modal-body  mt-3">
+						<p class="font_2 font_weight text-center">您是否要财务审核确认？</p>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn new_btn col-4 mt-3  offset-1 font_2 wite muted_bg click_btn supOrderExamine_false" data-dismiss="modal" aria-label="Close" data-status ="BOS_CHERCK_PAY_UNPASS">审核不通过</button>
+						<button type="button" class="btn new_btn col-4 mt-3 offset-2 font_2 wite line_orange click_btn supOrderExamine_ture" data-dismiss="modal" aria-label="Close" data-status ="BOS_PAYID">审核通过</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="changePrice_db" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class="modal-body  mt-3">
+						<p class="font_2 font_weight text-center">您是否要确认当前改价操作？</p>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn new_btn col-3 mt-3 offset-2 font_2 wite muted_bg click_btn " data-dismiss="modal" aria-label="Close">否</button>
+						<button type="button" class="btn new_btn col-3 mt-3 offset-2 font_2 wite line_orange click_btn changeTrue" data-dismiss="modal" aria-label="Close">是</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom" style="z-index: 9999 !important;" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+		<div class="fixed-bottom container shadow-lg bg-white rounded b_nav">
+			<ul class="row pb-1">
+				<li class="col-3 text-center" onclick="go_page('supplier_list.html')">
+					<div class="footer_item ">
+						<img src="img/store.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom ">油库</p>
+					</div>
+				</li>
+				<li class="col-3 text-center" onclick="go_page('supplier_order_list.html')">
+					<div class="footer_item">
+						<img src="img/procurement_0.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom change_active">采购管理</p>
+					</div>
+				</li>
+				<li class="col-3 text-center" >
+					<div class="footer_item physical_want">
+						<img src="img/physical.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom">物流</p>
+					</div>
+				</li>
+				<li class="col-3 text-center" onclick="go_page('supplier_my_user.html')">
+					<div class="footer_item  ">
+						<img src="img/myself.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom ">我的</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/iscroll.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="js/supplier_order_list.js"></script>
+</html>

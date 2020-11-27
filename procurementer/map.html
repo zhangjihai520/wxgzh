@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="css/map.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+	</head>
+
+	<body>
+		<div class="container-fluid wite_bg border-bottom pt-1 px-0">
+			<div class="top orange ">
+				<span class="fa fa-angle-left top_icon pl-2"></span>
+				<p class="header-title">选择加油站所在位置</p>
+			</div>
+		</div>
+		<div class="map_body">
+			<div id="mapContainer"></div>
+			<div id="tip">
+				<b>请输入关键字：</b>
+				<input type="text" id="keyword" name="keyword" value="" onkeydown='keydown(event)' style="width: 95%;" />
+				<div id="result1" name="result1"></div>
+			</div>
+			<div id="pos">
+				<b>点击地图上单击获取坐标</b>
+				<div>X：<input type="text" id="lngX" name="lngX" value="" /> Y：<input type="text" id="latY" name="latY" value="" /></div>
+				<div>选中地址：<span id="city"></span></-->
+				</div>
+			</div>
+
+		</div>
+		<div class="map_btn container  mt-2">
+			<div class="row">
+				<button type="button" class="col-6 offset-3 physical_finish">确定</button>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.3&key=c1eb5436111397abaaf6572487aa7fa6"></script>
+	<script src="../js/map.js"></script>
+	<script>
+		$(function() {
+			body_height();
+			$(".physical_finish").click(function() {
+				if(localStorage.getItem("latY") == undefined) {
+					toast("请您选择地址");
+				} else {
+					save_localStorage("map_type", "2");
+					page_back()
+				}
+			});
+			$(document).on("click", ".top_icon", function() {
+				page_back();
+				sessionStorage.setItem('refresh', 'true');
+			})
+		})
+	</script>
+
+</html>

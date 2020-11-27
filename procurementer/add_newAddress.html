@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="../css/login.css" />
+		<style type="text/css">
+			.icon{
+				font-size: 0.6rem !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container-fluid px-0">
+			<div class="top orange mt-1">
+				<span class=" fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<p class="header-title">新增地址</p>
+			</div>
+		</div>
+		<div class="container ">
+			<div class="row">
+				<form class="col-12 mt-4">
+					<div class="input-group  input-group-sm user_name_box">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text  icon" style="color:#676767;">联系人：</span>
+						</div>
+						<input type="text" class="form-control user_name" placeholder="请输入联系人姓名">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text icon" onclick="clear_input('.user_name')">&times;</span>
+						</div>
+					</div>
+					<div class="input-group input-group-sm password_box">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text  icon" style="color:#676767;">电话：</span>
+						</div>
+						<input type="text" class="form-control password phone_num" onkeyup="Number_num(this)" placeholder="请输入手机号码">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text icon" onclick="clear_input('.phone_num')">&times;</span>
+						</div>
+					</div>
+					<div class="input-group input-group-sm password_box">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text  icon" style="color:#676767;">地址：</span>
+						</div>
+						<input type="text" class="form-control password wite_bg checke_address "  onclick="toshare(this)" placeholder="请选择收货地址" readonly="readonly">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text  fa fa-angle-right icon"></span>
+						</div>
+					</div>
+					<div class="input-group input-group-sm password_box">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text  icon" style="color:#676767;">门牌号：</span>
+						</div>
+						<input type="text" class="form-control password address_detail" placeholder="请输入详细地址">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text icon" onclick="clear_input('.address_detail')">&times;</span>
+						</div>
+					</div>
+					<div class="col-12 row mt-3 p-0 m-0">
+						<p class="col-6 p-0 px-2" style="color:#676767;font-size: 0.875rem;line-height: 1.5rem;">设为默认地址</p>
+						<div class="custom-control custom-switch col-6 text-right p-0 m-0">
+							<input type="checkbox" class="custom-control-input" id="customSwitch1">
+							<label class="custom-control-label" for="customSwitch1"></label>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="row">
+				<button type="button" class="btn  btn-sm  col-10 offset-1 click_btn line_orange change_passowrd" id="sub_address">保存地址</button>
+			</div>
+		</div>
+		<div class="am-share">
+			<h3 class="am-share-title">选择地区</h3>
+			<ul class="am-share-sns">
+				<li>南昌</li>
+				<li>南昌</li>
+			</ul>
+			<div class="am-share-footer"><button class="share_btn">取消</button></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="js/add_newAddress.js"></script>
+
+</html>

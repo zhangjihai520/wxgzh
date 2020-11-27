@@ -1,0 +1,32 @@
+
+.organization-menu {
+    margin-left: 12%;
+    margin-right: 10%;
+}
+.check-menu {
+    color: #FF6E00;
+}
+.uncheck-menu {
+    color: #8A8A8A;
+}
+img {
+    width: 100%;
+}
+#navigationBar {
+    border-bottom: 1px solid #E0E0E0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: white;
+}
+/*.break {
+    width: 8%;
+    margin-left: 4%;
+}*/
+.navigationBarText {
+    width: 80%;
+    text-align: center ;
+    color: #FF6E00;
+    font-size: 4.5vw;
+    margin-top: 2.5%;
+   	font-weight: bolder;
+}

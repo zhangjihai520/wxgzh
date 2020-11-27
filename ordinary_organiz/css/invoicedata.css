@@ -1,0 +1,53 @@
+
+#navigationBar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: white;
+}
+img {
+    width: 100%;
+}
+.break {
+    margin-top: 2.7%;
+    width: 3%;
+    height: 3.5%;
+    margin-left: 4%;
+}
+.navigationBarText {
+    width: 89%;
+    text-align: center;
+    color: #1F1F1F;
+    font-size: 5vw;
+    margin-top: 1.6%;
+}
+.public_bg{
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #EBEBEB;
+}
+.text{
+    font-size: 5vw;
+    color: #8A8A8A;
+    text-align: center;
+
+}
+.text1{
+    font-size: 3.5vw;
+    color: #8A8A8A;
+}
+.text2{
+    font-size: 5vw;
+    color: #FF760D;
+    text-align: center;
+    font-weight: bolder;
+
+}
+.editstyle {
+    border: none;
+    font-size: 3vw;
+}
+#buttonstyle{
+    background: #FF660D;
+    text-align: center;
+    font-size: 4vw;
+}

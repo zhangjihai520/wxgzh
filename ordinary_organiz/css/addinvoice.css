@@ -1,0 +1,42 @@
+.container-fluid {
+    min-height: 100vh;
+    background: white;
+}
+#navigationBar {
+    /*   border-bottom: 1px solid #E0E0E0;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: white;
+}
+img {
+    width: 100%;
+}
+.break {
+    width: 5%;
+    margin-left: 4%;
+}
+.navigationBarText {
+    width: 78%;
+    text-align: center;
+    color: #FF6E00;
+    font-size: 5vw;
+    margin-top: 1.6%;
+}
+.public_bg{
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #EBEBEB;
+}
+.text1{
+    color:#1F1F1F;
+    font-size: 4vw;
+}
+.editstyle {
+    border: none;
+    font-size: 3vw;
+}
+#buttonstyle{
+    background: #FF660D;
+    text-align: center;
+    font-size: 4vw;
+}

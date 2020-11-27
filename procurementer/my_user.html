@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/my_user.css" />
+	</head>
+	<body>
+		<header class="container header">
+			<div class="row">
+				<div class="col-1  offset-10" >
+					<span class="fa fa-cog mt-1 click_set" style="color: #FFFFFF" onclick="go_page('setting.html')"></span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-2 user_img">
+					<img class="img rounded-circle" src="" alt="" style="width: 100%; height: 100%;"/>
+				</div>
+				<div class="col-7">
+					<div class="row">
+						<p class="user_name px-1">张继海</p>
+						<p class="col-4 user_level">二级会员</p>
+					</div>
+					<div class="row">
+						<p class="col-12 user_account mt-2 px-1">15170827934</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<p class="col-2  status text-center font_0">资料审核中</p>
+			</div>
+		</header>
+		<div class="container list_group">
+			<div class="row ">
+				<div class="col-12">
+					<div class="row list_box">
+						<h5 class="col-12 list_title mt-3">采购管理</h5>
+						<div class="col-4 list_container orders" id="1" onclick="go_page('all_orders.html')">
+							<div class="text-center">
+								<span class="iconfont iconsuoyoudingdan list_icons"></span>
+							</div>
+							<p class="list_name" style="">所有订单</p>
+						</div>
+						<div class="col-4 list_container orders" id="2" onclick="go_page('during_pay_orders.html')">
+							<div class="text-center">
+								<span class="iconfont iconzhifudingdan1 list_icons"></span>
+							</div>
+							<p class="list_name" style="">支付中订单</p>
+						</div>
+						<div class="col-4 list_container orders" id="3"  onclick="go_page('on_road_orders.html')">
+							<div class="text-center">
+								<span class="iconfont iconbill-sent list_icons"></span>
+							</div>
+							<p class="list_name" style="">在途订单</p>
+						</div>
+					</div>
+					<div class="row list_box">
+						<h5 class="col-12 list_title mt-3">基础信息</h5>
+						<div class="col-4 list_container" onclick="go_page('my_address.html')">
+							<div class="text-center">
+								<span class="iconfont iconshouhuo list_icons"></span>
+							</div>
+							<p class="list_name" style="">收货地址</p>
+						</div>
+						<div class="col-4 list_container" onclick="go_page('invoice_list.html')">
+							<div class="text-center">
+								<span class="iconfont iconkaipiaoxinxi list_icons"></span>
+							</div>
+							<p class="list_name" style="">开票信息</p>
+						</div>
+						<div class="col-4 list_container" onclick="go_page('shopping_plan.html')">
+							<div class="text-center">
+								<span class="iconfont iconjihua list_icons"></span>
+							</div>
+							<p class="list_name" style="">购油计划</p>
+						</div>
+					</div>
+					<div class="row list_box">
+						<h5 class="col-12 list_title mt-3">会员信息</h5>
+						<div class="col-4 list_container" onclick="go_page('certification_office.html')">
+							<div class="text-center">
+								<span class="iconfont iconqiyerenzheng1 list_icons"></span>
+							</div>
+							<p class="list_name" style="">企业认证</p>
+						</div>
+						<div class="col-4 list_container" onclick="go_page('certification_oilstation.html')">
+							<div class="text-center">
+								<span class="iconfont iconkaipiaoxinxi-tongcheng list_icons"></span>
+							</div>
+							<p class="list_name" style="">加油站补充认证</p>
+						</div>
+						<div class="col-4 list_container"  onclick="go_page('vip_system.html')">
+							<div class="text-center">
+								<span class="iconfont iconhuiyuantixi list_icons"></span>
+							</div>
+							<p class="list_name" style="">会员体系</p>
+						</div>
+					</div>
+					<div class="row list_box">
+						<h5 class="col-12 list_title mt-3">加油站管理</h5>
+						<div class="col-4 list_container" onclick="go_page('add_oilStation_list.html')">
+							<div class="list_icons">
+								<span class="fa fa-file-text-o"></span>
+							</div>
+							<p class="list_name" >加油站列表</p>
+						</div>
+						<div class="col-4 list_container" onclick="go_page('oilStation_set_price.html')">
+							<div class="text-center">
+								<span class="iconfont icondingjia list_icons"></span>
+							</div>
+							<p class="list_name" style="">加油站定价</p>
+						</div>
+						<div class="col-4 list_container" onclick="go_page('add_station_operation.html')">
+							<div class="text-center">
+								<span class="iconfont iconshuju list_icons"></span>
+							</div>
+							<p class="list_name" style="">加油站经营</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fixed-bottom nav_bottom container shadow-lg bg-white rounded">
+			<ul class="row mt-1">
+				<li class="col-3 text-center " onclick="go_page('purchasing.html')">
+					<div class="footer_item ">
+						<img src="img/procurement.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom ">超市</p>
+					</div>
+				</li>
+				<li class="col-3 text-center" onclick="go_page('shopping_plan.html')">
+					<div class="footer_item ">
+						<img src="img/plan.png" alt=""  class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom">购油</p>
+					</div>
+				</li>
+				<li class="col-3 text-center" >
+					<div class="footer_item physical_want">
+						<img src="img/physical.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom">物流</p>
+					</div>
+				</li>
+				<li class="col-3  text-center" onclick="go_page('my_user.html')">
+					<div class="footer_item ">
+						<img src="img/myself_0.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom change_active">我的</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="js/my_user.js"></script>
+</html>

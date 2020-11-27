@@ -1,0 +1,53 @@
+/**进度条样式*/
+
+.proressexternal {
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+	align-items: center;
+}
+
+.proresscontainer {
+	width: 40%;
+	height: 3px;
+	background: #E3E3E3;
+}
+
+.progress {
+	width: 0%;
+	height: 100%;
+	background: #FFBE19;
+}
+
+#p-v {
+	position: absolute;
+	top: -5px;
+	right: 0px;
+}
+
+img {
+	width: 100%;
+}
+
+.break {
+	width: 5%;
+	margin-left: 4%;
+}
+
+.vipimag {
+	width: 6%;
+	margin-bottom: 5px;
+}
+
+.vLine {
+	border-left: solid 2px #F0C7A8;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.item {
+	background: linear-gradient(#FFDBBF, #FFCBA3);;
+}
+
+.borders{
+	border-color:#F0C7A8 !important;
+}

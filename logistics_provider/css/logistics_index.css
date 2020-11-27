@@ -1,0 +1,53 @@
+.header{
+	height:4rem;
+}
+.titles{
+	height: 2.5rem;
+	position: relative;
+	bottom:1.1rem;
+	border-radius: 4px;
+	line-height: 2.5rem;
+}
+.pr-0{
+	color: #7A7A7A;
+}
+.icons{
+	font-size: 6px !important;
+}
+.icon_1{
+	color: #21C447;
+}
+.icon_2{
+	color: #FFA866;
+}
+.icon_3{
+	color: #B2D7FF;
+}
+.icon_4{
+	color: #FFD4B2;
+}
+.icon_5{
+	color: #FC5162;
+}
+.tran_money{
+	color: #F20C23;
+}
+.btn{
+	height: 1.4rem !important;
+	line-height: 0;
+	font-size: 0.65rem;
+}
+.order_item{
+	border-radius: 4px;
+}
+.adress_site{
+	line-height: 1.2rem;
+}
+.detail_btn{
+	background:#FFE5D1 ;
+	color: #FF6C00;
+	border-color: #FFBE8C !important;
+}
+.tran_sign,.want_sign{
+	border-color: #FF6F01 !important;
+}

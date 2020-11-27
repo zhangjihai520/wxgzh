@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/comfim_orders.css" />
+	</head>
+
+	<body class="public_bg">
+		<div class="container-fluid wite_bg pt-1 border-bottom px-0">
+			<div class="top orange ">
+				<span class="fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<p class="header-title ">确认订单</p>
+			</div>
+		</div>
+		<div class="container-fluid" style="padding: 0">
+			<div class="row p-0 m-0" id="oilDepot">
+				<!--<div class="col-12">-->
+				<!--<div class="row wite_bg pt-2">-->
+				<!--<div class="col-2 pr-2">-->
+				<!--<img src="img/logo.png" class="img_logo rounded-circle" alt="" />-->
+				<!--</div>-->
+				<!--<p class="col-10 station_name font_5 font_weight">hahhaha</p>-->
+				<!--</div>-->
+				<!--<div class="row oil_list wite_bg pt-2">-->
+				<!--<div class="col-12 row p-0 m-0 px-2  orange text-right">-->
+				<!--<p class="col-2 p-0 m-0 oil_no font_weight">92#</p>-->
+				<!--<p class="col-4 p-0 m-0 oil_num font_weight">100吨</p>-->
+				<!--<p class="col-6 p-0 m-0 oil_money font_3">金额: <span class="money">200</span>元</p>-->
+				<!--</div>-->
+				<!--</div>-->
+				<!--<div class="row wite_bg pt-2 logistics">-->
+				<!--<div class="col-12">物流费用：<span class="logisticsPrice">200</span>元</div>-->
+				<!--</div>-->
+				<!--</div>-->
+			</div>
+		</div>
+		<div class="container mb-5">
+
+			<div class="row   wite_bg mt-1" id="logistics">
+				<div class="col-12 p-0 m-0  input-group input-group-md py-2 arive_style" data-toggle="collapse" href="#arive_style" aria-expanded="false" aria-controls="collapseTwo">
+					<div class="input-group-prepend">
+						<span class="input-group-text font_1 text-muted">物流方式：</span>
+					</div>
+					<input type="text" class="form-control font_1 pl-0" readonly="readonly" id="logisticsText" value="">
+					<input type="hidden" class="check_active_value" id="transType" value="0">
+					<div class="input-group-prepend icon_box">
+						<span class="input-group-text  fa fa-angle-right  px-2"></span>
+					</div>
+				</div>
+				<div class="col-12 p-0 m-0 border  collapse input-group input-group-md py-2" id="arive_style">
+					<div class="row col-12 m-0 p-0 now_check_active" id="logisticsRule">
+						<div class="col-5 input-group-prepend pl-0 ">
+							<span class="input-group-text  font_1 item check_active">物流配送</span>
+						</div>
+						<div class="col-7 icon_box  text-right">
+							<span class="input-group-text fa  "></span>
+						</div>
+					</div>
+					<div class="row col-12 m-0 p-0 now_check_active_two" id="doorTo">
+						<div class="col-5 input-group-prepend pl-0">
+							<span class="input-group-text font_1 item">上门自提</span>
+						</div>
+						<div class="col-7 icon_box  text-right">
+							<span class="input-group-text fa"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row   wite_bg mt-1" >
+				<div class="col-12 p-0 m-0  input-group input-group-md py-2">
+					<div class="input-group-prepend">
+						<span class="input-group-text font_1 text-muted">返现钱包扣除：</span>
+					</div>
+					<input type="text" id="re_money" class="form-control font_1 pl-0" readonly="readonly" value="">
+					
+				</div>
+			</div>
+			<div class="row   wite_bg mt-1" id="shippingAddress">
+				<div class="col-12 p-0 m-0  input-group input-group-md py-2">
+					<div class="input-group-prepend">
+						<span class="input-group-text font_1 text-muted">配送地址：</span>
+					</div>
+					<input type="text" id="getAddress" class="form-control font_1 pl-0" readonly="readonly" value="" placeholder="点击选择配送地址">
+					<div class="input-group-prepend icon_box">
+						<span class="input-group-text  fa fa-angle-right  px-2"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row   wite_bg mt-1" id="payment">
+				<div class="col-12 p-0 m-0  input-group pay_style input-group-md py-2" data-toggle="collapse" href="#pay_style" aria-expanded="false" aria-controls="collapseOne">
+					<div class="input-group-prepend">
+						<span class="input-group-text font_1 text-muted">付款方式：</span>
+					</div>
+					<input type="text" class="form-control font_1 pl-0" id="paymentText" readonly="readonly" value="">
+					<input type="hidden" class="check_active_value" id="paymentType" value="0">
+					<div class="input-group-prepend icon_box">
+						<span class="input-group-text  fa fa-angle-right  px-2"></span>
+					</div>
+				</div>
+				<div class="col-12 p-0 m-0 border  collapse input-group input-group-md py-2" id="pay_style">
+					<div class="row col-12 m-0 p-0 border-bottom now_check_active" id="pay_bank">
+						<div class="col-5 input-group-prepend pl-0">
+							<span class="input-group-text font_1 item check_active">银行汇款</span>
+						</div>
+						<div class="col-7 icon_box  text-right">
+							<span class="input-group-text fa orange"></span>
+						</div>
+					</div>
+					<div class="row col-12 m-0 p-0 now_check_active_two" id="payOnDelivery">
+						<div class="col-5 input-group-prepend pl-0">
+							<span class="input-group-text font_1 item">货到付款</span>
+						</div>
+						<div class="col-7 icon_box  text-right">
+							<span class="input-group-text fa orange "></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row wite_bg mt-1" id="reqBeginTime">
+				<div class="col-12 p-0 m-0  input-group input-group-md py-2">
+					<div class="input-group-prepend">
+						<span class="input-group-text font_1 time_begin text-muted">到货开始时间：</span>
+					</div>
+					<div>
+						<input type="text" class="form-control  font_1 pl-0" readonly="readonly" id="hello2" value="" placeholder="请点击选择时间" style="height: 1.7rem !important;">
+					</div>
+
+					<div class="input-group-prepend icon_box ">
+						<span class="input-group-text  fa fa-calendar  px-2 b_icon"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row   wite_bg mt-1">
+				<div class="col-12 p-0 m-0  input-group input-group-md py-2">
+					<div class="input-group-prepend">
+						<span class="input-group-text font_1 time_title text-muted">到货结束时间：</span>
+					</div>
+					<div class="box">
+						<input type="text" class="form-control  demo-input font_1 pl-0 pt-1" readonly="readonly" id="hello3" value="" placeholder="请点击选择时间" style="height: 1.7rem !important;">
+					</div>
+
+					<div class="input-group-prepend icon_box ">
+						<span class="input-group-text  fa fa-calendar  px-2 e_icon"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container wite_bg fixed-bottom border">
+			<div class="row py-1">
+				<p class="col-7 font_3 font_weight total_money">总费用: <span class="_money"></span>元</p>
+				<div class="col-5 p-0 px-1 text-right ">
+					<button class="btn btn-md click_btn line_orange wite rounded-pill put_order" id="submit">提交订单</button>
+				</div>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="z-index: 9999 !important;" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../laydate/laydate.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="js/comfirm_orders.js"></script>
+
+</html>

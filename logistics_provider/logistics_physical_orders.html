@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/logistics_index.css" />
+		<link rel="stylesheet" href="../css/iScroll.css" />
+		<script src="../bootstrap-4.3.1-dist/js/popper.min.js"></script>
+	</head>
+
+	<body class="public_bg">
+		<header class="container header orange_bg pt-2">
+			<div class=" wite">
+				<p class="text-center font_5 pt-1">物流单</p>
+			</div>
+		</header>
+		<div class="container ">
+			<div class="row">
+				<div class="col-12 text-center px-2">
+					 <div class="form-row wite_bg titles  font_3 ">
+						<p class="col-4 orange title_item" id="OUT_OF_WAIT">出库中</p>  
+						<p class="col-4 title_item" id="IN_TRAN">运输中</p> 
+						<p class="col-4 title_item" id="SIGNED">已完成</p> 
+					 </div>
+				</div>
+			</div>
+		</div>
+		<div id="wrapper" class="public_bg " style="top: 5.5rem !important;">
+			<div id="scroller" class="container px-2">
+				<ul class="row mx-0 order_box">
+					
+				</ul>
+				<div class="pull-loading ">
+					上拉加载更多
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="rob_orders" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class="form-row pt-2 mx-1">
+						<div class="col-12 font_1">
+							<span class="fa fa-truck orange"></span>
+							<span class="font_2 text-muted">选择交通工具</span>
+						</div>
+						<div class="col-12 mt-1">
+							<select class="form-control form-control-sm border border_2" id="select_car">
+							
+							</select>
+						</div>
+					</div>
+					<div class="form-row pt-2 mx-1">
+						<div class="col-12 font_1">
+							<span class="fa fa-truck orange"></span>
+							<span class="font_2 text-muted">选择工具牌号</span>
+						</div>
+						<div class="col-12 mt-1">
+							<select class="form-control form-control-sm border border_2" id="check_car">
+							 
+							</select>
+						</div>
+					</div>
+					<div class="form-row pt-2 mx-1">
+						<div class="col-12 font_1">
+							<span class="fa fa-truck orange"></span>
+							<span class="font_2 text-muted">选择运输人员</span>
+						</div>
+						<div class="col-12 mt-1">
+							<select class="form-control form-control-sm border border_2" id="check_worker" >
+							  
+							</select>
+						</div>
+					</div>
+					<div class="form-row mt-3 mx-1">
+						<button class="btn btn-sm click_btn line_orange wite col-4 offset-4" data-dismiss="modal" aria-label="Close" id="set_orders">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="tran_orders" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class=" p-1 mt-2 col-2 offset-5 text-center">
+						<p class="font_2 font_weight">提示</p>
+					</div>
+					<div class="modal-body p-0">
+						<p class="font_2 font_weight text-center">是否进行运输？</p>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite orange_bg modal_btn click_btn true_tran" data-dismiss="modal" aria-label="Close" >确定</button>
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite orange_bg modal_btn click_btn false_tran" data-dismiss="modal" aria-label="Close" style="opacity: 0.5;">取消</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="sign_orders" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class=" p-1 mt-2 col-2 offset-5 text-center">
+						<p class="font_2 font_weight">提示</p>
+					</div>
+					<div class="modal-body p-0">
+						<p class="font_2 font_weight text-center">是否签收订单？</p>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite orange_bg modal_btn click_btn true_sign" data-dismiss="modal" aria-label="Close" >确定</button>
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite orange_bg modal_btn click_btn false_sign" data-dismiss="modal" aria-label="Close" style="opacity: 0.5;">取消</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+		<div class="toast text-center fixed-bottom" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+		<div class="fixed-bottom container shadow-lg bg-white rounded b_nav">
+			<ul class="row pb-1">
+				<li class="col-3 offset-1 text-center">
+					<a class="footer_item  " href="logistics_index.html">
+						<span class="iconfont iconqiangdan footer_icon"></span>
+						<p class="footer_title font_1">抢单</p>
+					</a>
+				</li>
+
+				<li class="col-3 offset-1 text-center">
+					<a class="footer_item change_active" href="logistics_physical_orders.html">
+						<span class="iconfont iconwuliu1 footer_icon"></span>
+						<p class="footer_title font_1">物流</p>
+					</a>
+				</li>
+				<li class="col-3 offset-1 text-center">
+					<a class="footer_item " href="logistics_myself.html">
+						<span class="iconfont iconshoujianren footer_icon"></span>
+						<p class="footer_title font_1">我的</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="toast text-center fixed-bottom" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/iscroll.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="js/logistics_physical_orders.js"></script>
+		
+
+</html>

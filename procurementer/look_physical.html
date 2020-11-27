@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/swiper-3.3.1.min.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/look_physical.css" />
+	</head>
+
+	<body class="public_bg">
+		<div class="container-fluid wite_bg pt-1 border-bottom px-0">
+			<div class="top black ">
+				<span class="fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<p class="header-title">查看物流</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 ">
+					<div class="form-row wite_bg border border_3 mt-2">
+						<p class="col-12 text-center py-2 border-bottom font_7 title"></p>
+						<div class="col-12 pl-3 pb-2">
+							<div class="form-row font_1 pt-1">
+								<p class="col-3 pr-0">订单号：</p>
+								<p class="col-9 pl-0 order_no"></p>
+							</div>
+							<div class="form-row font_1 pt-1">
+								<p class="col-3 pr-0">总金额：</p>
+								<p class="col-8 pl-0 text-danger money"></p>
+							</div>
+							<div class="form-row font_1 pt-1">
+								<p class="col-3 pr-0">实付金额：</p>
+								<p class="col-8 pl-0 text-danger payMoney"></p>
+							</div>
+							<div class="form-row font_1 pt-1">
+								<p class="col-4 pr-0">预计到达时间：</p>
+								<p class="col-8 pl-0 arrive_time"></p>
+							</div>
+						</div>
+					</div>
+					<div class="form-row wite_bg border border_3 mt-2">
+						<div class="col-12 pl-3 py-2">
+							<div class="form-row font_1 pt-1">
+								<p class="col-8 oil_list">
+								
+								</p>
+								<p class="col-4">
+									<span>数量:</span>
+									<span class="num"></span>
+								</p>
+							</div>
+							<div class="form-row font_1 pt-1">
+								<p class="col-8">运输车次</p>
+								<p class="col-4">
+									<span>司机：</span>
+									<span class="trans_name"></span>
+								</p>
+							</div>
+							<div class="form-row font_1 pt-1">
+								<p class="col-8">联系他：<span class=" fa fa-phone bule_deep"></span></p>
+								<p class="col-4 bule_deep trans_phone">15070887941</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="mt-2 font_7">物流状态</div>
+					<ul class="track_shipflow">
+						<li class="track_shipflow_item cur">
+							<i class="track_shipflow_item_status type_dot"></i>
+							<div class="track_shipflow_item_msg">
+								<p class="track_shipflow_item_msg_text"></p>
+								<p class="track_shipflow_item_msg_time"></p>
+							</div>
+						</li>
+						<!--<li class="track_shipflow_item cur">
+							<i class="track_shipflow_item_status type_dot"></i>
+							<div class="track_shipflow_item_msg">
+								<p class="track_shipflow_item_msg_text"> 出库中 </p>
+								<p class="track_shipflow_item_msg_time"></p>
+							</div>
+						</li>
+						<li class="track_shipflow_item ">
+							<i class="track_shipflow_item_status type_dot"></i>
+							<div class="track_shipflow_item_msg">
+								<p class="track_shipflow_item_msg_text">运输中 </p>
+								<p class="track_shipflow_item_msg_time"></p>
+							</div>
+						</li>
+
+						<li class="track_shipflow_item "> <i class="track_shipflow_item_status type_dot"></i>
+							<div class="track_shipflow_item_msg">
+								<p class="track_shipflow_item_msg_text">已签收 </p>
+								<p class="track_shipflow_item_msg_time"></p>
+							</div>
+						</li>-->
+						
+					</ul>
+
+				</div>
+				<div class="col-12 mt-5 btn_box">
+					<div class="form-row">
+						<button class="col-12 btn btn-sm line_orange wite click_btn rounded-pill ">确认签收</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="js/look_physical.js"></script>
+</html>

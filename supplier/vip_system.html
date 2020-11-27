@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!--在IE运行最新的渲染模式-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+		<title>会员体系</title>
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/vip_system.css" />
+	</head>
+
+	<body>
+		<div class="container-fluid px-0 border-bottom  ">
+			<div class="top orange mt-1">
+				<span class=" fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<p class="header-title ">会员体系</p>
+			</div>
+		</div>
+		<div class="container" >
+			<div class="row" style="border-top: 6px solid #f5f8fc;">
+				<div class="col-12">
+					<div class="form-row align-items-center">
+						<div class="col-6 font_weight px-0">
+							<span class=" font_4  pr-2">当前等级</span>
+							<span class="orange font_5 levelNum">LV1</span>
+						</div>
+						<div class="col-3 offset-3 text-right text-muted px-0" onclick="go_page('vip_rule.html')">
+							<span class="font_1"> 升级规则</span>
+							<span class="fa-angle-right-align fa fa-angle-right"></span>
+						</div>
+					</div>
+					<div class="form-row mt-1">
+						<div class="font_1 text-muted">当前等级单量：<span class="orange user_balance"></span></div>
+					</div>
+					<div class="form-row proressexternal">
+						<div class="vipimag"><img src="../img/vip_1.png"  class="vip_status" id="vip_1"></div>
+						<div class="proresscontainer" style="margin-left: -1px">
+							<div class="progress progress_vip1 " style="width: 0%"></div>
+						</div>
+						
+						<div class="vipimag" style="margin-left: -1px"><img src="../img/unvip_2.png"  class="vip_status" id="vip_2"></div>
+						
+						<div class="proresscontainer" style="margin-left: -1px">
+							<div class="progress progress_vip2" style="width: 0%"></div>
+						</div>
+						<div class="vipimag" style="margin-left: -1px"><img src="../img/unvip_3.png"  class="vip_status" id="vip_3"></div>
+					</div>
+					<div class="form-row pb-3">
+						<div class="font_1 text-muted ">距离升级还差：<span class="orange next_leve"> 0单</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="border-top: 9px solid #f5f8fc;">
+				<div class="col-12">
+					<div class="form-row">
+							<p class="col-12 px-0 mt-2 pt-1 font_3 font_weight">什么是会员等级？</p>
+							<p class="col-12 px-0 mt-1 font_1 text-black-50">会员的等级与用户的积分息息相关</p>
+							<p class="col-12 px-0 font_1 text-black-50">等级积分值如下图所示</p>
+							<p class="col-12 px-0 mt-2 pt-1 font_3 font_weight" >会员如何实现分级？</p>
+							<p class="col-12 px-0 mt-1 font_1 text-black-50" >会员的等级与用户的积分息息相关</p>
+							<p class="col-12 px-0 font_1 text-black-50">等级积分值如下图所示</p>
+					</div>
+					<div class="form-row text-center mt-2  text-muted">
+						<p class="col-4 py-2 border-right font_1" style="background: #FFE2CC;border-top-left-radius: 6px; border-color:#F0C7A8 !important ;color: #FF7D19;">等级</p> 
+						<p class="col-8 py-2 font_1"  style="background: #FFE2CC;border-top-right-radius: 6px;color: #FF7D19;">单量值(单/<span class="rule_type"></span>)</p>
+					</div>
+				</div>
+				<div class="col-12 rule_box">
+					<div class="form-row item_2">
+						<p class="col-4 py-2 border-right text-center font_4 text-danger font_weight borders">Lv1</p>
+						<p class="col-8 py-2 text-center font_5 text-body  item" ></p>
+					</div>
+					<div class="form-row item_3">
+						<p class="col-4 py-2 border-right text-center font_4 text-danger font_weight borders " >Lv2</p>
+						<p class="col-8 py-2  text-center font_5 text-body  item " ></p>
+					</div>
+					<div class="form-row item_4">
+						<p class="col-4 py-2 border-right text-center font_4 text-danger font_weight borders " >Lv3</p>
+						<p class="col-8 py-2  text-center font_5 text-body item" ></p>
+					</div>
+				</div>
+				<div class="col-12 m-0">
+					<div class="form-row">
+						<p class="col-12 px-0 mt-2 pt-1 font_3 font_weight">积分说明</p>
+						<p class="col-12 px-0 mt-1 font_1 text-black-50">积分是客户在UE油网消费时除优惠抵扣外实际支付现金金 额产生的定制奖励或UE油网所提供活动获取。</p>
+					</div>
+					<div class="form-row">
+						<p class="col-12 px-0 mt-2 pt-1 font_3 font_weight">积分的有效期</p>
+						<p class="col-12 px-0 mt-1 font_1 text-black-50">目前账户积分有效期为一年，如用户账号暂停使用，册UE 油网将取消该用户账号内积分相关使用权益。</p>
+					</div>
+					<div class="form-row">
+						<p class="col-12 px-0 mt-2 pt-1 font_3 font_weight">积分如何获得</p>
+						<p class="col-12 px-0 mt-1 font_1 text-black-50">订单完成后，在符合以下情形时，UE油网将按订单实际支 付现金金额发放积分。</p>
+						<p class="col-12 px-0  font_1 text-black-50" >1.订单内商品必须是实际支付产出物。</p>
+						<p class="col-12 px-0  font_1 text-black-50" >2.实际金额是指用户除优惠之外。</p>
+						<p class="col-12 px-0  font_1 text-black-50" >3.订单完成是指：订单已显示完成且未办理退货手续。</p>
+					</div>
+					<div class="form-row">
+						<p class="col-12 px-0 mt-2 pt-1 font_3 font_weight">积分有效期</p>
+						<p class="col-12 px-0 mt-1 font_1 text-black-50">1.积分的有效期最长一年，既从获得积分开始至次年年底， 逾期自动作废；</p>
+						<p class="col-12 px-0  font_1 text-black-50" > 2.用户获得但未使用的积分，将在一个自然年底过期，UE 油网将定期对过期积分进行作废处理。</p>
+					</div>
+					<div class="form-row my-3">
+						<p class="col-12 px-0 mt-1 font_3 text-danger">积分规则由UE油网制定并依据国际相关法律及规章制度 以解释和修改。</p>
+						<p class="col-12 px-0 mt-1 font_3 text-danger">UE油网对积分规则拥有最终解释权。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="js/vip_system.js"></script>
+</html>

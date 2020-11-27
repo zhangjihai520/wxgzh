@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link rel="stylesheet" href="../css/iScroll.css" />
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/shopping_plan.css" />
+		<script src="../bootstrap-4.3.1-dist/js/popper.min.js"></script>
+	</head>
+
+	<body>
+		<header class="container header wite_bg border-bottom">
+			<div class="top pt-1">
+				<span class=" top_icon" style="width:10%;"></span>
+				<p class="header-title" style="width: 80%;">一键购油</p>
+				<p class="font_4 top_icon complie" style="width: 10%;color: #666666;display: none;">编辑</p>
+			</div>
+		</header>
+		<div class="container add_box" style="display: none;" >
+			<div class="row">
+				<div class="add_btn col-4 orange add_plan mt-2" style="line-height: 1.3rem;">
+					<span class="fa fa-plus-circle text-center"></span>
+					<span class="font_1">添加计划</span>
+				</div>
+			</div>
+		</div>
+		<div class="container plan_null" style="display: none;">
+			<div class="row shadow-sm bg-white m-0 plan_box pb-4 mt-2">
+				<div class="add_btn col-4 offset-4 mt-4">
+					<p class="add_icon orange_bg wite text-center mx-3">+</p>
+					<p class="text-center black" style="font-size: 0.7rem;">添加计划</p>
+				</div>
+			</div>
+		</div>
+		<div id="wrapper" class="mt-0" style="background:#FFFDF8;display: none;">
+			<div id="scroller" class="container px-2">
+				<ul class="row mx-0" id="dataList"style=" touch-action: none;">
+					<!--<li class="col-12 px-2 shadow-sm bg-white plan_box pb-3 mt-2 border_1">
+						<div class="form-row border-bottom py-2 plan_item">
+							<p class="product-ckb check_item col-1 px-1" style="display: none;"><em class="product-em product-xz"></em></p>
+							<p class="col-6 font_6 font_weight text-left black px-1">购油计划C</p>
+							<p class="col-5 plan_physical orange text-right">配送:物流<span class="physical_no">3</span>处</p>
+						</div>
+						<p class="col-12 mt-3  black font_1 px-0">总数量:</p>
+						<div class="form-row mt-3">
+							<div class="col-3 goods_item text-center">
+								<p class="goods_name orange">92#</p>
+								<p class="goods_no mt-1"><span class="g_no">50</span>吨</p>
+							</div>
+							<div class="col-3 goods_item text-center">
+								<p class="goods_name orange">92#</p>
+								<p class="goods_no mt-1"><span class="g_no">50</span>吨</p>
+							</div>
+							<div class="col-3 goods_item text-center">
+								<p class="goods_name orange">92#</p>
+								<p class="goods_no mt-1"><span class="g_no">50</span>吨</p>
+							</div>
+							<div class="col-3 goods_item text-center">
+								<p class="goods_name orange">92#</p>
+								<p class="goods_no mt-1"><span class="g_no">50</span>吨</p>
+							</div>
+						</div>
+					</li>-->
+				</ul>
+				<div class="pull-loading ">
+					上拉加载更多
+				</div>
+			</div>
+		</div>
+		<div class="container wite_bg fixed-bottom delete_box border-top mb-5 wite_bg">
+			<div class="row pr-1  py-2  wite_bg">
+				<p class="product-ckb col-2 pr-0  check_all mt-2">
+					<em class="product-em check_icon mx-2 "></em>
+				</p>
+				<p class="col-1 check_call p-0 font_2 text-left mt-2">全选</p>
+				<button class="offset-6 col-3 wite orange_bg btn  delete">删除</button>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+		<div class="fixed-bottom nav_bottom container shadow-lg bg-white rounded">
+			<ul class="row mt-1">
+				<li class="col-3 text-center " onclick="go_page('purchasing.html')">
+					<div class="footer_item ">
+						<img src="img/procurement.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom">超市</p>
+					</div>
+				</li>
+				<li class="col-3 text-center " onclick="go_page('shopping_plan.html')">
+					<div class="footer_item ">
+						<img src="img/plan_0.png" alt=""  class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom change_active">购油</p>
+					</div>
+				</li>
+				<li class="col-3 text-center" >
+					<div class="footer_item physical_want">
+						<img src="img/physical.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom">物流</p>
+					</div>
+				</li>
+				<li class="col-3  text-center" onclick="go_page('my_user.html')">
+					<div class="footer_item ">
+						<img src="img/myself.png" alt="" class="nav_img"/>
+						<p class="footer_title font_1 nav_bottom">我的</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/iscroll.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="js/shopping_plan.js"></script>
+
+</html>

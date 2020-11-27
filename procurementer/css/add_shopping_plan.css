@@ -1,0 +1,31 @@
+.save{
+	font-size:0.55rem !important;
+	width: 20%;
+	color: #F20C23;
+}
+.drop_container{
+	height:3.5rem;
+}
+.icon,.site_title{
+	line-height: 2.2rem;
+}
+.modal-body {
+	max-height: 10rem;
+	overflow: scroll;
+}
+
+.modal-body::-webkit-scrollbar {
+	display: none;
+}
+.oil_type{
+	display: none;
+}
+.dropdown-toggle{
+	width: 7.2rem;
+	height: 1.5rem;
+	line-height: 0;
+}
+.click_btn{
+	height: 1.5rem;
+	line-height:0rem !important;
+}

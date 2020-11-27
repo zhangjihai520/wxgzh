@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+	</head>
+	<body>
+		<div class="container-fluid wite_bg pt-1 border-bottom px-0" >
+			<div class="top  ">
+				<span class="fa fa-angle-left top_icon pl-2"></span>
+				<p class="header-title">物流改价</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<dov class="col-12">
+					<div class="form-row mt-4">
+						<img class="col-2 offset-5" src="img/aprove_04.png" alt="" width="100%" height="100%"/>
+					</div>
+					<div class="form-row mt-2">
+						<p class="col-12 text-center font_weight text-muted font_4" >提交成功</p>
+						<p class="col-12 text-center font_2  text-muted mt-3">我们将于12小时内给予答复，请注意查收。</p>
+					</div>
+				
+				</dov>
+			</div>
+		</div>
+		
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script>
+		$(".top_icon").on("click",function(){
+			page_back();
+			sessionStorage.setItem('refresh', 'true');
+		})
+	</script>
+</html>

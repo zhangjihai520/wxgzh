@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<!--在IE运行最新的渲染模式-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+		<title>申请开票</title>
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="../css/organization.css" />
+		<link rel="stylesheet" href="../css/iScroll.css" />
+	</head>
+
+	<body class="public_bg ">
+		<div class="container-fluid head_box wite_bg px-0">
+			<div class="top orange mt-1 border-bottom">
+				<span class=" fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<p class="header-title">申请开票</p>
+			</div>
+		</div>
+		<div class="container wite_bg pb-2 nav_box">
+			<div class="row">
+				<div class="col-12 " id="getMonth">
+					<div class="form-row">
+						<div class="col-8">
+							<div class="form-row">
+								<div class="col-5 ml-0 offset-1 pt-2 pb-1 font_6" id="dateNow">2019-12</div>
+								<div class="col-6" id="subscript">
+									<div class="form-row">
+										<div class="col-2 pl-0 pt-1">
+											<span class="fa fa-angle-down font_7"></span>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="form-row ">
+						<div class="col-12 offset-1 font_1 ml-0">
+							<span>本月总储蓄</span>
+							<span class="money save_mone text-danger"></span>
+							<span class="pl-3">本月总支出</span>
+							<span class="money use_money text-danger"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="line col-12"></div>
+		</div>
+
+		<div id="wrapper" class="mt-3">
+			<div id="scroller" class="container px-2 wite_bg">
+				<ul class="row mx-0 form_list">
+					<!--<li class="col-12 mt-2">
+						<div class="form-row ">
+							<div class="col-6">
+								<div class="form-row font_1">
+									<p class="col-12 font_2 font_weight">充值</p>
+									<p class="col-12">2020-3-6</p>
+								</div>
+							</div>
+							<div class="col-6 text-right">
+								<div class="form-row font_1">
+									<p class="col-12  font_2 font_weight">￥200</p>
+									<p class="col-4 offset-8 border orange border_1">去开票</p>
+								</div>
+							</div>
+						</div>
+
+					</li>
+					<li class="col-12 mt-2">
+						<div class="form-row ">
+							<div class="col-6">
+								<div class="form-row font_1">
+									<p class="col-12 font_2 font_weight">充值</p>
+									<p class="col-12">2020-3-6</p>
+								</div>
+							</div>
+							<div class="col-6 text-right">
+								<div class="form-row font_1">
+									<div class="col-12  font_2 font_weight">￥200</div>
+									<div class="col-4 offset-8 border orange border_1">去开票</div>
+								</div>
+							</div>
+						</div>
+
+					</li>-->
+				</ul>
+				<div class="pull-loading">
+					上拉加载更多
+				</div>
+			</div>
+		</div>
+		<div class="fixed-bottom nav_bottom container">
+			<div class="row">
+				<button type="button" class="btn  btn-sm click_btn wite line_orange col-12 go_invoiceList ">发票信息管理</button>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../plugins/dateModel/js/rolldate.min.js"></script>
+	<script src="../js/iscroll.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="js/please_invoiceList.js"></script>
+
+</html>

@@ -1,0 +1,105 @@
+.status_box {
+	max-height: 6.25rem;
+}
+
+.not_status {
+	color: #8A8A8A;
+}
+
+.stutas_img {
+	width:2.6rem ;
+	height: 2.6rem ;
+}
+
+.status_text {
+	color: #737373;
+}
+
+.public_style {
+	background: #FFFFFF !important;
+	border: none;
+	font-size: 0.65rem;
+	line-height: 1rem;
+}
+
+.fa-asterisk {
+	color: #FA2A00;
+	font-size: 0.4rem !important;
+}
+
+.form-control:focus {
+	background-color: #fff;
+	border-color: #D6D6D6 !important;
+	box-shadow: 0 0 0 0 #FFFFFF;
+}
+
+.fa-angle-right {
+	font-size: 1rem !important;
+}
+
+.clearfix {
+	border: 5px solid #f5f8fc;
+}
+
+.base {
+	color: #333333;
+}
+
+.top_img {
+	width: 3.4rem;
+	height: 3.4rem;
+	margin: 1.2rem auto 0;
+}
+
+.top_img>img {
+	width: 100%;
+	height: 100%;
+}
+
+.state {
+	font-size: 0.6rem;
+	color: #737373;
+	margin-top: 0.6rem;
+	text-align: center;
+}
+
+.clear_img {
+	display: none;
+	width: 30%;
+	height: 1rem;
+	font-size:1rem;
+	position: absolute;
+	bottom: 2.2rem !important;
+	color:dodgerblue;
+}
+._clear_img {
+	display: none;
+	width: 30%;
+	height: 1rem;
+	font-size:1rem;
+	position: absolute;
+	bottom: 1.2rem;
+	color:dodgerblue;
+}
+
+#imghead,
+#articleHead,
+#oilsaleHead,
+#licencehead,
+#license_head,
+#idCard_front_head,
+#idCard_back_head,
+#logo_head{
+	display: inline-block;
+	width: 90px;
+	height: 90px;
+	border: 1px dashed #0D86FF;
+}
+
+.clear_preview {
+	bottom: 1.5rem;
+}
+.chosePay_active{
+	border-color: #FD6B03 !important;
+	color: #FD6B03 !important;
+}

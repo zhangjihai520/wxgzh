@@ -1,0 +1,72 @@
+body,.swiper_top{
+	background: #FFFDF9;
+}
+/*.swiper-container,
+.w {
+	max-height: calc(100vh - 8.7rem);
+}*/
+.plan_box{
+	border: 1px solid #FFE0B8;
+}
+.plan_item{
+	border-color: #F2F2F2;
+}
+.plan_physical{
+	font-size: 0.6rem;
+	line-height:1.2rem !important; 
+}
+.goods_item{
+	border-right: 1px solid #EDEDED;
+}
+.goods_name{
+	font-size: 0.85rem;
+	font-weight:700;
+}
+.goods_no{
+	font-size: 0.6rem;
+}
+.add_icon{
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	font-size:2rem;
+	line-height: 1.55rem;
+}
+.product-ckb{
+	width:2rem;
+	font-size: 0.8rem;
+}
+.product-ckb em {
+	width: 1.1rem;
+	height: 1.1rem;
+	border-radius: 50%;
+	border: 1px solid #B8B4B4;
+	display: inline-block;
+}
+.product_img{
+	width: 100%;
+}
+
+.product-ckb .product-xz,.product-ckb .check_icon{
+	background: url(../img/gouico.png) no-repeat 0 0;
+	background-size: 1.1rem;
+	border: 0;
+}
+.fixed-bottom {
+	height: 2.75rem;
+}
+.delete{
+	height: 2.05rem;
+	border-radius: 2.05rem;
+	line-height: 0;
+	margin-top:0rem;
+}
+.delete:focus{
+	color: #FFFFFF;
+}
+.delete:hover{
+	color: #FFFFFF;
+}
+.delete_box{
+	display: none;
+}

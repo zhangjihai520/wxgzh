@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<!--在IE运行最新的渲染模式-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+		<title>网点详情</title>
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="../plugins/jSlider/jSlider.min.css" />
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="../css/organization.css" />
+		<link rel="stylesheet" href="css/serviceDetails.css" />
+		<script src="../js/jquery.min.js?v=2.1.1"></script>
+		<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+		<script src="../plugins/jSlider/jquery.jSlider.js"></script>
+		<script src="../js/public.js"></script>
+		<script src="../js/util.js"></script>
+		<script src="js/serviceDetails.js"></script>
+	</head>
+
+	<body>
+		<div class="container-fluid pt-1 px-0">
+			<div class="top">
+				<span class="fa fa-angle-left top_icon  pl-2" style="width:10%;" onclick="page_back()"></span>
+				<p class="header-title" style="width: 80%;">网点详情</p>
+				<span class="fa fa-pencil top_icon disclaimer" style="font-size:1rem !important;width: 10%;"></span>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<!--<div class="col-12" id="navigationBar">
+                <div class="form-row">
+                    <div class="break">
+                        <img src="img/break_black.png">
+                    </div>
+                    <div class="navigationBarText">
+                        网点详情
+                    </div>
+                    <div class="disclaimer">
+                        <img src="img/edit.png">
+                    </div>
+                </div>
+            </div>-->
+				<div class="col-12" style="padding: 0">
+					<div class="jSlider" id="slider-example">
+						<!--<div><img src="img/13639685_123501617185_2.jpg"></div>-->
+						<!--<div><img src="img/13639685_123501617185_2.jpg"></div>-->
+						<!--<div><img src="img/13639685_123501617185_2.jpg"></div>-->
+					</div>
+					<!--<img src="img/13639685_123501617185_2.jpg">-->
+				</div>
+				<div class="col-12 font_6 mt-2" id="storeName">
+
+				</div>
+				<div class="col-12 font_3 mt-1 pb-2 borderBottom" id="detailAddr" style="color: #616161">
+
+				</div>
+				<div class="col-12 font_3 mt-2" style="color: #8A8A8A">
+					联系负责人
+				</div>
+				<div class="col-12 font_6 mt-1 pb-2" style="border-bottom: 8px solid #F4F8FB">
+					<div class="form-row">
+						<div class="col-3" id="storeContact"></div>
+						<div class="col-6 ml-2" id="storeTel"></div>
+					</div>
+				</div>
+				<div class="col-11 serviceDetails mt-1">
+					<div class="form-row mb-2">
+						<div class="col-12 mt-2 font_2" style="color: #8A8A8A">服务类型</div>
+						<div class="col-12 mt-1 font_3" id="labelName"></div>
+					</div>
+					<div class="form-row mb-2">
+						<div class="col-12 mt-2 font_2" style="color: #8A8A8A">服务介绍</div>
+						<div class="col-12 mt-1 font_3 more_than_omit" id="serviceDesc"></div>
+						<div class="col-12 mt-1 font_3" style="color: #616161">
+							<div class="form-row">
+								<div class="unfold unfoldText">展开</div>
+								<div class="col-1 unfold"><img src="img/downward.png"></div>
+							</div>
+						</div>
+						<div class="col-12 mt-1 font_3" style="color: #616161;display: none">
+							<div class="form-row">
+								<div class="packUp unfoldText">收起</div>
+								<div class="col-1 packUp"><img src="img/upward.png"></div>
+							</div>
+						</div>
+					</div>
+					<div class="form-row mb-2">
+						<div class="col-12 mt-2 font_2" style="color: #8A8A8A">公司名称</div>
+						<div class="col-12 mt-1 font_3" id="serverName"></div>
+					</div>
+					<div class="form-row mb-3">
+						<div class="col-12 mt-2 font_2" style="color: #8A8A8A">服务网址</div>
+						<div class="col-12 mt-1 font_3" id="serviceUrl"></div>
+					</div>
+				</div>
+				<div class="col-12" style="border-bottom: 8px solid #F4F8FB"></div>
+				<div class="col-12 mt-2 font_2" style="color: #8A8A8A">相关资质</div>
+				<div class="col-12">
+					<div class="form-row" id="csSvcQuaList">
+						<!--<div class="relevantQualifications"><img src="img/test.png"></div>-->
+						<!--<div class="relevantQualifications"><img src="img/test.png"></div>-->
+					</div>
+				</div>
+				<div class="col-12 mt-2 font_2" style="color: #8A8A8A">服务图片</div>
+				<div class="col-12 mb-3">
+					<div class="form-row" id="photoServer">
+						<!--<div class="relevantQualifications"><img src="img/test.png"></div>-->
+						<!--<div class="relevantQualifications"><img src="img/test.png"></div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

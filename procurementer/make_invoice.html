@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+	</head>
+
+	<body class="public_bg">
+		<div class="container-fluid wite_bg pt-1 border-bottom px-0">
+			<div class="top">
+				<span class="fa fa-angle-left top_icon pl-2" onclick="page_change('all_orders.html')"></span>
+				<p class="header-title">开票</p>
+			</div>
+		</div>
+		<div class="container wite_bg  py-1 border_2" style="border: 10px solid #f5f8fc !important;box-sizing: border-box !important; ">
+			<div class="row font_2 pt-2">
+				<p class="col-8 font_weight">订单信息</p>
+			</div>
+			<div class="row  font_1 mt-2 pt-2">
+				<p class="item_name col-3 pr-0">订单号：</p>
+				<p class="order_no col-9 pl-0"></p>
+			</div>
+			<div class="row font_1 mt-2">
+				<div class="col-12">
+					<div class="form-row">
+						<p class="item_name col-3 pr-0">商品明细：</p>
+						<div class="goods_info col-9 pl-0">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row  font_1 mt-2">
+				<p class="item_name col-3 pr-0">配送地址：</p>
+				<p class=" col-9 pl-0 arrive_site"></p>
+			</div>
+			<div class="row  font_1 mt-2">
+				<p class="item_name col-3 pr-0">下单时间：</p>
+				<p class=" col-9 pl-0 creat_time"></p>
+			</div>
+			<div class="row  font_1 mt-2">
+				<p class="item_name col-4 pr-0">预计到达时间：</p>
+				<p class=" col-8 pl-0 arrive_time"></p>
+			</div>
+			<div class="row  font_1 py-2">
+				<p class="item_name col-3 pr-0">总金额：</p>
+				<p class=" col-9 pl-0 font_weight font_3 total_money"></p>
+			</div>
+		</div>
+		<div class="container wite_bg border_2  py-2" style="border-left:10px solid #f5f8fc !important;border-right:10px solid #f5f8fc !important;">
+			<div class="col-12 p-0 m-0  input-group input-group-md" >
+				<div class="input-group-prepend ">
+					<span class="input-group-text font_1 border-0 font_1 text-black-50 m-0 p-0" style="background: #fff;">公司名称：</span>
+				</div>
+				<p type="text" class="form-control font_1 company_name" ></p>
+			</div>
+			<div class="col-12 p-0 m-0  input-group input-group-md" >
+				<div class="input-group-prepend ">
+					<span class="input-group-text font_1 border-0 font_1 text-black-50 m-0 p-0" style="background: #fff;">纳税人识别号：</span>
+				</div>
+				<p type="text" class="form-control font_1 uscc" ></p>
+			</div>
+			<div class="col-12 p-0 m-0  input-group input-group-md" >
+				<div class="input-group-prepend ">
+					<span class="input-group-text font_1 border-0 font_1 text-black-50 m-0 p-0" style="background: #fff;">收件人：</span>
+				</div>
+				<input type="text" class="form-control font_1 user_name" value="">
+			</div>
+			<div class="col-12 p-0 m-0  input-group input-group-md" >
+				<div class="input-group-prepend">
+					<span class="input-group-text font_1 border-0 font_1 text-black-50 m-0 p-0" style="background: #fff;">联系方式：</span>
+				</div>
+				<input type="text" class="form-control font_1 phone_num" value="">
+			</div>
+			<div class="col-12 p-0 m-0  input-group input-group-md" >
+				<div class="input-group-prepend">
+					<span class="input-group-text font_1 border-0 font_1 text-black-50 m-0 p-0" style="background: #fff;">邮箱：</span>
+				</div>
+				<input type="text" class="form-control font_1 email" value="">
+			</div>
+		</div>
+		<div class="container my-4">
+			<div class="row">
+				<button type="button" class="btn  btn-sm wite col-10 offset-1 line_orange click_btn make_invoice">确认开票</button>
+			</div>
+		</div>	
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="js/make_invoice.js"></script>
+</html>

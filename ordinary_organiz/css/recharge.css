@@ -1,0 +1,50 @@
+.container {
+    overflow-X:hidden;
+    width: 100vw;
+    min-height: 100vh;
+    background: #F4F7FC;
+}
+#moneyNum {
+    background: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.moneyNum {
+    border: none;
+}
+.checkPay {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: white;
+}
+.checkPayTip {
+    font-size: 4vw;
+    text-indent: 2em;
+}
+.wxIcon {
+    width: 5%;
+    margin-left: 9%;
+}
+.patternPayment {
+    width: 60%;
+    margin-left: 6%;
+    color: #737373;
+    font-size: 5vw;
+    margin-top: 1%;
+}
+.checkWX {
+    width: 20%;
+}
+#affirm {
+    background: #FFD7B8;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 5px;
+    font-size: 5vw;
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.disclaimer {
+    margin-top: 3.5%;
+}

@@ -1,0 +1,124 @@
+.container-fluid {
+    min-height: 100vh;
+    background: #F4F7FC;
+}
+
+img {
+    width: 100%;
+}
+
+.organization-menu {
+    margin-left: 19%;
+    margin-right: 20%;
+}
+#head {
+    background: linear-gradient(to top, #FF7B1C, #FF852E);
+}
+.head_img{
+    width: 5%;
+    height: 15%;
+}
+.text1 {
+    width: 100%;
+    font-size: 5vw;
+    color: white;
+    font-weight: bolder;
+
+}
+.text2 {
+    padding: 3px 10px 3px 10px;
+    font-size: 2.5vw;
+    color: #965B22;
+}
+.text3 {
+    margin-top: 5px;
+    font-size: 3vw;
+    color: white;
+
+}
+.text4 {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 3vw;
+    color: #4D4A49;
+
+}
+.text5 {
+    font-size: 5.5vw;
+    color: #FD6C02;
+    font-weight: bolder;
+
+}
+
+.text6 {
+    font-size: 5vw;
+    color: #595756;
+    text-align: left;
+    font-weight: bold;
+
+}
+.text7{
+    margin-top: 10px;
+    font-size: 3vw;
+    color: #4D4A49;
+
+}
+.status {
+    color: white;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.Headportrait {
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    background: #D6EAFF;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    height: 20vw;
+}
+
+.Headtopimghw{
+    margin-left: 7%;
+    width: 20vw;
+}
+
+.viplevel {
+    height: 23px;
+    border-radius: 19px;
+    background: #FFE6CC;
+}
+.DriverBack{
+    margin-right: 5px;
+    border-radius:6px;
+    background: white;
+    text-align: center;
+
+}
+
+.DriverBack1{
+    margin-left: 5px;
+    border-radius:6px;
+    background: white;
+    text-align: center;
+}
+.vipdata{
+    border-radius:6px;
+    background: white;
+    text-align: center;
+}
+.vipdata1{
+    margin-top: 20px;
+    text-align: center;
+    width: 25%;
+}
+#businessCertification {
+    margin-left: 10%;
+}
+#activity {
+    margin-left: 30%;
+}
+.vipimag{
+    width: 35%;
+    height: 45%;
+}

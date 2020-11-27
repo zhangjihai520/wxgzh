@@ -1,0 +1,60 @@
+.recommend_item{
+	border: 1px solid #FFE4CC;
+}
+.tag{
+	height: 1rem;
+	background: #FFE9D6;
+	border-bottom-right-radius:0.5rem;
+	font-size: 0.7rem;
+	color: #FF6E00;
+}
+.font_color{
+	color:#8A8A8A;
+}
+.fa-map-marker{
+	color: #FF7729;
+}
+.fa-circle{
+	color: #17A2B8;
+}
+.total_money,.goods,.physical{
+	color: #F20C23;
+}
+.drop_time{
+	height: 1.6rem !important;
+	width: 66.66666667% !important;
+	border: none !important;
+	color: #616161;
+	font-size: 0.6rem;
+}
+.form-control{
+	background: #FFFFFF !important;
+	outline: none ;
+	border: none ;
+	border-radius: 0 !important;
+}
+.input-group-text{
+	background: #FFFFFF;
+	color: #737373;
+	font-size: 0.6rem !important;
+}
+.icons{
+	font-size: 5px;
+}
+.rounded-circle{
+	width: 0.65rem;
+	height: 0.65rem;
+	border: 1px solid #8B8B87;
+}
+.time_icon{
+	color: #12B4CE;
+	font-size: 0.9rem;
+	line-height:1.65rem;
+	text-align: right;
+}
+
+.check_active{
+	background: url(../img/gouico.png) no-repeat 0 0;
+	background-size:0.65rem;
+	border: 0;
+}

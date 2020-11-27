@@ -1,0 +1,60 @@
+.nav_box{
+	font-size: 0.5rem;
+}
+
+.nav_item{
+	color: #666666;
+}
+
+.icons{
+	font-size:5px !important;
+	color: #26A644;
+}
+.invoice_status{
+	color: #FF3019;
+	font-size: 0.5rem !important;
+}
+.oil_price,.total_money{
+	color: #FF3019;
+}
+.item_name{
+	color: #8F8F8F;
+}
+.box_bg{
+	background:#F0F5FF;
+}
+.btns{
+	border-radius: 2px;
+}
+.delete_btn{
+	color: #8A8A8A;
+	border-color: #8A8A8A !important;
+}
+.cancel_btn{
+	color: #666666;
+	border-color: #666666 !important;
+}
+.buy_agin{
+	color: #DB3444;
+	border-color: #DB3444 !important;
+}
+.item_box{
+	border-color: #DB3444 !important;
+}
+.go_physical{
+	background: #FFF6F0;
+	color: #FC7A0F;
+}
+.move_active{
+	transform:translate3d(0px, 0px, 0px);
+}
+.false_btn{
+	background: #90979D;
+}
+.true_btn,.is_show{
+	background:#E8493A;
+}
+.copy_dom{
+	position: absolute;
+	left: 500rem;
+}

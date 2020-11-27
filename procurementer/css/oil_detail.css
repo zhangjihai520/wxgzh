@@ -1,0 +1,74 @@
+.oil_no{
+	color: #737373;
+}
+.price_item{
+	width: 21.5vw;
+	background:#FFFBF7;
+	border: 1px solid #FF9500;
+	color: #FF9500;
+	text-align: center;
+}
+.price{
+	font-size: 0.75rem;
+	font-weight: bold;
+}
+.site_short,.unit_num{
+	color: #FF1D0D;
+}
+.click_arive{
+	display: none;
+}
+.sites{
+	color: #FF7715;
+	background: #FFFAF5;
+}
+.oilStation{
+	font-size: 0.95rem;
+}
+.item{
+	color: #DA9841;
+	background:#FFF6EB;
+	
+}
+.volume_num,.buy_num{
+	color: #FF7105;
+	font-size: 0.85rem;
+}
+.argument{
+	background: #FFFAF5;
+}
+.titles{
+	color: #616161;
+}
+.service{
+	width: 100% !important;
+}
+.sigin{
+	text-align: center;
+	width:100% !important;
+}
+.now_buy,.add_buy{
+	width:48%;
+	height: 1.8rem;
+	font-size: 0.75rem;
+	color: #FFFFFF;
+	line-height:0;
+}
+
+.form-control:focus {
+  background-color: #fff;
+  border-color:#D6D6D6 !important;
+  box-shadow:0 0 0 0 #FFFFFF;
+}
+.input-group-text,.form-control{
+	border: none;
+}
+.modal_btn{
+	border-radius: ;
+}
+.imgs{
+	height: 0.8rem !important;
+}
+.price_make{
+	background: #FFF3F0 !important;
+}

@@ -1,0 +1,67 @@
+.container-fluid {
+    /*min-height: 100vh;*/
+    background: #F4F7FC;
+}
+#getMonth {
+    font-size: 5vw;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+#subscript {
+    text-align: left;
+}
+.uncheckStatement {
+    width: 10%;
+    color: #616161;
+}
+.checkStatement {
+    width: 10%;
+    color: #FF6E00;
+    border-bottom: 3px solid #FF6E00;
+}
+#histogram {
+    height: 70vw;
+    width: 90%;
+    margin-left: 2%;
+    padding-left: 5%;
+}
+#formDetails {
+    background: white;
+}
+#expend {
+    font-size: 4vw;
+    color: #8A8A8A;
+    margin-top: 20px;
+}
+#expendDetails {
+    font-size: 5vw;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#expendDetails span {
+    font-size: 8vw;
+}
+.spendingRanking {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 30px;
+    font-size: 4vw;
+}
+.rankingColor {
+    color: #F20C23;
+}
+.rankingSize {
+    font-size: 4.5vw;
+}
+.rankingMoneyColor {
+    color: #FF6E00;
+}
+.randing div {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.reportFormLeft {
+    margin-left: 6%;
+}

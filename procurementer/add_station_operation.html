@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="../css/iScroll.css" />
+		<link rel="stylesheet" href="css/add_station_operation.css" />
+		<script src="../bootstrap-4.3.1-dist/js/popper.min.js"></script>
+	</head>
+
+	<body>
+		<div class="container-fluid topBox px-0">
+			<div class="top black mt-1 border-bottom">
+				<span class=" fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<p class="header-title">加油站经营</p>
+			</div>
+		</div>
+		<div class="container containerBox">
+			<div class="row">
+				<div class="col-12 drowBox">
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle wite_bg border-0 orange font_1" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="min-width: 100%;">
+   							
+  						</button>
+						<div class="dropdown-menu font_2" aria-labelledby="dropdownMenu2" style="min-width: 100%;">
+							<!--<button class="dropdown-item active" type="button">Action</button>
+							<button class="dropdown-item" type="button">Another action</button>
+							<button class="dropdown-item" type="button">Something else here</button>-->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row title_top">
+				<div class="col-4 report_left">营收走势</div>
+				<div class="col-7" style="margin-left:0.5rem;">
+					<div class="row">
+						<div class="report_time col-12">
+							<button class="startTime time_btn px-1" id="date-group2-1">2019-02-10</button>
+							<p style="font-size: 0.6rem;line-height: 1.2rem;">至</p>
+							<button class=" endtTime time_btn  px-1" id="date-group2-2">2019-02-10</button>
+							<span class="fa fa-angle-down down_icon px-1"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="fo_chart" id="barChart"></div>
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-12">
+					<ul class="row head_list">
+						<li class="col-3 head_item">车牌</li>
+						<li class="col-3 head_item">日期</li>
+						<li class="col-3 head_item">油品</li>
+						<li class="col-3 head_item">加油站</li>
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<!--<div class="shows"></div>-->
+		<div id="wrapper" class="wite_bg">
+			<div id="scroller" class="container px-2">
+				<div class="row">
+					<ul class="col-12 order_box">
+						<!--<li class="form-row">
+						<div class="col-3 body_item">1fsdfsdgdfsgfdgfdsg</div>
+						<div class="col-3 body_item">1fsdfsdgdfsgfdgfdsg</div>
+						<div class="col-3 body_item">1fsdfsdgdfsgfdgfdsg</div>
+						<div class="col-3 body_item">1fsdfsdgdfsgfdgfdsg</div>
+					</li>-->
+					</ul>
+				</div>
+
+				<div class="pull-loading">
+					上拉加载更多
+				</div>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/echarts.min.js"></script>
+	<script src="../js/rolldate.min.js"></script>
+	<script src="../js/iscroll.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="js/add_station_operation.js"></script>
+
+</html>

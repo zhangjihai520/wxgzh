@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<style>
+			input::-webkit-input-placeholder{
+				color: #6E6E6E !important;
+			}
+		</style>
+	</head>
+	<body class="public_bg">
+		<div class="container-fluid wite_bg pt-1 border-bottom px-0" >
+			<div class="top">
+				<p class="header-title" style="margin-left: 6%;">取快件</p>
+			</div>
+		</div>
+		<div class="container wite_bg pb-2">
+			<div class="row">
+				<div class="col-12 mt-4 pt-2">
+					<div class="input-group input-group-md">
+						<div class="input-group-prepend" >
+							<span class="input-group-text border-0  pr-1"style="color: #8A8A8A;" id="basic-addon2">提货码：</span>
+						</div>
+						<input type="text" class="form-control border_2 pl-0 pikCode" aria-describedby="basic-addon2" placeholder="请输入提货码" style="background: #e9ecef !important;">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contanier mt-4">
+			<div class="row mx-0" >
+				<button class="col-10 offset-1 btn wite click_btn" style="background: #18AB15;">校验</button>
+			</div>
+		</div>
+		<div class="click"  data-toggle="modal" data-target="#warn"></div>
+		<div class="modal fade " id="warn" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content border-0" style="background:url(img/back_img.png);background-repeat:no-repeat;background-size: cover; height: 20rem;">
+					<div class="row"  >
+						<div class="col-12">
+							<div class="form-row" style="margin-top:9rem !important;">
+								<div class=" p-1 col-4 offset-4 text-center font_1 text-muted ">温馨提示</div>
+							</div>
+							<div class="form-row mt-2">
+								<p class="col-12 font_3 font_weight text-center get_before font_weight " style="display: none;">您还有<span class="warn_sigin"></span>天才能开始提货哦</p>
+								<p class="col-12 font_3 font_weight text-center get_later font_weight text-muted" style="display: none;">
+									<span>您已过了提货时间，请联系客服</span>
+									<img src="img/service.png" alt=""style="width: 0.75rem;height: 0.75rem;" class="tel_img"/>
+									
+								</p>
+							</div>
+							<div class="form-row mt-1">
+								<p class="col-12 font_1 text-center" style="color: #198CFF;">
+									<span>提货时间：</span>
+									<span class="times"></span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn btn-md col-10 font_4  mt-5 offset-1 rounded-pill  wite   click_btn" style="background: #FF8C19;height: 2.4rem !important;" data-dismiss="modal" aria-label="Close" >我知道了</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom" style="z-index: 9999 !important;" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="js/check_goods.js"></script>
+</html>

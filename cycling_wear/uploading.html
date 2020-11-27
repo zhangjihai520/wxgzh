@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--在IE运行最新的渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <title>上传</title>
+    <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+    <link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+    <link rel="stylesheet" href="../plugins/ImgCropping/css/cropper.min.css">
+    <link rel="stylesheet" href="../plugins/ImgCropping/css/ImgCropping.css">
+    <link href="https://cdn.bootcss.com/cropper/3.1.3/cropper.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/public.css" />
+    <link rel="stylesheet" href="../css/organization.css" />
+    <link rel="stylesheet" href="css/uploading.css" />
+    <script src="../js/jquery.min.js?v=2.1.1"></script>
+    <script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+    <script src="../plugins/ImgCropping/js/cropper.min.js"></script>
+    <script src="https://cdn.bootcss.com/cropper/3.1.3/cropper.min.js"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/util.js"></script>
+    <script src="js/uploading.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 pt-1" id="navigationBar">
+                <div class="form-row">
+                    <div class="break col-2 mx-0">
+                        <span class=" fa fa-angle-left top_icon wite nav_icon"></span>
+                       
+                    </div>
+                    <div class="col-8 text-center">
+                    	 <span class="font_6 wite font_weight" style="line-height: 8vh;">上传服务</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-11 uploadingComment pb-2">
+                <form id="dealService">
+                    <input type="hidden" name="csServiceId" value="">
+                    <input type="hidden" name="deleteCsSvcImageIdList" value="">
+                    <input type="hidden" name="deleteCsSvcQuaIdList" value="">
+                    <div class="form-row borderBottom">
+                        <div class="col-12 font_2 mt-2" style="color: #A6A19D">
+                            服务名称
+                        </div>
+                        <div class="col-12 mb-1">
+                            <input type="text" name="storeName" class="uploadingInput font_5" placeholder="请输入名称">
+                        </div>
+                    </div>
+                    <div class="form-row borderBottom">
+                        <div class="col-12 font_2 mt-2" style="color: #A6A19D">
+                            选择省市区
+                        </div>
+                        <div class="col-12 mb-1">
+                            <input type="hidden" name="bdDistrictId" value="">
+                            <input type="text" class="checke_address" onclick="toshare()" readonly="readonly" placeholder="请选择"/>
+                            <!--<select class="uploadingInput font_5" name="province" id="province">-->
+                                <!--<option value="">请选择</option>-->
+                            <!--</select>-->
+                        </div>
+                        <!--<div class="col-3 mb-1 ml-2">-->
+                            <!--<select class="uploadingInput font_5" name="city" id="city">-->
+                                <!--<option value="">请选择</option>-->
+                            <!--</select>-->
+                        <!--</div>-->
+                        <!--<div class="col-3 mb-1 ml-2">-->
+                            <!--<select class="uploadingInput font_5" name="bdDistrictId" id="district">-->
+                                <!--<option value="">请选择</option>-->
+                            <!--</select>-->
+                        <!--</div>-->
+                    </div>
+                    <div class="form-row borderBottom">
+                        <div class="col-12 font_2 mt-2" style="color: #A6A19D">
+                            详细地址
+                        </div>
+                        <div class="col-12 mb-1">
+                            <input type="text" name="storeAddress" class="uploadingInput font_5" placeholder="请输入详细地址">
+                        </div>
+                    </div>
+                    <div class="form-row borderBottom">
+                        <div class="col-6">
+                            <div class="form-row">
+                                <div class="col-12 font_2 mt-2" style="color: #A6A19D">
+                                    联系人
+                                </div>
+                                <div class="col-12 mb-1">
+                                    <input type="text" name="storeContact" class="uploadingInput font_5" placeholder="请输入联系人">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-row">
+                                <div class="col-12 font_2 mt-2" style="color: #A6A19D">
+                                    电话
+                                </div>
+                                <div class="col-12 mb-1">
+                                    <input type="text" class="uploadingInput font_5"
+                                           placeholder="请输入电话" name="storeTel" oninput = "value=value.replace(/[^\d]/g,'')" maxlength="11">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-12 font_2 mt-2" style="color: #A6A19D">
+                            选择服务类型(单选)
+                        </div>
+                        <div class="col-12 mb-1 mt-1">
+                            <div class="form-row" id="labelList">
+                                <!--<div class="serviceType font_3 text-center checkServiceType">车务服务</div>-->
+                                <!--<div class="serviceType font_3 text-center">车务服务</div>-->
+                                <!--<div class="serviceType font_3 text-center">车务服务</div>-->
+                                <!--<div class="serviceType font_3 text-center">车务服务</div>-->
+                            </div>
+                            <input type="hidden" name="csLabelId" value="">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-12 font_2 mt-2" style="color: #A6A19D">
+                            服务介绍
+                        </div>
+                        <div class="col-12 p-1" style="background: #F7F7F7">
+                            <textarea class="font_4 uploadingInput" name="serviceDesc" style="height: 15vw" placeholder="请编辑介绍"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row borderBottom">
+                        <div class="col-12 font_2 mt-2" style="color: #A6A19D">
+                            服务网址
+                        </div>
+                        <div class="col-12 mb-1">
+                            <input type="text" name="serviceUrl" class="uploadingInput font_5" placeholder="请输入服务网址">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-12 font_2 mt-2" style="color: #A6A19D">
+                            相关资质（<span class="imgTip">必传</span>）
+                        </div>
+                        <div class="col-12 mb-1">
+                            <div class="form-row">
+                                <div class="relevantQualifications addImg"><img src="img/add.png"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-12 font_2 mt-2" style="color: #A6A19D">
+                            服务图片(<span class="imgTip">请按长宽比例为16:9左右选择规定图片</span>)
+                        </div>
+                        <div class="col-12 mb-1">
+                            <div class="form-row">
+                                <div class="relevantQualifications addServiceImg"><img src="img/add.png"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="form-row mt-3 mb-2">
+                    <div class="text-center font_7 pt-1 pb-1" id="add">
+                        提交
+                    </div>
+                    <div class="text-center font_7 pt-1 pb-1" id="update" style="display:none;">
+                        确认修改
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--图片裁剪框 start-->
+    <div style="display: none" class="tailoring-container">
+        <div class="black-cloth" onclick="closeTailor(this)"></div>
+        <div class="tailoring-content" style="padding: 0">
+            <div class="tailoring-content-one mt-2 pl-2 pr-5">
+                <label title="上传图片" for="chooseImg" class="l-btn choose-btn">
+                    <input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg" class="hidden" onchange="selectImg(this)">
+                    选择图片
+                </label>
+                <div class="close-tailoring"  onclick="closeTailor(this)">×</div>
+            </div>
+            <div class="tailoring-content-two">
+                <div class="tailoring-box-parcel">
+                    <img id="tailoringImg">
+                </div>
+                <!--<div class="preview-box-parcel">-->
+                    <!--<p>图片预览：</p>-->
+                    <!--<div class="square previewImg"></div>-->
+                    <!--<div class="circular previewImg"></div>-->
+                <!--</div>-->
+            </div>
+            <div class="tailoring-content-three pl-2 pr-4">
+                <!--<button class="l-btn cropper-reset-btn">复位</button>-->
+                <!--<button class="l-btn cropper-rotate-btn">旋转</button>-->
+                <!--<button class="l-btn cropper-scaleX-btn">换向</button>-->
+                <button class="l-btn sureCut" id="sureCut" onclick="crop()">确定</button>
+            </div>
+        </div>
+    </div>
+    <!--图片裁剪框 end-->
+    <div class="am-share ">
+        <h3 class="am-share-title">选择地区</h3>
+        <ul class="am-share-sns">
+            <li>南昌</li>
+            <li>南昌</li>
+        </ul>
+        <div class="am-share-footer"><button class="share_btn">取消</button></div>
+    </div>
+    <div class="toast text-center fixed-bottom" style="" role="alert" aria-live="polite" aria-atomic="true"
+         data-delay="1000">
+        <div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+.order_item{
+	border-bottom:8px solid #f5f8fc ;
+}
+.icons{
+	font-size: 6px !important;
+	line-height: 0.9rem !important;
+}
+.icon_1{
+	color: #6BE387;
+}
+.icon_2{
+	color:#FAB37D;
+}
+.icon_3{
+	color:#EB737D;
+}
+.icon_4{
+	color:#75D9EB;
+}
+.icon_5{
+	color:#79B4F2;
+}
+.icon_6{
+	color:#919BDB;
+}
+.look_more{
+	border-color: #FF6F01 !important;
+	border-radius: 2px;
+}
+.true_btn{
+	background: #FF760D;
+}
+.false_btn{
+	background: #8C8787;
+}
+.pr-0{
+	color: #8A8A8A;
+}
+.all_money{
+	color: #E02437;
+}
+.new_btn{
+	height: 1.5rem !important;
+	line-height:0rem;
+}
+.blue_bg{
+	background: #93D2BF;
+}
+.yellow_bg{
+	background: #FFCB76;
+}
+.text_tyle{
+	height: 1.2rem;
+	line-height: 1.2rem;
+}
+.muted_bg{
+	background: #999091;
+}

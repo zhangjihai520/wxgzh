@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="../css/login.css" />
+		<style type="text/css">
+			.icon{
+				font-size: 0.6rem !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container-fluid px-0">
+			<div class="top orange mt-1">
+				<span class=" fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<p class="header-title">修改发票信息</p>
+			</div>
+		</div>
+		<div class="container ">
+			<div class="row">
+				<div class="col-12 mt-4">
+					<div class="input-group  input-group-sm user_name_box ">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text  icon" style="color:#676767;">公司名称：</span>
+						</div>
+						<input type="text" class="form-control user_name font_1" placeholder="请输入公司名称">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text icon" onclick="clear_input('.user_name')">&times;</span>
+						</div>
+					</div>
+					<div class="input-group input-group-sm password_box">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text  icon" style="color:#676767;">社会统一信用代码：</span>
+						</div>
+						<input type="text" class="form-control password uscc font_1" onkeyup="number_eng(this)" placeholder="请输入社会统一信用代码">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text icon" onclick="clear_input('.uscc')">&times;</span>
+						</div>
+					</div>
+					
+					<div class="input-group input-group-sm password_box">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text  icon" style="color:#676767;">注册地址：</span>
+						</div>
+						<input type="text" class="form-control password address_detail font_1"   placeholder="请输入详细地址">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text icon" onclick="clear_input('.address_detail')">&times;</span>
+						</div>
+					</div>
+					<div class="input-group input-group-sm password_box">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text  icon" style="color:#676767;">电话号码：</span>
+						</div>
+						<input type="text" class="form-control password phone_num font_1"  onkeyup="Number_num(this)" placeholder="请输入电话号码">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text icon" onclick="clear_input('.phone_num')">&times;</span>
+						</div>
+					</div>
+					<div class="input-group input-group-sm password_box">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text  icon" style="color:#676767;">开户银行名称：</span>
+						</div>
+						<input type="text" class="form-control password bankName font_1" placeholder="请输入开户银行名称">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text icon" onclick="clear_input('.bankName')">&times;</span>
+						</div>
+					</div>
+					<div class="input-group input-group-sm password_box">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text  icon" style="color:#676767;">对公账户账号：</span>
+						</div>
+						<input type="text" class="form-control password bankAccount font_1" onkeyup="number_eng(this)" placeholder="请输入对公账户账号">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text icon" onclick="clear_input('.bankAccount')">&times;</span>
+						</div>
+					</div>
+					<div class="input-group input-group-sm password_box">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text  icon" style="color:#676767;">邮箱地址：</span>
+						</div>
+						<input type="email" class="form-control password wite_bg email font_1"   placeholder="请输入邮箱地址" >
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text icon" onclick="clear_input('.email')">&times;</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row fixed-bottom mb-2">
+				<button type="button" class="btn  btn-sm  col-10 offset-1 click_btn line_orange change_passowrd" id="sub_address">保存提交</button>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<!--<script src="js/change_invoice.js"></script>-->
+</html>

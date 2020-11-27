@@ -1,0 +1,158 @@
+.navigationBarText {
+    font-size: 4.5vw;
+    font-weight: bold;
+    color: #FF760D;
+}
+.disclaimer {
+    font-weight: bold;
+    color: black;
+    font-size: 4.5vw;
+}
+.checkButton {
+    margin-top: 0.8%;
+}
+.groupName {
+    font-size: 5vw;
+}
+.groupName span {
+    font-size: 4.5vw;
+    color: #8A8A8A;
+}
+.itemName {
+    font-size: 4vw;
+    color: #1F1F1F;
+}
+.edit {
+    color: #F20C23;
+    font-size: 5vw;
+}
+.itemComment {
+    display: none;
+}
+#moveTo {
+    background: #DB3444;
+    color: white;
+    font-size: 4.5vw;
+    text-align: center;
+    margin-top: 6%;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 13%;
+}
+#delete {
+    background: #807A7B;
+    color: white;
+    font-size: 4.5vw;
+    text-align: center;
+    margin-top: 6%;
+    padding: 5px;
+    border-radius: 5px;
+}
+.deletePersonComment {
+    background: white;
+    font-size: 4.5vw;
+    color: #F83737;
+    border-radius: 5px;
+    margin-top: 50%;
+    margin-left: 7%;
+}
+.personnelDetailsComment {
+    background: #F0F0F0;
+    border-radius: 5px;
+    margin-left: 1%;
+    width: 100.5%;
+    bottom: 0;
+    position: fixed;
+}
+.personnelDetailsConfirm {
+    font-size: 4.5vw;
+    text-indent: 1em;
+    color: #FF6E00;
+}
+#personnelDetails .cancel {
+    font-size: 8vw;
+    line-height: 6vw;
+}
+.personage {
+    background: white;
+    border-radius: 5px;
+    width: 97%;
+    margin-left: 1.5%;
+    padding-bottom: 40px;
+    height: 35vh;
+    overflow-y: scroll;
+}
+.personageItemInput {
+    border-bottom: 1px solid #E3E3E3;
+}
+.personageItemIcon {
+    margin-top: 5%;
+}
+.personageItemCheck {
+    color: #FF6E00;
+}
+.addJurisdiction {
+    width: 85%;
+    margin-left: 5.5%;
+    margin-top: 30%;
+    background: white;
+    border-radius: 5px;
+}
+.setName {
+    border: none;
+    width: 100%;
+    margin-top: 15px;
+}
+.setName::-ms-input-placeholder{
+    text-align: center;
+}
+.setName::-webkit-input-placeholder{
+    text-align: center;
+}
+.jurisdictionDetails {
+    margin-top: 10px;
+    border-top: 1px solid #F0EEED;
+    padding-top: 5px;
+}
+.details {
+    margin-top: 10px;
+    background: #FFE9D9;
+    border-radius: 5px;
+    font-size: 4.5vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.details .col-5 {
+    margin-left: 5%;
+}
+.details input {
+    border: none;
+    background: none;
+    color: #F76B00;
+    width: 100%;
+}
+.moneyHint {
+    font-size: 3vw;
+    color: #8A8A8A;
+    text-indent: 1em;
+    margin-top: 10px;
+}
+.jurisdictionBtn {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 5vw;
+}
+.jurisdictionConfirm {
+    background: #FF760D;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+.jurisdictionCancel {
+    background: #8C8787;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}

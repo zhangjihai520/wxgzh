@@ -1,0 +1,116 @@
+.container-fluid {
+    min-height: 100vh;
+    background: #F4F7FC;
+}
+
+img {
+    width: 100%;
+}
+
+#head {
+    height: 31vw;
+    background: linear-gradient(to top, #FF7B1C, #FF852E);
+}
+.head_img{
+    width: 6vw;
+    height: 6vw;
+}
+.text1 {
+    width: 100%;
+    font-size: 5vw;
+    color: white;
+    font-weight: bolder;
+
+}
+.text2 {
+    padding: 3px 10px 3px 10px;
+    font-size: 2.5vw;
+    color: #965B22;
+
+}
+.text3 {
+    margin-top: 5px;
+    font-size: 3vw;
+    color: white;
+
+}
+.text4 {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 3vw;
+    color: #4D4A49;
+
+}
+.text5 {
+    font-size: 5.5vw;
+    color: #FD6C02;
+    font-weight: bolder;
+
+}
+
+.text6 {
+    font-size: 5vw;
+    color: #595756;
+    text-align: left;
+    font-weight: bold;
+
+}
+.text7{
+    margin-top: 10px;
+    font-size: 3vw;
+    color: #4D4A49;
+
+}
+.status {
+    color: white;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.Headportrait {
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    height: 20vw;
+}
+.Headtopimghw{
+    width: 20vw;
+    height: 20vw;
+   margin-left: 3%;
+}
+
+.viplevel {
+    height: 23px;
+    border-radius: 19px;
+    background: #FFE6CC;
+}
+.DriverBack{
+    margin-right: 5px;
+    border-radius:6px;
+    background: white;
+    text-align: center;
+
+}
+
+.DriverBack1{
+    margin-left: 5px;
+    border-radius:6px;
+    background: white;
+    text-align: center;
+}
+.vipdata{
+
+    border-radius:6px;
+    background: white;
+    text-align: center;
+}
+.vipdata1{
+    margin-top: 20px;
+    text-align: center;
+    width: 33%;
+}
+.vipimag{
+    width: 24%;
+    height: 45%;
+}

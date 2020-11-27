@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/wait_pay.css" />
+	</head>
+
+	<body class="public_bg">
+		<div class="container-fluid wite_bg pt-1 border-bottom px-0">
+			<div class="top orange ">
+				<span class="fa fa-angle-left top_icon pl-2" onclick="go_page('purchasing.html')"></span>
+				<p class="header-title">确认中</p>
+			</div>
+		</div>
+		<div class="container wite_bg py-1 border-bottom">
+			<div class="row order_box">
+				<!--<div class="col-12">
+					<div class="form-row font_2 pt-2">
+						<p class="col-8 font_weight">订单信息</p>
+					</div>
+					<div class="form-row  font_1 mt-2 pt-2">
+						<p class="item_name col-3 pr-0">订单号：</p>
+						<p class="order_no col-9 pl-0"></p>
+					</div>
+					<div class="form-row font_1 mt-2">
+						<div class="col-12">
+							<div class="form-row">
+								<p class="item_name col-3 pr-0">商品明细：</p>
+								<div class="goods_info col-9 pl-0">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-row  font_1 mt-2">
+						<p class="item_name col-3 pr-0">配送方式：</p>
+						<p class=" col-9 pl-0 trans_type"></p>
+					</div>
+					<div class="form-row  font_1 mt-2">
+						<p class="item_name col-3 pr-0">油库地址：</p>
+						<p class=" col-9 pl-0 oil_site"></p>
+					</div>
+					<div class="form-row  font_1 mt-2">
+						<p class="item_name col-3 pr-0">配送地址：</p>
+						<p class=" col-9 pl-0 arrive_site"></p>
+					</div>
+					<div class="form-row  font_1 mt-2">
+						<p class="item_name col-3 pr-0">下单时间：</p>
+						<p class=" col-9 pl-0 creat_time"></p>
+					</div>
+					<div class="form-row  font_1 mt-2">
+						<p class="item_name col-4 pr-0">预计到达时间：</p>
+						<p class=" col-8 pl-0 arrive_time"></p>
+					</div>
+					<div class="form-row  font_1 py-2">
+						<p class="item_name col-3 pr-0">总金额：</p>
+						<p class=" col-9 pl-0 font_weight font_3 total_money"></p>
+					</div>
+					<div class="form-row py-2 font_1 border-bottom ">
+						<p class="col-4"><span class="delete_btn p-1" data-toggle="modal" data-target="#cancel_model">取消订单</span></p>
+						<p class="col-8 text-right text-danger">请在30分钟内付款成功</p>
+					</div>
+					<div class="form-row font_2 pt-1 mt-2">
+						<p class="col-8 font_weight">付款信息</p>
+					</div>
+					<div class="form-row  font_1 mt-3">
+						<p class="item_name col-3 pr-0">开户名：</p>
+						<p class=" col-9 pl-0 buy_name"></p>
+					</div>
+					<div class="form-row  font_1 mt-2">
+						<p class="item_name col-3 pr-0">开户行：</p>
+						<p class=" col-9 pl-0 buy_bank"></p>
+					</div>
+					<div class="form-row  font_1 mt-2">
+						<p class="item_name col-3 pr-0">账号：</p>
+						<p class=" col-9 pl-0 bank_no"></p>
+					</div>
+					<div class="form-row  font_1 mt-2">
+						<p class="item_name col-3 pr-0">识别码:</p>
+						<p class=" col-9 pl-0 buy_uscc"></p>
+						<p class="col-12 font_0 orange mt-1">(识别码为审核项，请务必填入备注栏)</p>
+					</div>
+					<div class="form-row  font_1 py-2">
+						<p class="item_name col-3 pr-0">总金额：</p>
+						<p class=" col-9 pl-0 font_weight font_3 total_money"></p>
+					</div>
+					
+				</div>-->
+			</div>
+		</div>
+		<div class="modal fade " id="cancel_model" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class=" p-1 mt-2 col-2 offset-5 text-center">提示</div>
+					<div class="modal-body p-0">
+						<p class="font_2 font_weight text-center">是否确认取消订单</p>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2 click_btn wite modal_btn is_show" data-dismiss="modal" aria-label="Close">是</button>
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2 click_btn wite modal_btn false_btn" data-dismiss="modal" aria-label="Close">否</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="tall_phone" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class=" p-1 mt-2 col-2 offset-5 text-center">提示</div>
+					<div class="modal-body p-0">
+						<p class="font_2 font_weight text-center">是否与客服联系</p>
+					</div>
+					<div class="row m-0 p-0">
+						<a  href="tel:15170827934" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn take_phone click_btn">是</a>
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2 click_btn wite modal_btn false_btn" data-dismiss="modal" aria-label="Close">否</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="change_price" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-3">
+					<div class=" p-1 mt-1 col-6 offset-3 text-center text-black-50 font_5">改物流金额</div>
+					<div class="modal-body text-center ">
+						<div class="form-row border-bottom font_5 text-danger font_weight" style="line-height: 1.55rem;">
+							<input type="text" class="font_2 col-6 offset-1 font_weight text-right form-control text-danger trans_price" oninput="clearNoNum(this)">
+							<span>元</span>
+						</div>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn btn-sm col-3 mt-1 offset-2  wite modal_btn line_orange click_btn trans_btn" data-dismiss="modal" aria-label="Close" >确定</button>
+						<button type="button" class="btn btn-sm col-3 mt-1 offset-2  wite modal_btn line_orange click_btn" style="opacity: 0.5;" data-dismiss="modal" aria-label="Close">取消</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="js/wait_pay.js"></script>
+
+</html>

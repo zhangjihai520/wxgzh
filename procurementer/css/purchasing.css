@@ -1,0 +1,169 @@
+.header {
+	width: 100%;
+}
+.search_box {
+	height: 1.6rem;
+	background: #FFFFFF;
+	padding: 0;
+	border-radius: 1.6rem;
+}
+
+.search_input {
+	width: 70%;
+	border-bottom-left-radius: 50% !important;
+	border-top-left-radius: 50% !important;
+}
+
+.search_input,
+.search_btn {
+	height: 1.6rem;
+	outline: none;
+	border: none;
+	border-radius: 1.5rem;
+	font-size: 0.6rem;
+}
+
+.search_btn {
+	/* width: 30%; */
+	border: 1px solid #FFFFFF;
+	background: linear-gradient(#FF852E, #FF7B1C);
+	color: #FFFFFF;
+	line-height: 0;
+}
+
+.in_focus:focus {
+	box-shadow: 0 0 0 0 #FFFFFF;
+	outline: none;
+}
+
+.search_btn:focus {
+	color: #FFFFFF;
+}
+
+.buy_icon {
+	width: 1.2rem;
+	height: 1.1rem;
+	font-size: 1.2rem;
+	padding: 0;
+	text-align: right;
+	color: #FFFFFF;
+	line-height: 1.6rem;
+}
+
+.dropdown-toggle {
+	font-size: 0.6rem;
+}
+
+.type_item,
+.product_item {
+	border: 1px solid #E0E0E0;
+	text-align: center;
+	border-radius: 4px;
+	font-size: 0.75rem;
+}
+.search_price{
+	font-size: 0.6rem;
+	height:1rem;
+	margin-top: 0.75rem;
+	border-radius: 2px;
+	line-height: 1rem;
+}
+
+.product_item {
+	padding: 0 0 5px 0;
+	margin: 0;
+}
+.gray_color{
+	color: #999999;
+}
+.product_img {
+	width:2.4rem;
+	height: 2.4rem;
+}
+.station_name {
+	font-size: 0.75rem;
+	color: #1F1F1F;
+}
+
+.price {
+	font-size: 0.75rem;
+	color: #FF1D0D;
+}
+.station_name,
+.price {
+	line-height: 1rem;
+}
+.volume{
+	display: none;
+}
+.fa-map-marker{
+	color: #BFB4AC;
+}
+.site{
+	color: #757D8A;
+}
+.modal-body {
+	max-height: 10rem;
+	overflow: scroll;
+}
+
+.modal-body::-webkit-scrollbar {
+	display: none;
+}
+
+.form-check {
+	border-bottom: 1px solid #EDEDED;
+	padding: 10px 0 10px 2rem;
+}
+
+.form-check-label {
+	font-size: 0.6rem;
+}
+
+.form-check-input:checked {
+	background: #FF7B1C;
+}
+
+/*active*/
+
+.type_active {
+	border-color: #FF852E;
+	color: #FF852E;
+}
+
+.site_box{
+	display: none;
+}
+.buy_num{
+	width:0.8rem !important;
+	height: 0.8rem !important;
+	line-height:0.8rem ;
+	border-radius:0.8rem;
+	background: red;
+	position: absolute;right: 0;
+}
+
+.checkIcon {
+	margin-top: 0.35rem;
+}
+.checkIcon img {
+	width: 100%;
+}
+.locationIcon {
+	margin-top: 0.12rem;
+	width:5%;
+}
+.locatingInformation {
+	font-size: 3vw;
+	display: none;
+}
+.distancePrice,.distance {
+	color: #FF7300;
+}
+.sortByDestination,.sortByDestinationParent {
+	width: 8vw;
+}
+#priceTip {
+	color: #FF720D;
+	display: none;
+}

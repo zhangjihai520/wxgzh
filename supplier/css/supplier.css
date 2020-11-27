@@ -1,0 +1,16 @@
+.header{
+	height:4.5rem;
+	
+}
+.titles{
+	height: 2.5rem;
+	position: relative;
+	bottom:1.5rem;
+	border-radius: 4px;
+	line-height: 2.5rem;
+}
+.oil_box{
+	position: relative;
+	bottom:1rem;
+}
+

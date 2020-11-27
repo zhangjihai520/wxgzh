@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<style>
+			.input-group-text {
+				background: #FFFFFF;
+			}
+			.form-control {
+				border-radius: 4px !important;
+			}
+			
+			.fa-angle-right {
+				font-size: 1.2rem;
+				border: none;
+				line-height: 1.8rem;
+			}
+		</style>
+	</head>
+
+	<body class="public_bg">
+		<div class="container-fluid shadow-sm pt-1 bg-white rounded px-0">
+			<div class="top">
+				<span class=" fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<p class="header-title"></p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row mx-0 wite_bg mt-2 oil_row">
+				<div class="col-12 oil_stock_box">
+					<!--<div class="form-row">
+						<p class="form-control border col-6 font_4 orange font_weight text-center">1000吨</p>
+						<p class="form-control border col-6 font_4 orange font_weight text-center">1000吨</p>	
+					</div>-->
+				</div>
+<!-- 				<div class="input-group pb-3 pr-2">
+					<div class="input-group-prepend">
+						<span class="input-group-text border-white font_4 px-5 orange">92#</span>
+					</div>
+					<p class="form-control font_4 orange font_weight text-center">1000吨</p>
+
+				</div>
+				<div class="input-group pb-3 pr-2">
+					<div class="input-group-prepend">
+						<span class="input-group-text border-white font_4 px-5 orange">95#</span>
+					</div>
+					<p class="form-control font_4 orange font_weight text-center">1000吨</p>
+
+				</div>
+				<div class="input-group pb-3 pr-2">
+					<div class="input-group-prepend">
+						<span class="input-group-text border-white font_4 px-5 orange">98#</span>
+					</div>
+					<p class="form-control font_4 orange font_weight text-center">1000吨</p>
+
+				</div>
+				<div class="input-group pb-3 pr-2">
+					<div class="input-group-prepend">
+						<span class="input-group-text border-white font_4 px-5 orange">0#</span>
+					</div>
+					<p class="form-control font_4 orange font_weight text-center">1000吨</p>
+				</div> -->
+
+			</div>
+			<div class="row mx-0 wite_bg mt-2">
+				<div class="input-group py-0 pr-2">
+					<div class="input-group-prepend">
+						<span class="input-group-text border-white font_4 px-4">系统入库</span>
+					</div>
+					<p class="form-control  text-right fa fa-angle-right sys_inStock"></p>
+				</div>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="js/supplier_oil_stock.js"></script>
+
+</html>

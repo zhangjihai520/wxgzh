@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/shop_plan_detail.css" />
+		<script src="../bootstrap-4.3.1-dist/js/popper.min.js"></script>
+	</head>
+
+	<body class="public_bg">
+		<div class="container-fluid wite_bg px-0 border-bottom">
+			<div class="top black pt-1">
+				<span class=" fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<p class="header-title"></p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="add_btn col-7 mt-2" style="line-height: 1.3rem;color: #8A8A8A;">
+					<span class="font_2">物流方式：</span>
+					<span class="font_2 physical_type orange"></span>
+				</div>
+			</div>
+		</div>
+		<div class="container plan_box px-2">
+			<!-- <div class="row m-0 shadow-sm bg-white wite_bg mt-2 plan_item pb-4">
+				<div class="col-12 row p-0 m-0">
+					<div class="row col-12">
+						<p class="col-2 tag text-center">1</p>
+					</div>
+					<div class="col-12 row color-6 mt-3">
+						<span class="col-4 pr-0 font_2 ">收货地址：</span>
+						<span class="col-8 px-0 font_2 site_name black">江西南昌东湖区120号</span>
+					</div>
+					<div class="col-12 mt-2 py-1 font_1">
+						<span class="fa fa-circle pr-1"></span>
+						<span class="color-6">油品详情</span>
+					</div>
+					<div class="col-12 row m-0 p-0 mt-2 py-1">
+						<div class="col-3 goods_item text-center border-right">
+							<p class="goods_name font_4 orange">92#</p>
+							<p class="goods_no font_1 mt-1"><span class="g_no">50</span>吨</p>
+						</div>
+						<div class="col-3 goods_item text-center  border-right">
+							<p class="goods_name font_4 orange">92#</p>
+							<p class="goods_no font_1 mt-1"><span class="g_no">500</span>吨</p>
+						</div>
+						<div class="col-3 goods_item text-center  border-right">
+							<p class="goods_name font_4 orange">92#</p>
+							<p class="goods_no font_1 mt-1"><span class="g_no">500</span>吨</p>
+						</div>
+						<div class="col-3 goods_item text-center  border-right">
+							<p class="goods_name font_4 orange">92#</p>
+							<p class="goods_no font_1 mt-1"><span class="g_no">500</span>吨</p>
+						</div>
+					</div>
+				</div>
+			</div> -->
+		</div>
+		<div class="row col-12 p-0 m-0 mb-2">
+			<button type="button" class="btn mt-3 btn-sm click_btn line_orange font_4 col-4 offset-4 rounded-pill finsh_btn">帮我推荐</button>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="js/shop_plan_detail.js"></script>
+	<script>
+		page_change(".finsh_btn","shopping_plan_recommend.html")
+	</script>
+</html>

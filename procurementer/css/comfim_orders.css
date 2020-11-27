@@ -1,0 +1,49 @@
+.img_logo{
+	width: 1.4rem !important;
+	height: 1.4rem !important;
+}
+.oil_no,.oil_num{
+	font-size: 0.9rem;
+}
+.oil_money{
+	color: #FF3019;
+}
+.input-group-text,.form-control{
+/*	height: 1.65rem;
+	line-height: 1.65rem;;*/
+	background: #FFFFFF !important;
+	border: none !important;
+}
+.form-control:focus {
+  background-color: #fff;
+  border-color:#D6D6D6 !important;
+  box-shadow:0 0 0 0 #FFFFFF;
+}
+.item{
+	color: #616161;
+}
+.check_active{
+	color: #1F1F1F;
+	font-weight: bold;
+}
+.fa-calendar{
+	color: #12B4CE;
+}
+.total_money{
+	color: #FF3019;
+	line-height: 2.5rem;
+}
+.logistics {
+	font-size: 4vw;
+	background: white;
+	text-align: right;
+	padding-bottom: 10px;
+	display: none;
+}
+.false_btn{
+	background:#F26500 ;
+	opacity: 0.5;
+}
+.true_btn,.is_show{
+	background:#F26500;
+}

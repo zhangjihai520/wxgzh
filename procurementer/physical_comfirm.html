@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/comfim_orders.css" />
+	</head>
+
+	<body class="public_bg">
+		<div class="container-fluid wite_bg pt-1 border-bottom px-0">
+			<div class="top orange ">
+				<span class="fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<p class="header-title">确认订单</p>
+			</div>
+		</div>
+		<div class="container-fluid" style="padding: 0">
+			<div class="row p-0 m-0" id="oilDepot">
+				<div class="col-12">
+					<div class="row wite_bg pt-2">
+						<p class="col-10 station_name font_2">
+							<span class=" fa fa-circle orange_light pr-1" style="font-size: 6px;"></span>
+							<span class="text-black-50">商品明细</span>
+						</p>
+					</div>
+					<div class="row wite_bg">
+						<div class="col-12">
+							<div class="form-row oil_list  py-2">
+								<!--<div class="col-12 row  orange ">
+									<p class="col-6   oil_no font_weight text-right">92#</p>
+									<p class="col-6   oil_num font_weight text-center">100吨</p>
+								</div>-->
+								<!--<div class="col-12 row  orange ">
+									<p class="col-6   oil_no font_weight text-right">92#</p>
+									<p class="col-6   oil_num font_weight text-center">100吨</p>
+								</div>-->
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row   wite_bg mt-1">
+				<div class="col-12 p-0 m-0  input-group pay_style input-group-md py-2">
+					<div class="input-group-prepend">
+						<p class="input-group-text font_1 pr-1">
+							<span class=" fa fa-circle green_light pr-1" style="font-size: 6px;"></span>
+							<span class="text-black-50">物流方式：</span>
+						</p>
+					</div>
+					<p class="form-control font_2 px-0">
+						<span>配送费</span>
+						<span class="text-danger trans_pay"></span>
+					</p>
+
+					<div class="input-group-prepend icon_box">
+						<span class="input-group-text  fa fa-angle-right  px-2"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row   wite_bg mt-1">
+				<div class="col-12 p-0 m-0  input-group input-group-md py-2 arive_style">
+					<div class="input-group-prepend">
+						<p class="input-group-text font_1 pr-1">
+							<span class=" fa fa-circle blue_light pr-1" style="font-size: 6px;"></span>
+							<span class="text-black-50">起始地址：</span>
+						</p>
+					</div>
+					<p class="form-control b_site font_2 px-0"></p>
+					<div class="input-group-prepend icon_box">
+						<span class="input-group-text  fa fa-angle-right  px-2"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row   wite_bg mt-1">
+				<div class="col-12 p-0 m-0  input-group input-group-md py-2 arive_style">
+					<div class="input-group-prepend">
+						<p class="input-group-text font_1 pr-1">
+							<span class=" fa fa-circle orange_light pr-1" style="font-size: 6px;"></span>
+							<span class="text-black-50">终点地址：</span>
+						</p>
+					</div>
+					<p class="form-control e_site font_2 px-1"></p>
+					<div class="input-group-prepend icon_box">
+						<span class="input-group-text  fa fa-angle-right  px-2"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="row   wite_bg mt-1">
+				<div class="col-12 p-0 m-0  input-group input-group-md py-2 arive_style">
+					<div class="input-group-prepend">
+						<p class="input-group-text font_1 pr-1">
+							<span class=" fa fa-circle orange_light pr-1" style="font-size: 6px;"></span>
+							<span class="text-black-50">到货时间：</span>
+						</p>
+					</div>
+					<input type="text" class="form-control  laydate-icon font_1 arrive_time px-1" readonly="readonly" id="hello3">
+					<div class="input-group-prepend icon_box">
+						<span class="input-group-text  fa fa-calendar  px-2"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container wite_bg fixed-bottom border">
+			<div class="row py-1">
+				<div class="col-7 font_weight" style="height: 3rem;">
+					<div class="form-row">
+						<p class="col-12 mt-2 font_3 text-danger">
+							<span>物流费:</span>
+							<span class="trans_money"></span>元
+						</p>
+						<p class="col-5 font_1 text-center wite bg-success mt-1" style="border-radius: 3px;" data-toggle="modal" data-target="#trans_price">改物流价</p>
+					</div>
+				</div>
+
+				<div class="col-5  px-1 text-right mt-2">
+					<button class="btn btn-sm click_btn line_orange wite rounded-pill put_order" >提交订单</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="trans_price" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class=" p-1 mt-2 col-6 offset-3 text-center text-black-50">改物流金额</div>
+					<div class="modal-body text-center ">
+						<div class="form-row border-bottom font_5 text-danger font_weight" style="line-height: 1.55rem;">
+							<input type="text" class="font_2 col-6 offset-1 font_weight text-right form-control text-danger trans_price" oninput="clearNoNum(this)">
+							<span>元</span>
+						</div>
+					</div>
+					<div class="row m-0 p-0">
+						
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn is_show" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#comfirm">确定</button>
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn false_btn" data-dismiss="modal" aria-label="Close">取消</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="comfirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class=" p-1 mt-2 col-2 offset-5 text-center">提示</div>
+					<div class="modal-body p-0">
+						<p class="font_2 font_weight text-center">是否确定要改价金额！</p>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn false_btn" data-dismiss="modal" aria-label="Close">取消</button>
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn is_show change_btn" data-dismiss="modal" aria-label="Close">确定</button>
+						
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../toastr-2.1.4/toastr.min.js"></script>
+	<script src="js/physical_comfirm.js"></script>
+
+</html>

@@ -1,0 +1,26 @@
+.item_name{
+	color: #8F8F8F;
+}
+.total_money,.oil_price{
+	color:#FF3019 ;
+}
+.delete_btn,.tall_phone{
+	background: #FFF3EB;
+	color: #FF7300;
+	border-radius: 2px;
+}
+.false_btn{
+	background: #90979D;
+}
+.true_btn,.is_show,.take_phone{
+	background:#E8493A;
+}
+.change_price{
+	background:#E3FAE9;
+	color: #1C9C3A;	
+	border-radius: 2px;
+}
+.take_phone{
+	border: none !important;
+	outline: none !important;
+}

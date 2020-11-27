@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/login.css" />
+	</head>
+
+	<body>
+		<div class="container-fluid pt-1 px-0">
+			<div class="top">
+				<span class=" fa fa-angle-left top_icon pl-2" onclick="window.location.href='login.html'"></span>
+				<p class="header-title">注册</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<p class="col-12 mt-4" style="font-size: 0.85rem;font-weight: bolder;">请选择注册类型</p>
+			</div>
+			<div class="row choose_user">
+				<div class="choose_box">
+					<div class="supplier-box choose_active shadow-sm  bg-white rounded" id="1" data-href="supplier/supplier_list.html" data-status="supplier">
+						<span class="iconfont icongongyingshang choose_icon"></span>
+						<p class="choose_name">供应商</p>
+						<p class="fa fa-check-circle-o check_icon"></p>
+					</div>
+				</div>
+				<div class=" choose_box">
+					<div class="supplier-box shadow-sm  bg-white rounded" id="2" data-href="procurementer/purchasing.html" data-status="procurementer">
+						<span class="iconfont iconcaigoushang choose_icon"></span>
+						<p class="choose_name">采购商</p>
+						<p class="fa fa-check-circle-o check_icon"></p>
+					</div>
+				</div>
+				<div class="choose_box">
+					<div class="supplier-box shadow-sm  bg-white rounded" id="3" data-href="ordinary_organiz/account.html" data-status="ordinary_organiz">
+						<span class="iconfont iconjigou choose_icon"></span>
+						<p class="choose_name">普通机构</p>
+						<p class="fa fa-check-circle-o check_icon"></p>
+					</div>
+				</div>
+				<div class="choose_box ">
+					<div class="supplier-box shadow-sm  bg-white rounded" id="4" data-href="logistics_provider/logistics_index.html"  data-status="logistics_provider">
+						<span class="iconfont iconwuliu choose_icon"></span>
+						<p class="choose_name">物流商</p>
+						<p class="fa fa-check-circle-o check_icon"></p>
+					</div>
+				</div>
+				<div class="choose_box ">
+					<div class="supplier-box shadow-sm  bg-white rounded" id="5" data-href="cycling_wear/homePage.html"  data-status="cycling_wear">
+						<span class="iconfont iconche choose_icon"></span>
+						<p class="choose_name">车服商</p>
+						<p class="fa fa-check-circle-o check_icon"></p>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="row">
+				<div class="col-10 offset-1 login_form">
+					<div class="input-group input-group-sm user_name_box">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text   fa fa-user-o icon"></span>
+						</div>
+						<input type="text" class="form-control user_name" placeholder="请输入账号">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text icon" onclick="clear_input('.user_name')">&times;</span>
+						</div>
+					</div>
+					<div class="input-group input-group-sm password_box">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text  fa fa-lock icon"></span>
+						</div>
+						<input type="password" class="form-control password"  placeholder="请输入密码">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text  fa fa-eye-slash icon" onclick="change_eyes('.password',this)"></span>
+						</div>
+					</div>
+					<div class="input-group input-group-sm user_name_box">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text    fa fa-tablet icon"></span>
+						</div>
+						<input type="text" class="form-control user_tel" id="contact_tel" oninput=" Number_num(this)" placeholder="请输入手机号码">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text icon" onclick="clear_input('.user_tel')">&times;</span>
+						</div>
+					</div>
+					<div class="input-group input-group-sm password_box">
+						<input type="text" class="form-control sign_code" placeholder="请输入验证码">
+						<div class="input-group-prepend icon_box">
+							<span class="input-group-text icon">|</span>
+						</div>
+						<div class="input-group-prepend icon_box">
+							<button type="button" class="input-group-text  icon get_code" >获取验证码</button>
+						</div>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input check_warn" type="checkbox" style="margin-top: 0.5rem;" >
+						<label class="form-check-label go_text" style="font-size: 0.6rem;color: #A6A6A6;">我已阅读且同意<span class="warn" style="color: #FF5F0D;">《账户安全与免责信息》</span></label>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="row">
+				<button type="button" class="btn  btn-sm line_orange  col-8 offset-2 sign">注册</button>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="js/jquery.min.js?v=2.1.1"></script>
+	<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="js/md5.js"></script>
+	<script src="js/util.js"></script>
+	<script src="js/public.js"></script>
+	<script src="js/sign_in.js"></script>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="css/add_shopping_plan.css" />
+		<script src="../bootstrap-4.3.1-dist/js/popper.min.js"></script>
+	</head>
+
+	<body class="public_bg">
+		<header class="container header wite_bg px-2">
+			<div class="top pt-1">
+				<span class="fa fa-angle-left top_icon" style="width:20%;" onclick="page_back()"></span>
+				<p class="header-title " style="width: 60%;">添加购油计划</p>
+				<div class="save" data-toggle="modal" data-target="#add_planName">
+					<p class=" col-12 text-center  font_3 mx-2" style="line-height:0.9rem;">
+						<span class="fa fa-plus-circle " style="width: 40%;"></span>
+					</p>
+					<p class="col-12 p-0 text-center mx-2" style="line-height:0.8rem;">保存</p>
+				</div>
+			</div>
+		</header>
+		<div class="container physical_choose wite_bg mt-1">
+			<div class="row">
+				<p class="col-12 font_5 mt-3 text-dark">选择物全部流方式</p>
+			</div>
+			<div class="row">
+				<div class="col-12 row mt-2 pb-2 mb-1">
+					<div class="custom-control  custom-radio col-4 offset-2  font_4">
+						<input oninput="gg(this)" checked="" type="radio" id="0" name="customRadio" class="custom-control-input font_1">
+						<label class="custom-control-label orange pt-1  text-muted " for="0">自提</label>
+					</div>
+					<div class="custom-control custom-radio col-4 offset-2 font_4">
+						<input type="radio" oninput="gg(this)" id="1" name="customRadio" class="custom-control-input">
+						<label class="custom-control-label pt-1 text-muted title_text" for="1">物流配送</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container drop_container wite_bg mt-2" id="add_finall">
+			<div class="row pt-2">
+				<span class="col-2 fa fa-map-marker icon marke"></span>
+				<p class="col-7 px-0 site_title font_4 border-right">添加自提地址</p>
+				<div class="col-3 text-center text-primary" data-toggle="modal" data-target="#address_box_">
+					<span class="fa fa-plus-circle font_5"></span>
+					<p class="font_1">添加地址</p>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="container wite_bg mt-1 pb-4 addr_box">
+			<div class="row pt-3 pb-4">
+				<span class="col-2 fa fa-map-marker orange icon"></span>
+				<p class="site_name col-7 px-0 font_4 border-right mt-2">江西省南昌市西湖区120号</p>
+				<div class="col-3 text-center orange add_oil">
+					<span class="fa fa-plus-circle font_5"></span>
+					<p class="font_1">添加油品</p>
+				</div>
+			</div>
+			<div class="row oil_box">
+				<div class="dropdown col-5" id="oil_list">
+					<button class="btn  border dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">92#</button>
+					<div class="dropdown-menu p-0" aria-labelledby="dropdownMenu2" style="min-width:100%;">
+						<button class="dropdown-item text-center border-bottom" type="button">92#</button>
+						<button class="dropdown-item text-center border-bottom" type="button">95#</button>
+						<button class="dropdown-item text-center border-bottom" type="button">98#</button>
+						<button class="dropdown-item text-center border-bottom" type="button">0#</button>
+					</div>
+				</div>
+				<input type="text" class="col-5 offset-1 form-control" style="height: 1.5rem;" />
+			</div>
+		</div> -->
+		<div class="container wite_bg">
+
+		</div>
+		<div class="toast text-center fixed-bottom" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+		<div class="modal fade" id="address_box_" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered   " role="document">
+				<div class="modal-content modal_box pb-2 fixed-bottom">
+					<div class="modal-header p-1">
+						<div class="col-3 p-0 offset-9 text-primary text-center" data-dismiss="modal" aria-label="Close" id="address_new">
+							<span class="fa fa-plus-circle" style="font-size: 1rem;"></span>
+							<p class="font_1">添加地址</p>
+						</div>
+					</div>
+					<div class="modal-body pb-0 py-0" id="address_items">
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="add_planName" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class=" p-1 mt-2 col-12 font_3 text-muted text-center">请输入购油计划名称</div>
+					<div class="modal-body p-0">
+						<div class="form-group">
+							<input type="text" class="form-control border-bottom text-center font_6" id="plan_name">
+						</div>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2 click_btn bg-danger wite  is_show change_btn" data-dismiss="modal" aria-label="Close">确定</button>
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2 click_btn text-danger border-danger  false_btn " data-dismiss="modal" aria-label="Close">取消</button>
+						
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="js/add_shopping_plan.js"></script>
+
+</html>

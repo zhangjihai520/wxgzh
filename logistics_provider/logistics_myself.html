@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+	</head>
+	<body class="public_bg">
+		<header class="container-fluid orange_bg" style="height: 5.5rem;">
+			<div class="row">
+				<div class="col-1  offset-10" >
+					<span class="fa fa-cog" style="color: #FFFFFF" onclick="go_page('logistics_setting.html')"></span>
+				</div>
+			</div>
+			<div class="row pl-3">
+				<div class="col-2 px-0 img_box " style="border-radius: 50%;">
+					<img class="img rounded-circle" src=" "style="width: 100%; height: 100%;"/>
+				</div>
+				<div class="col-9 pl-1">
+					<div class="form-row">
+						<p class="col-10 user_name wite pr-0"></p>
+						<p class="col-10 user_accoun wite font_1 px-0"></p>
+					</div>
+				</div>
+				<P class="col-2 font_1 px-0 wite approve text-center mt-1">已认证</P>
+			</div>
+		</header>
+		<div class="container ">
+			<div class="row mt-2">
+				<div class="col-12">
+					<div class="form-row wite_bg px-2 pt-3 title_top">
+						<p class="col-12 title">运营简报</p>
+					</div>
+					<div class="form-row wite_bg py-3 title_top">
+						<div class="col-4  font_1 text-center ">
+							<p class="text-center">近30天</p>
+							<p class="text-center">共计接单(单)</p>
+							<p class="mt-1 font_7 orange font_weight all_num"></p>
+						</div>
+						<div class="col-4  font_1 text-center">
+							<p class="text-center">近30天</p>
+							<p class="text-center">物流金额(元)</p>
+							<p class="mt-1 font_7 orange font_weight trans_money"></p>
+						</div>
+						<div class="col-4  font_1 text-center">
+							<p class="text-center wite">近30天</p>
+							<p class="text-center">未结账款(元)</p>
+							<p class="mt-1 font_7 orange font_weight lose_money"></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 mt-2">
+					<div class="form-row wite_bg px-2 pt-3 title_top">
+						<p class="col-12 title">基础信息</p>
+					</div>
+					<div class="form-row wite_bg py-3 title_top">
+						<div class="col-5 offset-1 font_1 text-center" onclick="go_page('logistics_want_orders.html')" >
+							<span class="iconfont icondingdanchaxun-wei  orange" style="font-size: 1.3rem;"></span>
+							<p class="mt-0"> 需求确认单</p>
+						</div>
+						<div class="col-5 offset-1 font_1 text-center item_message" onclick="go_page('certification_office.html')">
+							<span class="iconfont iconqiyerenzheng1  orange" style="font-size: 1.3rem;"></span>
+							<p class="mt-0 ">企业认证</p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fixed-bottom container shadow-lg bg-white rounded b_nav">
+			<ul class="row pb-1">
+				<li class="col-3 offset-1 text-center">
+					<a class="footer_item  " href="logistics_index.html">
+						<span class="iconfont iconqiangdan footer_icon"></span>
+						<p class="footer_title font_1">抢单</p>
+					</a>
+				</li>
+
+				<li class="col-3 offset-1 text-center">
+					<a class="footer_item " href="logistics_physical_orders.html">
+						<span class="iconfont iconwuliu1 footer_icon"></span>
+						<p class="footer_title font_1">物流</p>
+					</a>
+				</li>
+				<li class="col-3 offset-1 text-center">
+					<a class="footer_item change_active" href="logistics_myself.html">
+						<span class="iconfont iconshoujianren footer_icon"></span>
+						<p class="footer_title font_1">我的</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true"
+		 data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="js/logistics_myself.js"></script>
+</html>

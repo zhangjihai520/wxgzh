@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="css/all_orders.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="../css/iScroll.css" />
+		<script src="../bootstrap-4.3.1-dist/js/popper.min.js"></script>
+	</head>
+
+	<body>
+		<div class="container-fluid pt-1 wite_bg border-bottom title_contanier px-0">
+			<div class="top black">
+				<span class=" fa fa-angle-left top_icon pl-2" onclick="go_page('my_user.html')"></span>
+				<p class="header-title">支付中订单</p>
+			</div>
+		</div>
+		<div class="container wite_bg nav_contanier">
+			<div class="row nav_box text-center pb-1 font_1">
+				<p class="col-3 nav_item border-right px-1 mt-3 orange" id="">支付中订单(<span class="all_no">0</span>)</p>
+				<p class="col-3 nav_item border-right px-1 mt-3" id="BOS_UNPAYID">未支付(<span class="dont_no">0</span>)</p>
+				<p class="col-3 nav_item border-right px-1 mt-3" id="BOS_PAYID">已支付(<span class="yet_no">0</span>)</p>
+				<p class="col-3 nav_item border-right px-1 mt-3" id="BOS_CHERCK_PAY_UNPASS">财务未通过(<span class="finance_no">0</span>)</p>
+			</div>
+		</div>
+		<div id="wrapper" class="box_bg">
+			<div id="scroller" class="container px-2">
+				<ul class="row  order_box">
+					<!--<li class="col-12 order_item  mt-2">
+						<div class="form-row font_1 mt-2">
+							<p class="col-8">
+								<span>订单信息</span>
+								<span class="font_1" hidden="">(已开发票)</span>
+							</p>
+							<p class="col-4 text-right">
+								<span class=" fa fa-circle green_light pr-1"></span>
+								<span>已完成</span>
+							</p>
+						</div>
+						<div class="form-row font_1 mt-2">
+							<p class="col-3 pr-0">订单号：</p>
+							<p class="col-7 pl-0">UE2019112800016UT09S</p>
+							<p class="copy col-2  text-right orange">复制</p>
+						</div>
+
+						<div class="form-row font_2 mt-2">
+							<p class="col-12 pr-0">
+							
+									<span>商品明细：</span>
+									<span class="oil_name pr-1">92#</span>
+									<span class="oil_num pr-1">200吨</span>
+									<span>金额</span>
+									<span class="oil_price pr-1">11000元</span>
+								
+							</p>
+							<p class="col-12 pr-0">
+								<span>商品明细：</span>
+								<span class="oil_name pr-1">92#</span>
+								<span class="oil_num pr-1">200吨</span>
+								<span>金额</span>
+								<span class="oil_price pr-1">11000元</span>
+							</p>
+						</div>
+						<div class="form-row font_1 mt-2">
+							<p class="col-3 pr-0">配送方式：</p>
+							<p class="col-9 pl-0">物流配送</p>
+						</div>
+						<div class="form-row font_1 mt-2">
+							<p class="col-3 pr-0">上门地址：</p>
+							<p class="col-9 pl-0 tran_money font_4">江西省南昌市青山湖区塘山镇南京东路106号</p>
+						</div>
+						<div class="form-row font_1 mt-2">
+							<p class="col-3 pr-0">下单时间：</p>
+							<p class="col-9 pl-0 tran_money font_4">2019-11-30 10:35</p>
+						</div>
+						<div class="form-row font_1 mt-2">
+							<p class="col-4 pr-0">预计到达时间：</p>
+							<p class="col-8 pl-0 tran_money font_4">2019-11-30</p>
+						</div>
+						<div class="form-row font_1 pb-2 mt-2 border-bottom">
+							<p class="col-3 pr-0">总金额：</p>
+							<p class="col-8 pl-0 tran_money font_4">2019-11-30</p>
+						</div>
+						<div class="form-row font_1 pb-2 mt-2">
+							<div class="col-3">
+								<span class="px-1 border border_1 text-center text-muted">删除订单</span>
+							</div>
+							<div class="col-9 text-right">
+								<span class="px-1 border border_1 text-center text-muted">删除订单</span>
+								<span class="px-1 border border_1 text-center text-muted">取消订单</span>
+								<span class="px-1 border border_1 text-center text-danger border-danger">去支付</span>
+							</div>
+
+						</div>
+					</li>
+					<li class="col-12 order_item  mt-2">
+						<div class="form-row font_1 mt-2">
+							<p class="col-8">
+								<span>订单信息</span>
+								<span class="font_1" hidden="">(已开发票)</span>
+							</p>
+							<p class="col-4 text-right">
+								<span class=" fa fa-circle green_light pr-1"></span>
+								<span>已完成</span>
+							</p>
+						</div>
+						<div class="form-row font_1 mt-2">
+							<p class="col-3 pr-0">订单号：</p>
+							<p class="col-7 pl-0">UE2019112800016UT09S</p>
+							<p class="copy col-2  text-right orange">复制</p>
+						</div>
+
+						<div class="form-row font_2 mt-2">
+							<p class="col-12 pr-0">
+								<span>商品明细：</span>
+								<span class="oil_name pr-1">92#</span>
+								<span class="oil_num pr-1">200吨</span>
+								<span>金额</span>
+								<span class="oil_price pr-1">11000元</span>
+							</p>
+							<p class="col-12 pr-0">
+								<span>商品明细：</span>
+								<span class="oil_name pr-1">92#</span>
+								<span class="oil_num pr-1">200吨</span>
+								<span>金额</span>
+								<span class="oil_price pr-1">11000元</span>
+							</p>
+						</div>
+						<div class="form-row font_1 mt-2">
+							<p class="col-3 pr-0">配送方式：</p>
+							<p class="col-9 pl-0">物流配送</p>
+						</div>
+						<div class="form-row font_1 mt-2">
+							<p class="col-3 pr-0">上门地址：</p>
+							<p class="col-9 pl-0 tran_money font_4">江西省南昌市青山湖区塘山镇南京东路106号</p>
+						</div>
+						<div class="form-row font_1 mt-2">
+							<p class="col-3 pr-0">下单时间：</p>
+							<p class="col-9 pl-0 tran_money font_4">2019-11-30 10:35</p>
+						</div>
+						<div class="form-row font_1 mt-2">
+							<p class="col-4 pr-0">预计到达时间：</p>
+							<p class="col-8 pl-0 tran_money font_4">2019-11-30</p>
+						</div>
+						<div class="form-row font_1 pb-2 mt-2 border-bottom">
+							<p class="col-3 pr-0">总金额：</p>
+							<p class="col-8 pl-0 tran_money font_4">2019-11-30</p>
+						</div>
+						<div class="form-row font_1 pb-2 mt-2">
+							<div class="col-8 offset-5">
+								<span class="px-1 border border_1 text-center text-muted">删除订单</span>
+								<span class="px-1 border border_1 text-center text-muted">取消订单</span>
+								<span class="px-1 border border_1 text-center text-danger border-danger">去支付</span>
+							</div>
+
+						</div>
+					</li>-->
+				</ul>
+				<div class="pull-loading ">
+					上拉加载更多
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade " id="delte_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class=" p-1 mt-2 col-2 offset-5 text-center">提示</div>
+					<div class="modal-body p-0">
+						<p class="font_2 font_weight text-center">是否确认删除订单</p>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn false_btn" data-dismiss="modal" aria-label="Close">否</button>
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn true_btn" data-dismiss="modal" aria-label="Close">是</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="cancel_model" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered " role="document">
+				<div class="modal-content pb-4">
+					<div class=" p-1 mt-2 col-2 offset-5 text-center">提示</div>
+					<div class="modal-body p-0">
+						<p class="font_2 font_weight text-center">是否确认取消订单</p>
+					</div>
+					<div class="row m-0 p-0">
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn false_btn" data-dismiss="modal" aria-label="Close">否</button>
+						<button type="button" class="btn btn-sm col-3 mt-3 offset-2  wite modal_btn is_show" data-dismiss="modal" aria-label="Close">是</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true" data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/iscroll.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../js/public.js"></script>
+	<script src="js/all_orders.js"></script>
+</html>

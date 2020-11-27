@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--在IE运行最新的渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1,minimum-scale=1">
+    <title>权限组管理</title>
+    <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+    <link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+    <link rel="stylesheet" href="../plugins/navtree/font/layui.css" />
+    <link rel="stylesheet" href="../css/public.css" />
+    <link rel="stylesheet" href="../css/organization.css" />
+    <link rel="stylesheet" href="css/jurisdictionEdit.css" />
+    <script src="../js/jquery.min.js?v=2.1.1"></script>
+    <script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+    <script src="../plugins/navtree/layui.js"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/util.js"></script>
+    <script src="js/jurisdictionEdit.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+
+            <!--弹窗-->
+            <!--删除用户-->
+            <div class="popup" id="deletePerson">
+                <div class="form-row">
+                    <div class="col-10 deletePersonComment">
+                        <div class="form-row">
+                            <div class="col-12 text-center mt-3" style="color: #999999">确定将所选人员从权限组中删除吗？</div>
+                        </div>
+                        <div class="form-row mt-4 mb-3">
+                            <div class="col-3 offset-5 text-center delete_members">删除</div>
+                            <div class="col-3 text-center cancel">取消</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--移动到-->
+            <div class="popup" id="personnelDetails">
+                <div class="form-row">
+                    <div class="marginTopTwenty personnelDetailsComment">
+                        <div class="form-row marginTopFifteen">
+                            <div class="col-11 personnelDetailsConfirm">确认</div>
+                            <div class="col-1 cancel">×</div>
+                            <div class="marginTopFifteen personage">
+                                <div class="form-row mt-2 mb-3 all_groups">
+                                    <!-- <div class="col-11 ml-3 mt-3 font_7 personageItem">权限组A (40)</div>
+                                    <div class="col-11 ml-3 mt-3 font_7 personageItem">权限组A (40)</div>
+                                    <div class="col-11 ml-3 mt-3 font_7 personageItem">权限组A (40)</div>
+                                    <div class="col-11 ml-3 mt-3 font_7 personageItem">权限组A (40)</div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--编辑权限组-->
+            <div class="popup" id="editJurisdiction">
+                <div class="form-row">
+                    <div class="addJurisdiction" style="font-size: 5vw">
+                        <div class="form-row">
+                            <div class="col-12 text-center " style="color: #8A8A8A;margin-top: 15px">
+                                编辑权限组权限
+                            </div>
+                            <div class="col-12">
+                                <input class="text-center setName" type="text" placeholder="请输入权限组组名">
+                            </div>
+                            <div class="col-10 offset-1 jurisdictionDetails">
+                                <div class="form-row">
+                                    <div class="col-12 details">
+                                        <div class="form-row">
+                                            <div class="col-5">最高单笔消费</div>
+                                            <div class="col-6"><input class="single" type="text" placeholder="金额（元）"
+                                                                      oninput = "value=value.replace(/[^\d]/g,'')"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 details">
+                                        <div class="form-row">
+                                            <div class="col-5">最高单日限额</div>
+                                            <div class="col-6"><input class="everyday" type="text" placeholder="金额（元）"
+                                                                      oninput = "value=value.replace(/[^\d]/g,'')"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 details">
+                                        <div class="form-row">
+                                            <div class="col-5">最高每月限额</div>
+                                            <div class="col-6"><input class="monthly" type="text" placeholder="金额（元）"
+                                                                      oninput = "value=value.replace(/[^\d]/g,'')"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 moneyHint">
+                                        最高每月限额>=最高单日限额>=最高单笔消费
+                                    </div>
+                                    <div class="col-12 jurisdictionBtn">
+                                        <div class="form-row">
+                                            <div class="col-3 offset-1 text-center jurisdictionCancel cancel">取消</div>
+                                            <div class="col-3 offset-4 text-center jurisdictionConfirm" id="jurisdictionConfirmEdit">确定</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--//内容-->
+            <div class="col-12" id="subject">
+                <div class="form-row">
+                    <div class="col-12" id="navigationBar">
+                        <div class="form-row">
+                            <div class="break orange pt-0">
+                            	<span class=" fa fa-angle-left nav_icon orange"></span>
+                                <!--<img src="img/break.png">-->
+                            </div>
+                            <div class="navigationBarText text-left pl-2 pt-1">
+                                已选择(<span>0</span>)人
+                            </div>
+                            <div class="disclaimer pt-1 mt-1">
+                                全选
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-11 group_items" style="margin-left: 5vw">
+                        <!-- <div class="form-row ">
+                            <div class="col-12 marginTopFifteen group">
+                                <div class="form-row">
+                                    <div class="col-1 checkButton groupCheckButton">
+                                        <img src="img/uncheck.png">
+                                    </div>
+                                    <div class="col-9 groupName groupComment">
+                                        权限组A <span>(0)</span>
+                                    </div>
+                                    <div class="col-2 text-right edit">编辑</div>
+                                </div>
+                            </div>
+                            <div class="col-12 itemComment">
+                                <div class="form-row marginTopFifteen">
+                                    <div class="col-1 checkButton itemCheckButton">
+                                        <img src="img/uncheck.png">
+                                    </div>
+                                    <div class="col-5 itemName">
+                                        张谋杀
+                                    </div>
+                                    <div class="col-5">
+                                        500
+                                    </div>
+                                    <div class="col-1">
+                                        ＞
+                                    </div>
+                                </div>
+                                <div class="form-row marginTopFifteen">
+                                    <div class="col-1 checkButton itemCheckButton">
+                                        <img src="img/uncheck.png">
+                                    </div>
+                                    <div class="col-5 itemName">
+                                        张谋杀
+                                    </div>
+                                    <div class="col-5">
+                                        500
+                                    </div>
+                                    <div class="col-1">
+                                        ＞
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-12" id="menu">
+                <div class="form-row">
+                    <div class="col-3" id="moveTo">移动到</div>
+                    <div class="col-3 offset-3" id="delete">删除</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="toast text-center fixed-bottom" style="" role="alert" aria-live="polite" aria-atomic="true"
+         data-delay="1000">
+        <div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+    </div>
+</body>
+</html>

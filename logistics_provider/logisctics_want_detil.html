@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>UE油网</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.css" />
+		<!--<link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css?v=4.3.1" />-->
+		<link href="../font-awesome-4.7.0/css/font-awesome.min.css?v=4.7.0" rel="stylesheet">
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/public.css" />
+		<style>
+			.icons{
+				font-size: 6px !important;
+			}
+		</style>
+	</head>
+
+	<body class="public_bg">
+		<div class="container-fluid wite_bg pt-1 px-0">
+			<div class="top black ">
+				<span class="fa fa-angle-left top_icon pl-2" onclick="page_back()"></span>
+				<p class="header-title">订单详情</p>
+			</div>
+		</div>
+		<div class="container mt-2">
+			<div class="row px-2 ">
+				<div class="col-12 border_2 wite_bg py-2">
+					<div class="form-row border-bottom pb-2">
+						<p class="col-12 font_6 font_weight">物流配送</p>
+						<div class="col-12 font_1 text-muted">
+							<span>订单号：</span>
+							<span class="orderNo"></span>
+						</div>
+					</div>
+					<div class="form-row pt-1">
+						<p class="col-1 align-middle pt-2">
+							<span class=" fa fa-circle icons pr-1 "></span>
+						</p>
+						<div class="col-11">
+							<div class="form-row">
+								<div class="col-12">
+									<span class="font_6 b_name"></span>
+									<span class="font_6 b_phone"></span>
+									<span class="font_3 text-muted">取</span>
+								</div>
+								<p class="col-12 font_1 text-muted b_address"></p>
+							</div>
+						</div>
+					</div>
+					<div class="form-row pt-1 pb-2 border-bottom ">
+						<p class="col-1 align-middle pt-2">
+							<span class=" fa fa-circle icons pr-1 orange"></span>
+						</p>
+						<div class="col-11">
+							<div class="form-row">
+								<div class="col-12">
+									<span class="font_6 e_name"></span>
+									<span class="font_6 e_phone"></span>
+									<span class="font_3 text-muted">收</span>
+								</div>
+								<p class="col-12 font_1 text-muted e_address"></p>
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-12">
+							<span class="text-muted font_1">物流费用：</span>
+							<span class="text-danger font_2 amount"></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 wite_bg border_2 mt-2 py-2">
+					<div class="form-row">
+						<div class="col-12 font_1 mt-1" >
+							<span class="text-muted">取货时间：</span>
+							<span class="pickTime"></span>
+						</div>
+						<div class="col-12 font_1 mt-2">
+							<span class="text-muted">预达时间：</span>
+							<span class="arriveTime"></span>
+						</div>
+						
+					</div>
+					<div class="form-row mt-2">
+						<p class="col-3 font_1 text-muted">商品详情：</p>
+						<div class="col-9 px-0">
+							<div class="form-row font_1 text-center oil_box">
+								<!--<div class="col-3 pl-0">
+									<p>95</p>
+									<p>95dun</p>
+								</div>
+								<div class="col-3 pl-0">
+									<p>95</p>
+									<p>95dun</p>
+								</div>
+								<div class="col-3 pl-0">
+									<p>95</p>
+									<p>95dun</p>
+								</div>
+								<div class="col-3 pl-0">
+									<p>95</p>
+									<span>5000吨</span>
+								</div>-->
+							</div>
+						
+						</div>
+					</div>
+					<div class="form-row mt-2">
+						<div class="col-12 font_1">
+							<span class="text-muted">下单时间：</span>
+							<span class="createTime"></span>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="toast text-center fixed-bottom mb-5" style="" role="alert" aria-live="polite" aria-atomic="true"
+		 data-delay="1000">
+			<div role="alert" aria-live="assertive" class="toast_text " aria-atomic="true"></div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js?v=2.1.1"></script>
+	<script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js?v=4.3.1"></script>
+	<script src="../js/public.js"></script>
+	<script src="../js/util.js"></script>
+	<script src="../toastr-2.1.4/toastr.min.js"></script>
+	<script src="js/logisctics_want_detil.js"></script>
+</html>

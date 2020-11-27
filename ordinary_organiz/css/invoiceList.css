@@ -1,0 +1,57 @@
+.container-fluid {
+    min-height: 100vh;
+    background: #F4F7FC;
+}
+.break {
+    margin-top: 2.7%;
+    width: 3%;
+    height: 3.5%;
+    margin-left: 4%;
+}
+#navigationBar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: white;
+}
+.navigationBarText {
+    width: 89%;
+    text-align: center;
+    color: #1F1F1F;
+    font-size: 5vw;
+    margin-top: 1.6%;
+}
+.text{
+    font-size: 4vw;
+    color: #2E2E2E;
+}
+.text1{
+    font-size: 2vw;
+    color: #FF7D19;
+}
+.text2{
+    font-size: 2vw;
+    color: #808080;
+}
+img {
+    width: 100%;
+}
+.imgedit{
+    width: 28%;
+}
+.imgedit2{
+    width: 30%;
+}
+.public_bg{
+    width: 100%;
+    background: white;
+    border-top: 1px solid #EBEBEB;
+}
+.newinvoice{
+    width: 40%;
+    border:1px solid #FF6E00;
+    border-radius:25px;
+    background: #F4F7FC;
+    -moz-border-radius:25px;
+    color: #FF6E00;
+    font-size: 4vw;
+}
